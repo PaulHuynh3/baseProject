@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pyx-6O-Iu4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="zLG-gH-nMP">
+            <objects>
+                <viewController id="pyx-6O-Iu4" customClass="HomeViewController" customModule="Ayno" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fZq-em-FAz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmT-IJ-Yrz">
+                                <rect key="frame" x="30" y="61" width="61" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="cbe-5v-C9K"/>
+                                    <constraint firstAttribute="height" constant="54" id="h8X-lY-rmM"/>
+                                </constraints>
+                                <state key="normal" image="hamburger_icon"/>
+                                <connections>
+                                    <action selector="burgetMenuTapped:" destination="pyx-6O-Iu4" eventType="touchUpInside" id="yVc-J9-200"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LmT-IJ-Yrz" firstAttribute="top" secondItem="JY4-Vb-WDe" secondAttribute="top" constant="17" id="4WM-PH-9Wf"/>
+                            <constraint firstItem="LmT-IJ-Yrz" firstAttribute="leading" secondItem="JY4-Vb-WDe" secondAttribute="leading" constant="30" id="xqj-IK-7JJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JY4-Vb-WDe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HgL-Zb-oJT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224.63768115942031" y="215.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hamburger_icon" width="512" height="512"/>
+    </resources>
+</document>

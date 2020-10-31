@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ake-FX-Qqj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="yrv-Sm-Nlk">
+            <objects>
+                <viewController id="ake-FX-Qqj" customClass="RootViewController" customModule="Ayno" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3U3-uE-Zyb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9B-28-dRR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="4uz-VT-VSs" kind="embed" id="IHC-sv-5YP"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMF-el-EJ4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="Plb-0e-Ir0" kind="embed" id="3Mq-gd-wxR"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="O9B-28-dRR" firstAttribute="top" secondItem="3U3-uE-Zyb" secondAttribute="top" id="IbB-bV-HEQ"/>
+                            <constraint firstItem="O9B-28-dRR" firstAttribute="leading" secondItem="CiZ-c9-bh2" secondAttribute="leading" id="PNV-jd-WI7"/>
+                            <constraint firstAttribute="bottom" secondItem="O9B-28-dRR" secondAttribute="bottom" id="WqM-xN-hnJ"/>
+                            <constraint firstItem="CiZ-c9-bh2" firstAttribute="trailing" secondItem="SMF-el-EJ4" secondAttribute="trailing" id="a63-5T-kUt"/>
+                            <constraint firstItem="CiZ-c9-bh2" firstAttribute="trailing" secondItem="O9B-28-dRR" secondAttribute="trailing" id="her-Os-7c2"/>
+                            <constraint firstItem="SMF-el-EJ4" firstAttribute="top" secondItem="3U3-uE-Zyb" secondAttribute="top" id="iQK-ah-VEY"/>
+                            <constraint firstItem="SMF-el-EJ4" firstAttribute="leading" secondItem="CiZ-c9-bh2" secondAttribute="leading" id="q5z-6T-0BS"/>
+                            <constraint firstItem="SMF-el-EJ4" firstAttribute="bottom" secondItem="3U3-uE-Zyb" secondAttribute="bottom" id="yoq-ZT-Ul4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CiZ-c9-bh2"/>
+                    </view>
+                    <connections>
+                        <outlet property="baseView" destination="O9B-28-dRR" id="mJe-1u-BFJ"/>
+                        <outlet property="passiveLoadingView" destination="SMF-el-EJ4" id="2rk-PR-KUy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2fG-wV-HY0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="91.741071428571431"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="Lri-Wu-tIV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="PYS-aV-Xq6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4L0-zW-ofi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="-74"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="ntx-Eo-HRM">
+            <objects>
+                <tabBarController id="4uz-VT-VSs" customClass="TabBarViewController" customModule="Ayno" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xfv-wQ-GKN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="grB-rG-ypz" kind="relationship" relationship="viewControllers" id="qJ9-UI-VEx"/>
+                        <segue destination="Zmk-wU-FcP" kind="relationship" relationship="viewControllers" id="twJ-g6-RQv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nla-1y-ebJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="514"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="yye-2F-kxW">
+            <objects>
+                <navigationController id="grB-rG-ypz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="calendar.circle" catalog="system" id="1MX-SW-zMl"/>
+                    <navigationItem key="navigationItem" id="UtC-X2-HTb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dph-B9-BVE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Tjs-x9-7yz" kind="relationship" relationship="rootViewController" id="bh4-Xe-Hvj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hur-5P-Sht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229" y="1233"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="YYP-21-hIH">
+            <objects>
+                <navigationController id="Zmk-wU-FcP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="pencil" catalog="system" id="JVM-5h-g1g"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mhi-lC-tbS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Gv5-jJ-nPG" kind="relationship" relationship="rootViewController" id="xhq-z7-ESg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qeg-Mk-jMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1345" y="1233"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Yj3-Xw-yXQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="Tjs-x9-7yz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FyE-uu-V4r"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ceh-te-J0N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="230" y="1651"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="VS4-ES-tcw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Account" id="Gv5-jJ-nPG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5mB-F8-goC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4G-d1-cNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="1665"/>
+        </scene>
+        <!--Passive Loading View Controller-->
+        <scene sceneID="5N8-r2-R9T">
+            <objects>
+                <viewController storyboardIdentifier="PassiveLoadingViewController" id="Plb-0e-Ir0" customClass="PassiveLoadingViewController" customModule="Ayno" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hl4-eg-FEe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car-icon" translatesAutoresizingMaskIntoConstraints="NO" id="NhT-51-yWD">
+                                <rect key="frame" x="107" y="390.5" width="200" height="125"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your passive income solution" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUL-7r-5Hm">
+                                <rect key="frame" x="96.5" y="537" width="221" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TUL-7r-5Hm" firstAttribute="top" secondItem="NhT-51-yWD" secondAttribute="bottom" constant="21.5" id="3xA-ZL-2Ak"/>
+                            <constraint firstItem="TUL-7r-5Hm" firstAttribute="centerX" secondItem="dwv-yr-emq" secondAttribute="centerX" id="ZCm-m3-cBk"/>
+                            <constraint firstItem="NhT-51-yWD" firstAttribute="centerY" secondItem="dwv-yr-emq" secondAttribute="centerY" id="cZq-Jo-QrA"/>
+                            <constraint firstItem="NhT-51-yWD" firstAttribute="centerX" secondItem="dwv-yr-emq" secondAttribute="centerX" id="h4H-zX-YrT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dwv-yr-emq"/>
+                    </view>
+                    <connections>
+                        <outlet property="carImageView" destination="NhT-51-yWD" id="Cwm-ha-b9Z"/>
+                        <outlet property="passiveIncomeLabel" destination="TUL-7r-5Hm" id="U4j-Ma-Or7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWO-Yy-rsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="-592"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar.circle" catalog="system" width="64" height="60"/>
+        <image name="car-icon" width="200" height="125"/>
+        <image name="pencil" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
