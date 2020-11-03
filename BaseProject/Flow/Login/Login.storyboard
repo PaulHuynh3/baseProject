@@ -11,7 +11,7 @@
         <!--Login Methods View Controller-->
         <scene sceneID="ms0-QL-3wm">
             <objects>
-                <viewController id="4OK-Z3-7PQ" customClass="LoginMethodsViewController" customModule="Ayno" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4OK-Z3-7PQ" customClass="LoginMethodsViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QFw-si-32c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="p6z-kx-luz">
                                 <rect key="frame" x="0.0" y="225" width="414" height="500"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="income-pig" translatesAutoresizingMaskIntoConstraints="NO" id="T3i-Uy-ddP">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devil" translatesAutoresizingMaskIntoConstraints="NO" id="T3i-Uy-ddP">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="324"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BTq-FW-ilU">
@@ -91,7 +91,7 @@
         <!--Login View Controller-->
         <scene sceneID="OOu-A2-y81">
             <objects>
-                <viewController id="c1r-S8-nlo" customClass="LoginViewController" customModule="Ayno" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="c1r-S8-nlo" customClass="LoginViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rwr-8I-MYB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,7 +202,7 @@
         <!--Register View Controller-->
         <scene sceneID="44c-Hg-uBT">
             <objects>
-                <viewController id="2M8-XT-3m5" customClass="RegisterViewController" customModule="Ayno" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2M8-XT-3m5" customClass="RegisterViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fg3-nQ-40v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,7 +213,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7c9-Pk-hwj">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="306"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N0u-7F-mNC" customClass="FloatingLabelTextField" customModule="Ayno" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N0u-7F-mNC" customClass="FloatingLabelTextField" customModule="BaseProject" customModuleProvider="target">
                                                 <rect key="frame" x="35" y="8" width="344" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="nA8-wc-9bH"/>
@@ -221,22 +221,22 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="79I-cT-PmO" customClass="FloatingLabelTextField" customModule="Ayno" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="79I-cT-PmO" customClass="FloatingLabelTextField" customModule="BaseProject" customModuleProvider="target">
                                                 <rect key="frame" x="35" y="68" width="344" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAI-J2-jdJ" customClass="FloatingLabelTextField" customModule="Ayno" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAI-J2-jdJ" customClass="FloatingLabelTextField" customModule="BaseProject" customModuleProvider="target">
                                                 <rect key="frame" x="35" y="128" width="344" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="swh-Vl-Utp" customClass="FloatingLabelTextField" customModule="Ayno" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="swh-Vl-Utp" customClass="FloatingLabelTextField" customModule="BaseProject" customModuleProvider="target">
                                                 <rect key="frame" x="35" y="188" width="344" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2o-FP-cml" customClass="FloatingLabelTextField" customModule="Ayno" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2o-FP-cml" customClass="FloatingLabelTextField" customModule="BaseProject" customModuleProvider="target">
                                                 <rect key="frame" x="35" y="248" width="344" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -297,7 +297,7 @@
         <!--Forgot Password View Controller-->
         <scene sceneID="0wl-xC-hhj">
             <objects>
-                <viewController id="VqN-VA-yo8" customClass="ForgotPasswordViewController" customModule="Ayno" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VqN-VA-yo8" customClass="ForgotPasswordViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qaE-n8-e6c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -375,7 +375,7 @@
         <!--Password Sent View Controller-->
         <scene sceneID="PDl-iQ-vc6">
             <objects>
-                <viewController id="S3E-MR-aKc" customClass="PasswordSentViewController" customModule="Ayno" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="S3E-MR-aKc" customClass="PasswordSentViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mTK-RV-U8O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -466,7 +466,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="devil" width="16" height="16"/>
         <image name="email-sent" width="28.5" height="20"/>
-        <image name="income-pig" width="300" height="300"/>
     </resources>
 </document>
