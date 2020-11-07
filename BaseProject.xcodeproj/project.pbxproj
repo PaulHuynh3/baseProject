@@ -12,6 +12,7 @@
 		EB313368252510AD008FF586 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB313367252510AD008FF586 /* AlertManager.swift */; };
 		EB31336D25252AAF008FF586 /* RegisterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31336C25252AAF008FF586 /* RegisterBuilder.swift */; };
 		EB31337025252C52008FF586 /* FloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31336F25252C52008FF586 /* FloatingLabelTextField.swift */; };
+		EB56A6C12556422F00A57448 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A6C02556422F00A57448 /* Promise.swift */; };
 		EB639A742517F3DB00D4903B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB639A732517F3DB00D4903B /* Extensions.swift */; };
 		EB639A762517F67800D4903B /* DriverInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB639A752517F67800D4903B /* DriverInfoViewController.swift */; };
 		EB6CC0E1253B7D5100BBF7D5 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6CC0E0253B7D5100BBF7D5 /* CameraViewModel.swift */; };
@@ -66,6 +67,7 @@
 		EB313367252510AD008FF586 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		EB31336C25252AAF008FF586 /* RegisterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBuilder.swift; sourceTree = "<group>"; };
 		EB31336F25252C52008FF586 /* FloatingLabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingLabelTextField.swift; sourceTree = "<group>"; };
+		EB56A6C02556422F00A57448 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		EB639A732517F3DB00D4903B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EB639A752517F67800D4903B /* DriverInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoViewController.swift; sourceTree = "<group>"; };
 		EB6CC0E0253B7D5100BBF7D5 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				EB9890C7250DC82F00E35BEF /* Bindable.swift */,
 				EB639A732517F3DB00D4903B /* Extensions.swift */,
 				EB313367252510AD008FF586 /* AlertManager.swift */,
+				EB56A6C02556422F00A57448 /* Promise.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -438,7 +441,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
-				ORGANIZATIONNAME = Ayno;
+				ORGANIZATIONNAME = BaseProject;
 				TargetAttributes = {
 					EBEAF3C0250C250800AA3AAF = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -497,6 +500,7 @@
 				EBC7FC872516973600102B57 /* BurgerMenuBuilder.swift in Sources */,
 				EBF7991125225E36000B325C /* RegisterViewController.swift in Sources */,
 				EBB677ED2534E4CE00074550 /* PhotoInformationBuilder.swift in Sources */,
+				EB56A6C12556422F00A57448 /* Promise.swift in Sources */,
 				EBC7FC85251691E200102B57 /* BurgerMenuViewModel.swift in Sources */,
 				EB313368252510AD008FF586 /* AlertManager.swift in Sources */,
 				EB6E2B0D253395A3009EBBD7 /* PhotoInformationCell.swift in Sources */,
