@@ -599,22 +599,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CA4BFCC6-E940-4E46-B08F-D616A67F4C0A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BaseProject/Helpers/Promise.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "catch(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "AAEAFF35-4C56-45C8-8B2E-1E6E939D0EF8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -626,54 +610,6 @@
             endingLineNumber = "36"
             landmarkName = "loginMan()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BFCAE919-3872-4115-8ABC-7BE1C04094E5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BaseProject/Helpers/Promise.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "catch(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BFCAE919-3872-4115-8ABC-7BE1C04094E5 - 930ca4736cd29616"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BaseProject.Promise.catch((Swift.Error) -&gt; ()) -&gt; BaseProject.Promise&lt;A&gt;"
-                  moduleName = "BaseProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulhuynh/Desktop/Projects/BaseProject/BaseProject/Helpers/Promise.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "137"
-                  endingLineNumber = "137"
-                  offsetFromSymbolStart = "127">
-               </Location>
-               <Location
-                  uuid = "BFCAE919-3872-4115-8ABC-7BE1C04094E5 - 1201545ff6a53dac"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;A, Swift.Error&gt;) -&gt; () in BaseProject.Promise.catch((Swift.Error) -&gt; ()) -&gt; BaseProject.Promise&lt;A&gt;"
-                  moduleName = "BaseProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/paulhuynh/Desktop/Projects/BaseProject/BaseProject/Helpers/Promise.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "138"
-                  endingLineNumber = "138"
-                  offsetFromSymbolStart = "142">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

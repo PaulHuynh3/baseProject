@@ -19,7 +19,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9B-28-dRR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <connections>
-                                    <segue destination="4uz-VT-VSs" kind="embed" id="IHC-sv-5YP"/>
+                                    <segue destination="PYS-aV-Xq6" kind="embed" id="DIx-nB-lDH"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMF-el-EJ4">

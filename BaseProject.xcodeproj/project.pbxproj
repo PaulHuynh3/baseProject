@@ -13,6 +13,7 @@
 		EB31336D25252AAF008FF586 /* RegisterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31336C25252AAF008FF586 /* RegisterBuilder.swift */; };
 		EB31337025252C52008FF586 /* FloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31336F25252C52008FF586 /* FloatingLabelTextField.swift */; };
 		EB56A6C12556422F00A57448 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A6C02556422F00A57448 /* Promise.swift */; };
+		EB56A6C32557573B00A57448 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A6C22557573B00A57448 /* AccountViewController.swift */; };
 		EB639A742517F3DB00D4903B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB639A732517F3DB00D4903B /* Extensions.swift */; };
 		EB639A762517F67800D4903B /* DriverInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB639A752517F67800D4903B /* DriverInfoViewController.swift */; };
 		EB6CC0E1253B7D5100BBF7D5 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6CC0E0253B7D5100BBF7D5 /* CameraViewModel.swift */; };
@@ -29,7 +30,7 @@
 		EB918DFA25297ABB00EC0254 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB918DF925297ABB00EC0254 /* TableView.swift */; };
 		EB9890B7250C9A8B00E35BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890B6250C9A8B00E35BEF /* Main.storyboard */; };
 		EB9890B9250C9C5200E35BEF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9890B8250C9C5200E35BEF /* TabBarViewController.swift */; };
-		EB9890BD250DC15000E35BEF /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890BC250DC15000E35BEF /* Account.storyboard */; };
+		EB9890BD250DC15000E35BEF /* AccountViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890BC250DC15000E35BEF /* AccountViewController.storyboard */; };
 		EB9890BF250DC15B00E35BEF /* DriverInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890BE250DC15B00E35BEF /* DriverInfo.storyboard */; };
 		EB9890C4250DC53100E35BEF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9890C3250DC53100E35BEF /* LoginViewController.swift */; };
 		EB9890C8250DC82F00E35BEF /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9890C7250DC82F00E35BEF /* Bindable.swift */; };
@@ -68,6 +69,7 @@
 		EB31336C25252AAF008FF586 /* RegisterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBuilder.swift; sourceTree = "<group>"; };
 		EB31336F25252C52008FF586 /* FloatingLabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingLabelTextField.swift; sourceTree = "<group>"; };
 		EB56A6C02556422F00A57448 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		EB56A6C22557573B00A57448 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		EB639A732517F3DB00D4903B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EB639A752517F67800D4903B /* DriverInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoViewController.swift; sourceTree = "<group>"; };
 		EB6CC0E0253B7D5100BBF7D5 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
@@ -84,7 +86,7 @@
 		EB918DF925297ABB00EC0254 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		EB9890B6250C9A8B00E35BEF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EB9890B8250C9C5200E35BEF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		EB9890BC250DC15000E35BEF /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		EB9890BC250DC15000E35BEF /* AccountViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountViewController.storyboard; sourceTree = "<group>"; };
 		EB9890BE250DC15B00E35BEF /* DriverInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DriverInfo.storyboard; sourceTree = "<group>"; };
 		EB9890C3250DC53100E35BEF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EB9890C7250DC82F00E35BEF /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
@@ -283,7 +285,8 @@
 		EB9890BA250DC11500E35BEF /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				EB9890BC250DC15000E35BEF /* Account.storyboard */,
+				EB9890BC250DC15000E35BEF /* AccountViewController.storyboard */,
+				EB56A6C22557573B00A57448 /* AccountViewController.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -478,7 +481,7 @@
 				EBEAF3CE250C250900AA3AAF /* Assets.xcassets in Resources */,
 				EB6E2B0E253395A3009EBBD7 /* PhotoInformationCell.xib in Resources */,
 				EB9890CD250DCC4A00E35BEF /* Login.storyboard in Resources */,
-				EB9890BD250DC15000E35BEF /* Account.storyboard in Resources */,
+				EB9890BD250DC15000E35BEF /* AccountViewController.storyboard in Resources */,
 				EB9890BF250DC15B00E35BEF /* DriverInfo.storyboard in Resources */,
 				EB6E5535250C90E800816820 /* LaunchScreen.storyboard in Resources */,
 				EB9890B7250C9A8B00E35BEF /* Main.storyboard in Resources */,
@@ -530,6 +533,7 @@
 				EBF799132522BD45000B325C /* ForgotPasswordViewController.swift in Sources */,
 				EBAE646925282F07000F654C /* BurgerMenuModalInteractor.swift in Sources */,
 				EB639A762517F67800D4903B /* DriverInfoViewController.swift in Sources */,
+				EB56A6C32557573B00A57448 /* AccountViewController.swift in Sources */,
 				EB31336D25252AAF008FF586 /* RegisterBuilder.swift in Sources */,
 				EB9002E1250ED61C00F8B015 /* PhotoInformationViewController.swift in Sources */,
 				EBF799152522BD55000B325C /* PasswordSentViewController.swift in Sources */,

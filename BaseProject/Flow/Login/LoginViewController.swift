@@ -33,6 +33,13 @@ class LoginViewController: UIViewController {
     }
 
 
+    @IBAction func signInWithFacebookTapped(_ sender: Any) {
+    }
+
+    @IBAction func signInWithGoogleTapped(_ sender: Any) {
+
+    }
+
     @IBAction func forgotPasswordTapped(_ sender: Any) {
         performSegue(withIdentifier: "forgotPasswordSegue", sender: nil)
     }

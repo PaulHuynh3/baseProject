@@ -19,7 +19,9 @@ class ForgotPasswordViewController: UIViewController {
     }
 
     @IBAction func resetPasswordTapped(_ sender: Any) {
-        performSegue(withIdentifier: "resetPasswordSegue", sender: nil)
-        
+//        performSegue(withIdentifier: "resetPasswordSegue", sender: nil)
+        //Check if the account exists if it does then POP them back to the loginViewMethodsVC
+
+
     }
 }
