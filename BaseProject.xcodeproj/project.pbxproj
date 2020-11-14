@@ -11,7 +11,6 @@
 		EB3133662524DCF3008FF586 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3133652524DCF3008FF586 /* RegisterViewModel.swift */; };
 		EB313368252510AD008FF586 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB313367252510AD008FF586 /* AlertManager.swift */; };
 		EB31336D25252AAF008FF586 /* RegisterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31336C25252AAF008FF586 /* RegisterBuilder.swift */; };
-		EB31337025252C52008FF586 /* FloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31336F25252C52008FF586 /* FloatingLabelTextField.swift */; };
 		EB56A6C12556422F00A57448 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A6C02556422F00A57448 /* Promise.swift */; };
 		EB56A6C32557573B00A57448 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A6C22557573B00A57448 /* AccountViewController.swift */; };
 		EB639A742517F3DB00D4903B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB639A732517F3DB00D4903B /* Extensions.swift */; };
@@ -26,6 +25,10 @@
 		EB7B088725298B690050EE9F /* DriverInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7B088625298B690050EE9F /* DriverInfoBuilder.swift */; };
 		EB7B088A25298BDD0050EE9F /* DriverRequirementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7B088825298BDD0050EE9F /* DriverRequirementCell.swift */; };
 		EB7B088B25298BDD0050EE9F /* DriverRequirementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7B088925298BDD0050EE9F /* DriverRequirementCell.xib */; };
+		EB87F489255E39110052B51D /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB87F488255E39110052B51D /* NibOwnerLoadable.swift */; };
+		EB87F48C255F742C0052B51D /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB87F48B255F742C0052B51D /* LoginBuilder.swift */; };
+		EB8B25A8255D9F1C00453506 /* GeneralTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB8B25A7255D9F1C00453506 /* GeneralTextView.xib */; };
+		EB8B25AA255DBC4100453506 /* GeneralTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B25A9255DBC4100453506 /* GeneralTextView.swift */; };
 		EB9002E1250ED61C00F8B015 /* PhotoInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9002E0250ED61C00F8B015 /* PhotoInformationViewController.swift */; };
 		EB918DFA25297ABB00EC0254 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB918DF925297ABB00EC0254 /* TableView.swift */; };
 		EB9890B7250C9A8B00E35BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890B6250C9A8B00E35BEF /* Main.storyboard */; };
@@ -67,7 +70,6 @@
 		EB3133652524DCF3008FF586 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		EB313367252510AD008FF586 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		EB31336C25252AAF008FF586 /* RegisterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBuilder.swift; sourceTree = "<group>"; };
-		EB31336F25252C52008FF586 /* FloatingLabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingLabelTextField.swift; sourceTree = "<group>"; };
 		EB56A6C02556422F00A57448 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		EB56A6C22557573B00A57448 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		EB639A732517F3DB00D4903B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -82,6 +84,10 @@
 		EB7B088625298B690050EE9F /* DriverInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoBuilder.swift; sourceTree = "<group>"; };
 		EB7B088825298BDD0050EE9F /* DriverRequirementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRequirementCell.swift; sourceTree = "<group>"; };
 		EB7B088925298BDD0050EE9F /* DriverRequirementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverRequirementCell.xib; sourceTree = "<group>"; };
+		EB87F488255E39110052B51D /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadable.swift; sourceTree = "<group>"; };
+		EB87F48B255F742C0052B51D /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
+		EB8B25A7255D9F1C00453506 /* GeneralTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralTextView.xib; sourceTree = "<group>"; };
+		EB8B25A9255DBC4100453506 /* GeneralTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTextView.swift; sourceTree = "<group>"; };
 		EB9002E0250ED61C00F8B015 /* PhotoInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInformationViewController.swift; sourceTree = "<group>"; };
 		EB918DF925297ABB00EC0254 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		EB9890B6250C9A8B00E35BEF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -156,14 +162,6 @@
 				EB31336C25252AAF008FF586 /* RegisterBuilder.swift */,
 			);
 			path = Builer;
-			sourceTree = "<group>";
-		};
-		EB31336E25252C3C008FF586 /* TextFields */ = {
-			isa = PBXGroup;
-			children = (
-				EB31336F25252C52008FF586 /* FloatingLabelTextField.swift */,
-			);
-			path = TextFields;
 			sourceTree = "<group>";
 		};
 		EB6E2B08253394A4009EBBD7 /* CameraSession */ = {
@@ -265,6 +263,22 @@
 			path = DriverInfo;
 			sourceTree = "<group>";
 		};
+		EB87F487255E38EE0052B51D /* NIbOwnerLoadable */ = {
+			isa = PBXGroup;
+			children = (
+				EB87F488255E39110052B51D /* NibOwnerLoadable.swift */,
+			);
+			path = NIbOwnerLoadable;
+			sourceTree = "<group>";
+		};
+		EB87F48A255F73F50052B51D /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				EB87F48B255F742C0052B51D /* LoginBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		EB918DF82529719000EC0254 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +311,7 @@
 				EBF7990E25225DC3000B325C /* LoginMethodsViewController.swift */,
 				EB9890C3250DC53100E35BEF /* LoginViewController.swift */,
 				EB9890C9250DC9B400E35BEF /* LoginViewModel.swift */,
+				EB87F48A255F73F50052B51D /* Builder */,
 				EB313369252529EA008FF586 /* Register */,
 				EB31336A252529FB008FF586 /* Forgot Password */,
 				EB9890CC250DCC4A00E35BEF /* Login.storyboard */,
@@ -309,7 +324,6 @@
 			children = (
 				EB918DF82529719000EC0254 /* TableView */,
 				EBAE646025281BEA000F654C /* StoryboardNavigation */,
-				EB31336E25252C3C008FF586 /* TextFields */,
 				EBA39429251190CE0019B273 /* Views */,
 				EB9890C7250DC82F00E35BEF /* Bindable.swift */,
 				EB639A732517F3DB00D4903B /* Extensions.swift */,
@@ -322,8 +336,11 @@
 		EBA39429251190CE0019B273 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EB87F487255E38EE0052B51D /* NIbOwnerLoadable */,
 				EBA3942A251191190019B273 /* BottomStatusHelperView.swift */,
 				EBA3942C251191990019B273 /* BottomStatusHelperView.xib */,
+				EB8B25A9255DBC4100453506 /* GeneralTextView.swift */,
+				EB8B25A7255D9F1C00453506 /* GeneralTextView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -479,6 +496,7 @@
 				EBBB67CA2515A6EE00031C30 /* BurgerMenuCell.xib in Resources */,
 				EBBB67C32515A4FD00031C30 /* BurgerMenu.storyboard in Resources */,
 				EBEAF3CE250C250900AA3AAF /* Assets.xcassets in Resources */,
+				EB8B25A8255D9F1C00453506 /* GeneralTextView.xib in Resources */,
 				EB6E2B0E253395A3009EBBD7 /* PhotoInformationCell.xib in Resources */,
 				EB9890CD250DCC4A00E35BEF /* Login.storyboard in Resources */,
 				EB9890BD250DC15000E35BEF /* AccountViewController.storyboard in Resources */,
@@ -500,6 +518,7 @@
 				EBF7990F25225DC3000B325C /* LoginMethodsViewController.swift in Sources */,
 				EBA3942B251191190019B273 /* BottomStatusHelperView.swift in Sources */,
 				EB6E552D250C8C5B00816820 /* PassiveLoadingViewController.swift in Sources */,
+				EB8B25AA255DBC4100453506 /* GeneralTextView.swift in Sources */,
 				EBC7FC872516973600102B57 /* BurgerMenuBuilder.swift in Sources */,
 				EBF7991125225E36000B325C /* RegisterViewController.swift in Sources */,
 				EBB677ED2534E4CE00074550 /* PhotoInformationBuilder.swift in Sources */,
@@ -510,7 +529,6 @@
 				EBAE646225281C24000F654C /* StoryboardNavigation.swift in Sources */,
 				EB9890C8250DC82F00E35BEF /* Bindable.swift in Sources */,
 				EBEAF3C5250C250800AA3AAF /* AppDelegate.swift in Sources */,
-				EB31337025252C52008FF586 /* FloatingLabelTextField.swift in Sources */,
 				EBE7DECF25314DCE0055309C /* PhotoInformationViewModel.swift in Sources */,
 				EB6E5528250C888700816820 /* RootViewController.swift in Sources */,
 				EBAE645F25281481000F654C /* HomeViewController.swift in Sources */,
@@ -520,7 +538,9 @@
 				EB9890C4250DC53100E35BEF /* LoginViewController.swift in Sources */,
 				EBE7DECD25314D270055309C /* CameraViewController.swift in Sources */,
 				EBBB67C92515A6EE00031C30 /* BurgerMenuCell.swift in Sources */,
+				EB87F48C255F742C0052B51D /* LoginBuilder.swift in Sources */,
 				EB9890B9250C9C5200E35BEF /* TabBarViewController.swift in Sources */,
+				EB87F489255E39110052B51D /* NibOwnerLoadable.swift in Sources */,
 				EB7B0881252987310050EE9F /* DriverInfoViewModel.swift in Sources */,
 				EB639A742517F3DB00D4903B /* Extensions.swift in Sources */,
 				EB9890CA250DC9B400E35BEF /* LoginViewModel.swift in Sources */,

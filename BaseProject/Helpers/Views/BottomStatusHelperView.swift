@@ -3,12 +3,12 @@
 //  Ayno
 //
 //  Created by Paul Huynh on 2020-09-15.
-//  Copyright © 2020 Ayno. All rights reserved.
+//  Copyright © 2020 BaseProject. All rights reserved.
 //
 
 import UIKit
 
-class BottomStatusHelperView: UIView {
+class BottomStatusHelperView: UIView, NibOwnerLoadable {
     // MARK: - Properties
 
     let nibName = String(describing: BottomStatusHelperView.self)
@@ -33,23 +33,7 @@ class BottomStatusHelperView: UIView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupNibInit()
-    }
-
-     override init(frame: CGRect) {
-           super.init(frame: frame)
-           setupNibInit()
-       }
-
-    private func setupNibInit() {
-        guard let view = loadViewFromNib() else { return }
-        view.frame = self.bounds
-        self.addSubview(view)
-    }
-
-    func loadViewFromNib() -> UIView? {
-        let nib = UINib(nibName: nibName, bundle: nil)
-        return nib.instantiate(withOwner: self, options: nil).first as? UIView
+        loadNibContent()
     }
 
     func configure(data: Data) {

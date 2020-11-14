@@ -10,7 +10,6 @@ import UIKit
 
 class LoginMethodsViewController: UIViewController {
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,9 +18,6 @@ class LoginMethodsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
     }
-
-    //connect with google and facebook sdk
-    //handle navigation if user logins
 
     @IBAction func connectFacebookTapped(_ sender: Any) {
 

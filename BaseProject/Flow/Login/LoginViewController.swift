@@ -12,16 +12,24 @@ class LoginViewController: UIViewController {
 
     // MARK: - Properties
 
-    @IBOutlet weak var emailTextfield: UITextField!
-    @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var emailTextFieldView: GeneralTextView!
+    @IBOutlet weak var passwordTextFieldView: GeneralTextView!
 
-    var loginViewModel = LoginViewModel()
+    var viewModel = LoginViewModel()
 
-    // MARK: - ViewController lifecycle
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginViewModel.configure(delegate: self)
+        viewModel.configure(delegate: self)
+        setup()
+    }
+
+    // MARK: - Setup
+
+    private func setup() {
+        emailTextFieldView.configure(data: viewModel.emailTextViewData(), delegate: viewModel)
+        passwordTextFieldView.configure(data: viewModel.passwordTextViewData(), delegate: viewModel)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,7 +37,14 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginTapped(_ sender: Any) {
+        emailTextFieldView.setPotentialError(viewModel.emailValidation(emailTextFieldView.textField))
+        passwordTextFieldView.setPotentialError(viewModel.passwordValidation(passwordTextFieldView.textField))
+        guard viewModel.isEmailValid(emailTextFieldView.textField) || viewModel.isPasswordValid(passwordTextFieldView.textField) else {
+            return
+        }
 
+        viewModel.showCredentialError()
+        //Look into database and check there.. If its successful then navigate
     }
 
 
@@ -51,5 +66,7 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginViewModelDelegate {
-
+    func showAlert(data: AlertManager.Data) {
+        AlertManager.show(in: self, with: data)
+    }
 }

@@ -19,9 +19,18 @@ class ForgotPasswordViewController: UIViewController {
     }
 
     @IBAction func resetPasswordTapped(_ sender: Any) {
-//        performSegue(withIdentifier: "resetPasswordSegue", sender: nil)
-        //Check if the account exists if it does then POP them back to the loginViewMethodsVC
+        guard emailTextfield.text?.isValidEmail() == true else {
+            emailTextfield.checkInput(type: .email)
+            return AlertManager.show(in: self, with: buildInvalidEmailData())
+        }
+        navigationController?.popToRootViewController(animated: true)
+    }
 
-
+    private func buildInvalidEmailData() -> AlertManager.Data {
+        return AlertManager.Data(
+            title: "Invalid Email",
+            message: "Please enter a valid email",
+            actions: nil
+        )
     }
 }

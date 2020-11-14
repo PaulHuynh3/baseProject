@@ -11,7 +11,7 @@ import UIKit
 class RegisterViewController: UIViewController {
 
     // MARK: - Properties
-
+/*
     @IBOutlet weak var firstNameTextfield: FloatingLabelTextField!
     @IBOutlet weak var lastNameTextfield: FloatingLabelTextField!
     @IBOutlet weak var emailTextfield: FloatingLabelTextField!
@@ -154,4 +154,6 @@ extension RegisterViewController: UITextFieldDelegate {
         }
         return true
     }
+ */
 }
+
