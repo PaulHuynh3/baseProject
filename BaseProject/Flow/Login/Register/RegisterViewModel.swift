@@ -33,6 +33,27 @@ class RegisterViewModel {
     }
 }
 
+extension RegisterViewModel: GeneralTextViewDelegate {
+    
+    func editingChange(_ textField: UITextField) {
+        delegate?.isValidInputs() == true
+        ? delegate?.accountButtonState(.enabled)
+        : delegate?.accountButtonState(.disabled)
+    }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return true
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {}
+
+    func textFieldDidEndEditing(_ textField: UITextField) {}
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+}
+
 enum CreateAccountButtonState {
     case enabled
     case disabled
@@ -40,4 +61,9 @@ enum CreateAccountButtonState {
 
 protocol RegisterViewModelDelegate: class {
     func showAlert(data: AlertManager.Data)
+    func accountButtonState(_ state: CreateAccountButtonState)
+    func isValidInputs() -> Bool
+    var isEmailValid: Bool { get }
+    var isPasswordValid: Bool { get }
+    var isPasswordMatch: Bool { get }
 }

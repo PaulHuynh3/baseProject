@@ -8,8 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
-
+class RegisterViewController: UIViewController, RegisterViewModelDelegate {
     // MARK: - Properties
 
     @IBOutlet weak var emailTextFieldView: GeneralTextView!
@@ -42,6 +41,7 @@ class RegisterViewController: UIViewController {
     // MARK: - Setup
 
     private func setup() {
+        viewModel.configure(delegate: self)
         configureTextFieldViews()
         accountButtonState(.disabled)
     }
@@ -55,12 +55,16 @@ class RegisterViewController: UIViewController {
     // MARK: - Methods
 
     private func configureTextFieldViews() {
-        emailTextFieldView.configure(data: viewModel.emailData(), delegate: nil)
-        passwordTextFieldView.configure(data: viewModel.passwordData(), delegate: self)
-        confirmPasswordTextFieldView.configure(data: viewModel.confirmPasswordData(), delegate: self)
+        emailTextFieldView.configure(data: viewModel.emailData(), delegate: viewModel)
+        passwordTextFieldView.configure(data: viewModel.passwordData(), delegate: viewModel)
+        confirmPasswordTextFieldView.configure(data: viewModel.confirmPasswordData(), delegate: viewModel)
     }
 
-    private func accountButtonState(_ state: CreateAccountButtonState) {
+    func isValidInputs() -> Bool {
+        return isEmailValid && isPasswordValid && isPasswordMatch
+    }
+
+    func accountButtonState(_ state: CreateAccountButtonState) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
              switch state {
@@ -74,29 +78,8 @@ class RegisterViewController: UIViewController {
         }
     }
 
-    private func validation() {
-        isEmailValid && isPasswordValid && isPasswordMatch
-            ? accountButtonState(.enabled)
-            : accountButtonState(.disabled)
+    func showAlert(data: AlertManager.Data) {
+        //show alert for any error when registering
     }
 }
 
-extension RegisterViewController: GeneralTextViewDelegate {
-    func editingChange(_ textField: UITextField) {
-        isEmailValid && isPasswordValid && isPasswordMatch
-            ? accountButtonState(.enabled)
-            : accountButtonState(.disabled)
-    }
-
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        return true
-    }
-
-    func textFieldDidBeginEditing(_ textField: UITextField) {}
-
-    func textFieldDidEndEditing(_ textField: UITextField) {}
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return true
-    }
-}
