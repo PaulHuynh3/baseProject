@@ -6,7 +6,7 @@
 //  Copyright © 2020 BaseProject. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class LoginBuilder {
 
@@ -15,7 +15,8 @@ class LoginBuilder {
             keyboardType: .emailAddress,
             nameLabel: "Email",
             hintLabel: nil,
-            mode: .normal)
+            mode: .normal,
+            leftIconImage: #imageLiteral(resourceName: "user-icon"))
     }
 
     func buildPasswordData() -> GeneralTextView.Data {
@@ -24,7 +25,8 @@ class LoginBuilder {
             nameLabel: "Password",
             hintLabel: nil,
             mode: .password,
-            hidePasswordToggle: false)
+            leftIconImage: #imageLiteral(resourceName: "lock-icon"),
+            rightIconImage: #imageLiteral(resourceName: "show-password-icon"))
     }
 
     func buildCredentialError() -> AlertManager.Data {

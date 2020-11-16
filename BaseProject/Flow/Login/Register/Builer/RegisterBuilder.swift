@@ -6,7 +6,7 @@
 //  Copyright © 2020 Ayno. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class RegisterBuilder {
 
@@ -24,7 +24,8 @@ class RegisterBuilder {
             nameLabel: "Password",
             hintLabel: "At least 8 characters with a number and a special character",
             mode: .password,
-            hidePasswordToggle: false)
+            rightIconImage: #imageLiteral(resourceName: "show-password-icon"),
+            rightButtonType: .password)
     }
 
     func buildConfirmPasswordData() -> GeneralTextView.Data {
@@ -33,7 +34,8 @@ class RegisterBuilder {
             nameLabel: "Confirm Password",
             hintLabel: nil,
             mode: .password,
-            hidePasswordToggle: false)
+            rightIconImage: #imageLiteral(resourceName: "show-password-icon"),
+            rightButtonType: .password)
     }
     
 }

@@ -67,6 +67,29 @@ extension UITextField {
         self.layer.borderWidth = isValid ? 0 : 0.5
         self.layer.borderColor = isValid ? UIColor.clear.cgColor : UIColor.red.cgColor
     }
+
+    func setLeftIcon(_ image: UIImage?) {
+        guard let image = image else { return }
+        let iconView = UIImageView(frame: CGRect(x: 10, y: 5, width: 20, height: 20))
+        iconView.image = image
+        let iconContainerView: UIView = UIView(frame: CGRect(x: 20, y: 0, width: 30, height: 30))
+        iconContainerView.addSubview(iconView)
+        leftView = iconContainerView
+        leftViewMode = .always
+    }
+
+    func setRightIcon(_ image: UIImage?) -> UIButton? {
+        guard let image = image else { return nil }
+
+        let button = UIButton(frame: CGRect(x: 0, y: 5, width: 20, height: 20))
+        button.setImage(image, for: .normal)
+        let iconContainerView: UIView = UIView(frame: CGRect(x: 20, y: 0, width: 30, height: 30))
+        iconContainerView.addSubview(button)
+        rightView = iconContainerView
+        rightViewMode = .always
+        return button
+    }
+    
 }
 
 extension UIColor {

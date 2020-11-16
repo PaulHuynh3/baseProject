@@ -14,7 +14,6 @@ class GeneralTextView: UIView, NibOwnerLoadable {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var textField: UITextField!
     @IBOutlet var hintLabel: UILabel!
-    @IBOutlet weak var passwordToggleButton: UIButton!
 
     private var mode = Mode.normal
     private var potentialErrorText: String? {
@@ -40,22 +39,37 @@ class GeneralTextView: UIView, NibOwnerLoadable {
         nameLabel.text = data.nameLabel
         hintLabel.text = data.hintLabel
         mode = data.mode
-        passwordToggleButton.isHidden = data.hidePasswordToggle ?? true
 
         textField.isSecureTextEntry = mode == .password
         textField.autocorrectionType = .no
         textField.clearButtonMode = .never
         textField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-    }
 
-    @IBAction func passwordToggleTapped(_ sender: Any) {
-        mode = mode == .password ? .normal : .password
-        textField.isSecureTextEntry = mode == .password
+        textField.tintColor = .lightGray
+        textField.setLeftIcon(data.leftIconImage)
+
+        setupRightButton(data)
     }
 
     // MARK: - Methods
 
-    @objc func editingChanged() {
+    func setupRightButton(_ data: Data) {
+        let button = textField.setRightIcon(data.rightIconImage)
+
+        switch data.rightButtonType {
+        case .password:
+            button?.addTarget(self, action: #selector(togglePassword), for: .touchUpInside)
+        case .none:
+            return
+        }
+    }
+
+    @objc private func togglePassword() {
+        mode = mode == .password ? .normal : .password
+        textField.isSecureTextEntry = mode == .password
+    }
+
+    @objc private func editingChanged() {
         delegate?.editingChange(textField)
     }
 
@@ -80,6 +94,10 @@ class GeneralTextView: UIView, NibOwnerLoadable {
 extension GeneralTextView {
     enum Mode {
         case normal
+        case password
+    }
+
+    enum RightButtonType {
         case password
     }
 }
@@ -109,18 +127,24 @@ extension GeneralTextView {
         var nameLabel: String?
         var hintLabel: String?
         var mode: Mode
-        var hidePasswordToggle: Bool?
+        var leftIconImage: UIImage?
+        var rightIconImage: UIImage?
+        var rightButtonType: RightButtonType?
 
         init(keyboardType: UIKeyboardType,
              nameLabel: String?,
              hintLabel: String?,
              mode: Mode,
-             hidePasswordToggle: Bool = true) {
+             leftIconImage: UIImage? = nil,
+             rightIconImage: UIImage? = nil,
+             rightButtonType: RightButtonType? = nil) {
             self.keyboardType = keyboardType
             self.nameLabel = nameLabel
             self.hintLabel = hintLabel
             self.mode = mode
-            self.hidePasswordToggle = hidePasswordToggle
+            self.leftIconImage = leftIconImage
+            self.rightIconImage = rightIconImage
+            self.rightButtonType = .password
         }
     }
 }
