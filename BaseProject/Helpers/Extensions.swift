@@ -67,5 +67,23 @@ extension UITextField {
         self.layer.borderWidth = isValid ? 0 : 0.5
         self.layer.borderColor = isValid ? UIColor.clear.cgColor : UIColor.red.cgColor
     }
-    
+}
+
+extension UIColor {
+
+    enum ColourTheme {
+        case disabledButton
+        case orangeButton
+
+        var colour: UIColor {
+            switch self {
+            case .disabledButton:
+                return UIColor(red: 170/255, green: 170/255, blue: 170/255, alpha: 0.75)
+
+            case .orangeButton:
+                return UIColor(red: 231/255, green: 178/255, blue: 62/255, alpha: 1)
+            }
+        }
+    }
+
 }

@@ -62,7 +62,12 @@ protocol LoginViewModelDelegate {
     func showAlert(data: AlertManager.Data)
 }
 
+//Don't need right now
 extension LoginViewModel: GeneralTextViewDelegate {
+    func editingChange(_ textField: UITextField) {
+        
+    }
+
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         print("aa")
         return true

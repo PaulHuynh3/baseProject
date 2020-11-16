@@ -296,68 +296,54 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="hmX-J8-yBC">
                                 <rect key="frame" x="0.0" y="118" width="414" height="386"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7c9-Pk-hwj">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7c9-Pk-hwj">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="306"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N0u-7F-mNC" customClass="FloatingLabelTextField" customModule="BaseProject" customModuleProvider="target">
-                                                <rect key="frame" x="35" y="8" width="344" height="50"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpQ-9Z-GcI" customClass="GeneralTextView" customModule="BaseProject" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="8" width="374" height="90"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="nA8-wc-9bH"/>
+                                                    <constraint firstAttribute="height" constant="90" id="nek-rm-aoa"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="79I-cT-PmO" customClass="FloatingLabelTextField" customModule="BaseProject" customModuleProvider="target">
-                                                <rect key="frame" x="35" y="68" width="344" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAI-J2-jdJ" customClass="FloatingLabelTextField" customModule="BaseProject" customModuleProvider="target">
-                                                <rect key="frame" x="35" y="128" width="344" height="50"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="swh-Vl-Utp" customClass="FloatingLabelTextField" customModule="BaseProject" customModuleProvider="target">
-                                                <rect key="frame" x="35" y="188" width="344" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2o-FP-cml" customClass="FloatingLabelTextField" customModule="BaseProject" customModuleProvider="target">
-                                                <rect key="frame" x="35" y="248" width="344" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZl-1X-aqG" customClass="GeneralTextView" customModule="BaseProject" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="98" width="374" height="110"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="dTM-wt-RhB"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Wc-HH-NFZ" customClass="GeneralTextView" customModule="BaseProject" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="208" width="374" height="90"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="z2o-FP-cml" firstAttribute="height" secondItem="N0u-7F-mNC" secondAttribute="height" id="JFX-cx-DPd"/>
-                                            <constraint firstItem="79I-cT-PmO" firstAttribute="height" secondItem="N0u-7F-mNC" secondAttribute="height" id="QeF-Qt-NBt"/>
-                                            <constraint firstItem="swh-Vl-Utp" firstAttribute="height" secondItem="N0u-7F-mNC" secondAttribute="height" id="afB-s1-JZ3"/>
-                                            <constraint firstItem="rAI-J2-jdJ" firstAttribute="height" secondItem="N0u-7F-mNC" secondAttribute="height" id="s0Y-IY-0sY"/>
+                                            <constraint firstItem="4Wc-HH-NFZ" firstAttribute="height" secondItem="kpQ-9Z-GcI" secondAttribute="height" id="75n-lQ-c4k"/>
                                         </constraints>
-                                        <edgeInsets key="layoutMargins" top="8" left="35" bottom="8" right="35"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hzh-0x-WII">
                                         <rect key="frame" x="0.0" y="320" width="414" height="66"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EV3-aE-GY7">
-                                                <rect key="frame" x="35" y="8" width="344" height="50"/>
+                                                <rect key="frame" x="20" y="8" width="374" height="50"/>
                                                 <color key="backgroundColor" red="0.90681105849999999" green="0.69618886710000005" blue="0.24298161269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="h4R-fr-I88"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                 <state key="normal" title="Create Account">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="createAccountTapped:" destination="2M8-XT-3m5" eventType="touchUpInside" id="h4y-ge-RP4"/>
-                                                    <action selector="loginTapped:" destination="c1r-S8-nlo" eventType="touchUpInside" id="isD-qG-IGW"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <edgeInsets key="layoutMargins" top="8" left="35" bottom="8" right="35"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="EV3-aE-GY7" firstAttribute="height" secondItem="N0u-7F-mNC" secondAttribute="height" id="1Rj-NC-Kfx"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -370,12 +356,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="TyZ-oB-5r6"/>
                     <connections>
-                        <outlet property="confirmPasswordTextfield" destination="z2o-FP-cml" id="k3v-ns-oCH"/>
+                        <outlet property="confirmPasswordTextFieldView" destination="4Wc-HH-NFZ" id="FMn-A5-xhK"/>
                         <outlet property="createAccountButton" destination="EV3-aE-GY7" id="ucu-Ad-r9h"/>
-                        <outlet property="emailTextfield" destination="rAI-J2-jdJ" id="hX2-l2-7DD"/>
-                        <outlet property="firstNameTextfield" destination="N0u-7F-mNC" id="z5K-Ex-PC0"/>
-                        <outlet property="lastNameTextfield" destination="79I-cT-PmO" id="TwI-zo-Bfn"/>
-                        <outlet property="passwordTextfield" destination="swh-Vl-Utp" id="ulk-eN-I1w"/>
+                        <outlet property="emailTextFieldView" destination="kpQ-9Z-GcI" id="YE6-o2-sDO"/>
+                        <outlet property="passwordTextFieldView" destination="PZl-1X-aqG" id="p7M-O5-aXC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YB8-BU-7Aw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

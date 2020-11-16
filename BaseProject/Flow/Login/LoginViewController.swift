@@ -15,6 +15,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextFieldView: GeneralTextView!
     @IBOutlet weak var passwordTextFieldView: GeneralTextView!
 
+    var isEmailValid: Bool {
+        viewModel.isEmailValid(emailTextFieldView.textField)
+    }
+
+    var isPasswordValid: Bool {
+        viewModel.isPasswordValid(passwordTextFieldView.textField)
+    }
+
     var viewModel = LoginViewModel()
 
     // MARK: - Lifecycle
@@ -39,12 +47,10 @@ class LoginViewController: UIViewController {
     @IBAction func loginTapped(_ sender: Any) {
         emailTextFieldView.setPotentialError(viewModel.emailValidation(emailTextFieldView.textField))
         passwordTextFieldView.setPotentialError(viewModel.passwordValidation(passwordTextFieldView.textField))
-        guard viewModel.isEmailValid(emailTextFieldView.textField) || viewModel.isPasswordValid(passwordTextFieldView.textField) else {
-            return
-        }
+        guard isEmailValid || isPasswordValid else { return }
 
-        viewModel.showCredentialError()
         //Look into database and check there.. If its successful then navigate
+        viewModel.showCredentialError()
     }
 
 

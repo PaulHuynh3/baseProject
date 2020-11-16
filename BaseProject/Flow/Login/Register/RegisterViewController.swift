@@ -11,35 +11,26 @@ import UIKit
 class RegisterViewController: UIViewController {
 
     // MARK: - Properties
-/*
-    @IBOutlet weak var firstNameTextfield: FloatingLabelTextField!
-    @IBOutlet weak var lastNameTextfield: FloatingLabelTextField!
-    @IBOutlet weak var emailTextfield: FloatingLabelTextField!
-    @IBOutlet weak var passwordTextfield: FloatingLabelTextField!
-    @IBOutlet weak var confirmPasswordTextfield: FloatingLabelTextField!
+
+    @IBOutlet weak var emailTextFieldView: GeneralTextView!
+    @IBOutlet weak var passwordTextFieldView: GeneralTextView!
+    @IBOutlet weak var confirmPasswordTextFieldView: GeneralTextView!
+
     @IBOutlet weak var createAccountButton: UIButton!
 
-    var isFirstNameValid: Bool {
-        return viewModel.isValidNameTextfield(firstNameTextfield)
-    }
-
-    var isLastNameValid: Bool {
-         return viewModel.isValidNameTextfield(lastNameTextfield)
-    }
+    let viewModel = RegisterViewModel()
 
     var isEmailValid: Bool {
-        return viewModel.isValidEmailTextfield(emailTextfield.text)
+        emailTextFieldView.textField.text?.isValidEmail() ?? false
     }
 
     var isPasswordValid: Bool {
-        return viewModel.isValidPassword(passwordTextfield.text)
+        passwordTextFieldView.textField.text?.isValidPassword() ?? false
     }
 
-    var isConfirmPasswordValid: Bool {
-        return viewModel.isConfirmPasswordValid(passwordTextfield.text, confirmPasswordTextfield.text)
+    var isPasswordMatch: Bool {
+        passwordTextFieldView.textField.text == confirmPasswordTextFieldView.textField.text
     }
-
-    let viewModel = RegisterViewModel()
 
     // MARK: - View lifecycle
 
@@ -51,31 +42,8 @@ class RegisterViewController: UIViewController {
     // MARK: - Setup
 
     private func setup() {
-        setupBorder()
-        setUpDelegate()
-        createAccountEnabled()
-    }
-
-    private func setupBorder() {
-        firstNameTextfield.layer.borderWidth = 1.0
-        lastNameTextfield.layer.borderWidth = 1.0
-        emailTextfield.layer.borderWidth = 1.0
-        passwordTextfield.layer.borderWidth = 1.0
-        confirmPasswordTextfield.layer.borderWidth = 1.0
-
-        firstNameTextfield.layer.borderColor = UIColor.blue.cgColor
-        lastNameTextfield.layer.borderColor = UIColor.blue.cgColor
-        emailTextfield.layer.borderColor = UIColor.blue.cgColor
-        passwordTextfield.layer.borderColor = UIColor.blue.cgColor
-        confirmPasswordTextfield.layer.borderColor = UIColor.blue.cgColor
-    }
-
-    private func setUpDelegate() {
-        firstNameTextfield.delegate = self
-        lastNameTextfield.delegate = self
-        emailTextfield.delegate = self
-        passwordTextfield.delegate = self
-        confirmPasswordTextfield.delegate = self
+        configureTextFieldViews()
+        accountButtonState(.disabled)
     }
 
     // MARK: - IBActions
@@ -86,74 +54,49 @@ class RegisterViewController: UIViewController {
 
     // MARK: - Methods
 
-//    private func meetsRequiredStandard() -> Bool {
-//
-//    }
+    private func configureTextFieldViews() {
+        emailTextFieldView.configure(data: viewModel.emailData(), delegate: nil)
+        passwordTextFieldView.configure(data: viewModel.passwordData(), delegate: self)
+        confirmPasswordTextFieldView.configure(data: viewModel.confirmPasswordData(), delegate: self)
+    }
 
-    func createAccountEnabled() {
-        createAccountButton.isEnabled = isFirstNameValid && isLastNameValid && isEmailValid && isPasswordValid && isConfirmPasswordValid
+    private func accountButtonState(_ state: CreateAccountButtonState) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+             switch state {
+             case .enabled:
+                self.createAccountButton.backgroundColor = UIColor.ColourTheme.orangeButton.colour
+                self.createAccountButton.isEnabled = true
+             case .disabled:
+                self.createAccountButton.backgroundColor = UIColor.ColourTheme.disabledButton.colour
+                self.createAccountButton.isEnabled = false
+            }
+        }
+    }
+
+    private func validation() {
+        isEmailValid && isPasswordValid && isPasswordMatch
+            ? accountButtonState(.enabled)
+            : accountButtonState(.disabled)
     }
 }
 
-extension RegisterViewController: UITextFieldDelegate {
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-
-    }
-
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-
+extension RegisterViewController: GeneralTextViewDelegate {
+    func editingChange(_ textField: UITextField) {
+        isEmailValid && isPasswordValid && isPasswordMatch
+            ? accountButtonState(.enabled)
+            : accountButtonState(.disabled)
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
-        if let text = textField.text,
-            let textRange = Range(range, in: text) {
-            let updatedText = text.replacingCharacters(in: textRange, with: string)
-
-            if textField == firstNameTextfield {
-                firstNameTextfield.layer.borderColor = viewModel.isValidNameTextfield(firstNameTextfield)
-                ? UIColor.blue.cgColor
-                : UIColor.red.cgColor
-            }
-
-            if textField == lastNameTextfield {
-                lastNameTextfield.layer.borderColor = viewModel.isValidNameTextfield(lastNameTextfield)
-                ? UIColor.blue.cgColor
-                : UIColor.red.cgColor
-            }
-
-            if textField == emailTextfield {
-                emailTextfield.layer.borderColor = viewModel.isValidEmailTextfield(updatedText)
-                ? UIColor.blue.cgColor
-                : UIColor.red.cgColor
-                emailTextfield.errorPlaceholder = viewModel.isValidEmailTextfield(updatedText)
-                ? nil
-                : "Please enter a valid email."
-            }
-
-            if textField == passwordTextfield {
-                passwordTextfield.layer.borderColor = viewModel.isValidPassword(updatedText)
-                ? UIColor.blue.cgColor
-                : UIColor.red.cgColor
-
-                passwordTextfield.errorPlaceholder = viewModel.isValidPassword(updatedText)
-                ? nil
-                : "Contain at least one uppercase letter and number"
-            }
-
-            if textField == confirmPasswordTextfield {
-                confirmPasswordTextfield.layer.borderColor = viewModel.isConfirmPasswordValid(passwordTextfield.text, updatedText)
-                    ? UIColor.blue.cgColor
-                    : UIColor.red.cgColor
-
-                confirmPasswordTextfield.errorPlaceholder = viewModel.isConfirmPasswordValid(passwordTextfield.text, updatedText)
-                ? nil
-                : "Password must match"
-            }
-        }
         return true
     }
- */
-}
 
+    func textFieldDidBeginEditing(_ textField: UITextField) {}
+
+    func textFieldDidEndEditing(_ textField: UITextField) {}
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+}

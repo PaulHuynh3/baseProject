@@ -43,6 +43,18 @@ class GeneralTextView: UIView, NibOwnerLoadable {
         textField.isSecureTextEntry = mode == .password
         textField.autocorrectionType = .no
         textField.clearButtonMode = .never
+        textField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+    }
+
+    func toggleRevealPassword(_ mode: Mode) {
+        self.mode = mode
+        textField.isSecureTextEntry = mode == .password
+    }
+
+    // MARK: - Methods
+
+    @objc func editingChanged() {
+        delegate?.editingChange(textField)
     }
 
     func setPotentialError(_ message: String?) {
@@ -87,7 +99,6 @@ extension GeneralTextView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         delegate?.textFieldShouldReturn(textField) ?? true
     }
-    
 }
 
 extension GeneralTextView {
@@ -115,4 +126,5 @@ protocol GeneralTextViewDelegate: class {
     func textFieldDidBeginEditing(_ textField: UITextField)
     func textFieldDidEndEditing(_ textField: UITextField)
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    func editingChange(_ textField: UITextField)
 }
