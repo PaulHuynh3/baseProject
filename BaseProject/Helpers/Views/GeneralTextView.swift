@@ -14,6 +14,7 @@ class GeneralTextView: UIView, NibOwnerLoadable {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var textField: UITextField!
     @IBOutlet var hintLabel: UILabel!
+    @IBOutlet weak var passwordToggleButton: UIButton!
 
     private var mode = Mode.normal
     private var potentialErrorText: String? {
@@ -39,6 +40,7 @@ class GeneralTextView: UIView, NibOwnerLoadable {
         nameLabel.text = data.nameLabel
         hintLabel.text = data.hintLabel
         mode = data.mode
+        passwordToggleButton.isHidden = data.hidePasswordToggle ?? true
 
         textField.isSecureTextEntry = mode == .password
         textField.autocorrectionType = .no
@@ -46,8 +48,8 @@ class GeneralTextView: UIView, NibOwnerLoadable {
         textField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
     }
 
-    func toggleRevealPassword(_ mode: Mode) {
-        self.mode = mode
+    @IBAction func passwordToggleTapped(_ sender: Any) {
+        mode = mode == .password ? .normal : .password
         textField.isSecureTextEntry = mode == .password
     }
 
@@ -107,15 +109,18 @@ extension GeneralTextView {
         var nameLabel: String?
         var hintLabel: String?
         var mode: Mode
+        var hidePasswordToggle: Bool?
 
         init(keyboardType: UIKeyboardType,
              nameLabel: String?,
              hintLabel: String?,
-             mode: Mode) {
+             mode: Mode,
+             hidePasswordToggle: Bool = true) {
             self.keyboardType = keyboardType
             self.nameLabel = nameLabel
             self.hintLabel = hintLabel
             self.mode = mode
+            self.hidePasswordToggle = hidePasswordToggle
         }
     }
 }

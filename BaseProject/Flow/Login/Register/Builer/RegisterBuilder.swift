@@ -23,7 +23,8 @@ class RegisterBuilder {
             keyboardType: .default,
             nameLabel: "Password",
             hintLabel: "At least 8 characters with a number and a special character",
-            mode: .password)
+            mode: .password,
+            hidePasswordToggle: false)
     }
 
     func buildConfirmPasswordData() -> GeneralTextView.Data {
@@ -31,7 +32,8 @@ class RegisterBuilder {
             keyboardType: .emailAddress,
             nameLabel: "Confirm Password",
             hintLabel: nil,
-            mode: .password)
+            mode: .password,
+            hidePasswordToggle: false)
     }
     
 }

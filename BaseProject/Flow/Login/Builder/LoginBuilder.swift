@@ -23,7 +23,8 @@ class LoginBuilder {
             keyboardType: .emailAddress,
             nameLabel: "Password",
             hintLabel: nil,
-            mode: .password)
+            mode: .password,
+            hidePasswordToggle: false)
     }
 
     func buildCredentialError() -> AlertManager.Data {
@@ -32,5 +33,4 @@ class LoginBuilder {
             message: "Credentials entered is invalid",
             actions: nil)
     }
-
 }

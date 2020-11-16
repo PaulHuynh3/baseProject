@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="hintLabel" destination="bbG-0z-uko" id="ciw-w6-4gT"/>
                 <outlet property="nameLabel" destination="5c1-HB-b2N" id="63V-up-0lH"/>
+                <outlet property="passwordToggleButton" destination="7Zw-jp-aef" id="gzu-fy-GXY"/>
                 <outlet property="textField" destination="Yjc-eN-K6q" id="3KE-11-lgo"/>
             </connections>
         </placeholder>
@@ -30,17 +31,27 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XcU-cL-cp2">
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcU-cL-cp2">
                             <rect key="frame" x="10" y="27.5" width="470" height="40"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yjc-eN-K6q">
-                                    <rect key="frame" x="0.0" y="0.0" width="470" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="435" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="VlH-5y-k4c"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zw-jp-aef">
+                                    <rect key="frame" x="435" y="0.0" width="35" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="35" id="67I-N9-YFB"/>
+                                    </constraints>
+                                    <state key="normal" image="devil"/>
+                                    <connections>
+                                        <action selector="passwordToggleTapped:" destination="-1" eventType="touchUpInside" id="3oG-1O-tNu"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
@@ -68,4 +79,7 @@
             <point key="canvasLocation" x="-142.40000000000001" y="95.352323838080963"/>
         </view>
     </objects>
+    <resources>
+        <image name="devil" width="40" height="40"/>
+    </resources>
 </document>
