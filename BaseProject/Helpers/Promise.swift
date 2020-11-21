@@ -64,7 +64,7 @@ extension Promise {
     }
 
     @discardableResult
-    func then<T>(_ mapping: @escaping (Value) -> T) -> Promise<T> {
+    func thenMapValue<T>(_ mapping: @escaping (Value) -> T) -> Promise<T> {
         let promise = Promise<T>()
         observe { result in
             switch result {
@@ -78,7 +78,7 @@ extension Promise {
     }
 
     @discardableResult
-    func then<T>(_ callback: @escaping () -> Promise<T>) -> Promise<T> {
+    func thenAppendPromise<T>(_ callback: @escaping () -> Promise<T>) -> Promise<T> {
         let promise = Promise<T>()
         observe { result in
             switch result {
@@ -99,7 +99,7 @@ extension Promise {
     }
 
     @discardableResult
-    func then<T>(_ callback: @escaping (Value) -> Promise<T>) -> Promise<T> {
+    func thenAppendPromiseWithValue<T>(_ callback: @escaping (Value) -> Promise<T>) -> Promise<T> {
         let promise = Promise<T>()
         observe { result in
             switch result {
