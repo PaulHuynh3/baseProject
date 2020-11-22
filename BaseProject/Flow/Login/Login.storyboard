@@ -11,7 +11,7 @@
         <!--Login Methods View Controller-->
         <scene sceneID="ms0-QL-3wm">
             <objects>
-                <viewController id="4OK-Z3-7PQ" customClass="LoginMethodsViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginMethodsViewController" id="4OK-Z3-7PQ" customClass="LoginMethodsViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QFw-si-32c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

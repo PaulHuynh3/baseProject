@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        setRootViewController()
         return true
     }
 
@@ -58,6 +58,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    private func setRootViewController() {
+        let isLoggedIn = false
 
+        if isLoggedIn {
+            if let rootViewController = UIStoryboard(name: StoryboardNavigation.Main.rawValue, bundle: nil).instantiateViewController(withIdentifier: String(describing: RootViewController.self)) as? RootViewController {
+                window?.rootViewController = rootViewController
+            }
+        } else {
+            if let loginMethodsViewController = UIStoryboard(name: StoryboardNavigation.Login.rawValue, bundle: nil).instantiateViewController(withIdentifier: String(describing: LoginMethodsViewController.self)) as? LoginMethodsViewController {
+                let navigationController = UINavigationController(rootViewController: loginMethodsViewController)
+                window?.rootViewController = navigationController
+            }
+        }
+    }
 }
 

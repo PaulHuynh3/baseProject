@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB02435B2521416100EF93B9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB02435A2521416100EF93B9 /* Home.storyboard */; };
+		EB02435B2521416100EF93B9 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB02435A2521416100EF93B9 /* HomeViewController.storyboard */; };
 		EB22E0EA2569C71900453D85 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0E92569C71900453D85 /* ForgotPasswordViewModel.swift */; };
 		EB22E0ED2569C77000453D85 /* ForgotPasswordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0EC2569C77000453D85 /* ForgotPasswordBuilder.swift */; };
 		EB22E0EF2569D14600453D85 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0EE2569D14600453D85 /* Enums.swift */; };
@@ -68,7 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EB02435A2521416100EF93B9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		EB02435A2521416100EF93B9 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		EB22E0E92569C71900453D85 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		EB22E0EC2569C77000453D85 /* ForgotPasswordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordBuilder.swift; sourceTree = "<group>"; };
 		EB22E0EE2569D14600453D85 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -364,7 +364,7 @@
 			children = (
 				EB6E552B250C8C5B00816820 /* PassiveLoadingViewController.swift */,
 				EBAE645E25281481000F654C /* HomeViewController.swift */,
-				EB02435A2521416100EF93B9 /* Home.storyboard */,
+				EB02435A2521416100EF93B9 /* HomeViewController.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -506,7 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBA3942D251191990019B273 /* BottomStatusHelperView.xib in Resources */,
-				EB02435B2521416100EF93B9 /* Home.storyboard in Resources */,
+				EB02435B2521416100EF93B9 /* HomeViewController.storyboard in Resources */,
 				EBBB67CA2515A6EE00031C30 /* BurgerMenuCell.xib in Resources */,
 				EBBB67C32515A4FD00031C30 /* BurgerMenu.storyboard in Resources */,
 				EBEAF3CE250C250900AA3AAF /* Assets.xcassets in Resources */,

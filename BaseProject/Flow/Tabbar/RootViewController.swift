@@ -12,11 +12,9 @@ class RootViewController: UIViewController {
 
     @IBOutlet weak var passiveLoadingView: UIView!
     @IBOutlet weak var baseView: UIView!
-    var isLoggedIn = false
 
 
     var passiveLoadingViewController: PassiveLoadingViewController?
-    var loginMethodsViewController: LoginMethodsViewController?
     var baseViewController: TabBarViewController?
 
     override func viewDidLoad() {
@@ -27,10 +25,6 @@ class RootViewController: UIViewController {
         if let destination = segue.destination as? PassiveLoadingViewController {
             passiveLoadingViewController = destination
             passiveLoadingViewController?.configure(delegate: self)
-        }
-
-        if let destination = segue.destination as? LoginMethodsViewController {
-            loginMethodsViewController = destination
         }
 
         if let destination = segue.destination as? TabBarViewController {

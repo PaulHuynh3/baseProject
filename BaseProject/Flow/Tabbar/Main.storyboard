@@ -11,7 +11,7 @@
         <!--Root View Controller-->
         <scene sceneID="yrv-Sm-Nlk">
             <objects>
-                <viewController id="ake-FX-Qqj" customClass="RootViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RootViewController" id="ake-FX-Qqj" customClass="RootViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3U3-uE-Zyb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9B-28-dRR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <connections>
-                                    <segue destination="PYS-aV-Xq6" kind="embed" id="DIx-nB-lDH"/>
+                                    <segue destination="4uz-VT-VSs" kind="embed" id="Hi5-nL-8b1"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMF-el-EJ4">
@@ -51,14 +51,6 @@
             </objects>
             <point key="canvasLocation" x="134.78260869565219" y="91.741071428571431"/>
         </scene>
-        <!--Login-->
-        <scene sceneID="Lri-Wu-tIV">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Login" id="PYS-aV-Xq6" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4L0-zW-ofi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="798" y="-74"/>
-        </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="ntx-Eo-HRM">
             <objects>
@@ -75,7 +67,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nla-1y-ebJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="514"/>
+            <point key="canvasLocation" x="917" y="516"/>
         </scene>
         <!--Home-->
         <scene sceneID="yye-2F-kxW">
@@ -110,22 +102,22 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeg-Mk-jMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1345" y="1233"/>
+            <point key="canvasLocation" x="1480" y="1233"/>
         </scene>
-        <!--Home-->
+        <!--HomeViewController-->
         <scene sceneID="Yj3-Xw-yXQ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="Tjs-x9-7yz" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="HomeViewController" id="Tjs-x9-7yz" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="FyE-uu-V4r"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ceh-te-J0N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="230" y="1651"/>
         </scene>
-        <!--Account-->
+        <!--AccountViewController-->
         <scene sceneID="VS4-ES-tcw">
             <objects>
-                <viewControllerPlaceholder storyboardName="Account" id="Gv5-jJ-nPG" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="AccountViewController" id="Gv5-jJ-nPG" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="5mB-F8-goC"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4G-d1-cNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
