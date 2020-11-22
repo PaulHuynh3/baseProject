@@ -59,21 +59,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="grB-rG-ypz" kind="relationship" relationship="viewControllers" id="qJ9-UI-VEx"/>
                         <segue destination="Zmk-wU-FcP" kind="relationship" relationship="viewControllers" id="twJ-g6-RQv"/>
+                        <segue destination="Ats-Hl-PRs" kind="relationship" relationship="viewControllers" id="0gk-WH-mUA"/>
+                        <segue destination="Cuv-Ev-bLg" kind="relationship" relationship="viewControllers" id="bOb-Jr-k86"/>
+                        <segue destination="1iH-Is-IhO" kind="relationship" relationship="viewControllers" id="tYs-No-N64"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nla-1y-ebJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917" y="516"/>
+            <point key="canvasLocation" x="1758" y="510"/>
         </scene>
-        <!--Home-->
+        <!--Navigation Controller-->
         <scene sceneID="yye-2F-kxW">
             <objects>
                 <navigationController id="grB-rG-ypz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="calendar.circle" catalog="system" id="1MX-SW-zMl"/>
+                    <tabBarItem key="tabBarItem" title="" image="home-icon" id="1MX-SW-zMl"/>
                     <navigationItem key="navigationItem" id="UtC-X2-HTb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dph-B9-BVE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -87,11 +91,11 @@
             </objects>
             <point key="canvasLocation" x="229" y="1233"/>
         </scene>
-        <!--Account-->
+        <!--Navigation Controller-->
         <scene sceneID="YYP-21-hIH">
             <objects>
                 <navigationController id="Zmk-wU-FcP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Account" image="pencil" catalog="system" id="JVM-5h-g1g"/>
+                    <tabBarItem key="tabBarItem" title="" image="search-icon" id="JVM-5h-g1g"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mhi-lC-tbS">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -102,7 +106,55 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeg-Mk-jMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480" y="1233"/>
+            <point key="canvasLocation" x="916" y="1233"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nSV-3c-saA">
+            <objects>
+                <viewController id="Ats-Hl-PRs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E98-Zn-WQH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="7eP-6F-KHN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="auction-icon" id="xpc-Oe-Qna"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SPc-5x-SSQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1603" y="1233"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hg9-Zd-gJ0">
+            <objects>
+                <viewController id="Cuv-Ev-bLg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1t5-NF-xs5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="UXH-PI-ZV9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="shop-icon" id="33J-nT-byQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rlt-4b-xde" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2307" y="1233"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Awb-Jd-hrT">
+            <objects>
+                <viewController id="1iH-Is-IhO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j8u-fD-kGM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="52V-tO-gOZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="account-icon" id="5Zk-mR-Zox"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBi-w5-3Cz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2999" y="1233"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="Yj3-Xw-yXQ">
@@ -122,7 +174,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4G-d1-cNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1346" y="1665"/>
+            <point key="canvasLocation" x="916" y="1651"/>
         </scene>
         <!--Passive Loading View Controller-->
         <scene sceneID="5N8-r2-R9T">
@@ -163,7 +215,10 @@
     </scenes>
     <resources>
         <image name="StepForward" width="50" height="50"/>
-        <image name="calendar.circle" catalog="system" width="64" height="60"/>
-        <image name="pencil" catalog="system" width="64" height="56"/>
+        <image name="account-icon" width="30" height="30"/>
+        <image name="auction-icon" width="30" height="30"/>
+        <image name="home-icon" width="30" height="30"/>
+        <image name="search-icon" width="30" height="30"/>
+        <image name="shop-icon" width="30" height="30"/>
     </resources>
 </document>

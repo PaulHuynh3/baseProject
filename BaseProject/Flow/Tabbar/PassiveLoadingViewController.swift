@@ -33,7 +33,7 @@ class PassiveLoadingViewController: UIViewController {
     }
 
     func removeContainer() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {  // + .seconds(2)
+        DispatchQueue.main.asyncAfter(deadline: .now()) {  // + .seconds(2)
             self.delegate?.removeContainerViewController()
         }
     }

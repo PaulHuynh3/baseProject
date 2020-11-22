@@ -83,7 +83,7 @@
 		EB6E2B0B253395A3009EBBD7 /* PhotoInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInformationCell.swift; sourceTree = "<group>"; };
 		EB6E2B0C253395A3009EBBD7 /* PhotoInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoInformationCell.xib; sourceTree = "<group>"; };
 		EB6E5527250C888700816820 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		EB6E552B250C8C5B00816820 /* PassiveLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PassiveLoadingViewController.swift; path = ../Onboarding/PassiveLoadingViewController.swift; sourceTree = "<group>"; };
+		EB6E552B250C8C5B00816820 /* PassiveLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassiveLoadingViewController.swift; sourceTree = "<group>"; };
 		EB6E5534250C90E800816820 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB7B0880252987310050EE9F /* DriverInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoViewModel.swift; sourceTree = "<group>"; };
 		EB7B088625298B690050EE9F /* DriverInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoBuilder.swift; sourceTree = "<group>"; };
@@ -222,6 +222,7 @@
 		EB6E552A250C8B9000816820 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				EB6E552B250C8C5B00816820 /* PassiveLoadingViewController.swift */,
 				EB6E5527250C888700816820 /* RootViewController.swift */,
 				EB9890B8250C9C5200E35BEF /* TabBarViewController.swift */,
 				EB9890B6250C9A8B00E35BEF /* Main.storyboard */,
@@ -362,7 +363,6 @@
 		EBAE645D25281444000F654C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				EB6E552B250C8C5B00816820 /* PassiveLoadingViewController.swift */,
 				EBAE645E25281481000F654C /* HomeViewController.swift */,
 				EB02435A2521416100EF93B9 /* HomeViewController.storyboard */,
 			);
