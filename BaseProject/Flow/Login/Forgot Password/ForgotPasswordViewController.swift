@@ -10,27 +10,40 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
 
-    @IBOutlet weak var emailTextfield: UITextField!
+    // MARK: - Properties
+    let viewModel = ForgotPasswordViewModel()
+    @IBOutlet weak var forgotPasswordDataView: GeneralTextView!
+    @IBOutlet weak var resetPasswordButton: UIButton!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.configure(delegate: self)
+        setup()
+    }
 
-        // Do any additional setup after loading the view.
+    func setup() {
+        forgotPasswordButtonState(.disabled)
+        forgotPasswordDataView.configure(data: viewModel.forgotPasswordViewData(), delegate: viewModel)
     }
 
     @IBAction func resetPasswordTapped(_ sender: Any) {
-        guard emailTextfield.text?.isValidEmail() == true else {
-            emailTextfield.checkInput(type: .email)
-            return AlertManager.show(in: self, with: buildInvalidEmailData())
-        }
         navigationController?.popToRootViewController(animated: true)
     }
+}
 
-    private func buildInvalidEmailData() -> AlertManager.Data {
-        return AlertManager.Data(
-            title: "Invalid Email",
-            message: "Please enter a valid email",
-            actions: nil
-        )
+extension ForgotPasswordViewController: ForgotPasswordViewModelDelegate {
+    func forgotPasswordButtonState(_ state: ButtonState) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+             switch state {
+             case .enabled:
+                self.resetPasswordButton.backgroundColor = UIColor.ColourTheme.orangeButton.colour
+                self.resetPasswordButton.isEnabled = true
+             case .disabled:
+                self.resetPasswordButton.backgroundColor = UIColor.ColourTheme.disabledButton.colour
+                self.resetPasswordButton.isEnabled = false
+            }
+        }
     }
 }

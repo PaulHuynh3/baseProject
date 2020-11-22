@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EB02435B2521416100EF93B9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB02435A2521416100EF93B9 /* Home.storyboard */; };
+		EB22E0EA2569C71900453D85 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0E92569C71900453D85 /* ForgotPasswordViewModel.swift */; };
+		EB22E0ED2569C77000453D85 /* ForgotPasswordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0EC2569C77000453D85 /* ForgotPasswordBuilder.swift */; };
+		EB22E0EF2569D14600453D85 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0EE2569D14600453D85 /* Enums.swift */; };
 		EB3133662524DCF3008FF586 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3133652524DCF3008FF586 /* RegisterViewModel.swift */; };
 		EB313368252510AD008FF586 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB313367252510AD008FF586 /* AlertManager.swift */; };
 		EB31336D25252AAF008FF586 /* RegisterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31336C25252AAF008FF586 /* RegisterBuilder.swift */; };
@@ -62,11 +65,13 @@
 		EBF7990F25225DC3000B325C /* LoginMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7990E25225DC3000B325C /* LoginMethodsViewController.swift */; };
 		EBF7991125225E36000B325C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7991025225E36000B325C /* RegisterViewController.swift */; };
 		EBF799132522BD45000B325C /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF799122522BD45000B325C /* ForgotPasswordViewController.swift */; };
-		EBF799152522BD55000B325C /* PasswordSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF799142522BD55000B325C /* PasswordSentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB02435A2521416100EF93B9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		EB22E0E92569C71900453D85 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		EB22E0EC2569C77000453D85 /* ForgotPasswordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordBuilder.swift; sourceTree = "<group>"; };
+		EB22E0EE2569D14600453D85 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		EB3133652524DCF3008FF586 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		EB313367252510AD008FF586 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		EB31336C25252AAF008FF586 /* RegisterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBuilder.swift; sourceTree = "<group>"; };
@@ -123,7 +128,6 @@
 		EBF7990E25225DC3000B325C /* LoginMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMethodsViewController.swift; sourceTree = "<group>"; };
 		EBF7991025225E36000B325C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EBF799122522BD45000B325C /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		EBF799142522BD55000B325C /* PasswordSentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB22E0EB2569C75E00453D85 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				EB22E0EC2569C77000453D85 /* ForgotPasswordBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		EB313369252529EA008FF586 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				EBF799122522BD45000B325C /* ForgotPasswordViewController.swift */,
-				EBF799142522BD55000B325C /* PasswordSentViewController.swift */,
+				EB22E0E92569C71900453D85 /* ForgotPasswordViewModel.swift */,
+				EB22E0EB2569C75E00453D85 /* Builder */,
 			);
 			path = "Forgot Password";
 			sourceTree = "<group>";
@@ -329,6 +342,7 @@
 				EB639A732517F3DB00D4903B /* Extensions.swift */,
 				EB313367252510AD008FF586 /* AlertManager.swift */,
 				EB56A6C02556422F00A57448 /* Promise.swift */,
+				EB22E0EE2569D14600453D85 /* Enums.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -521,6 +535,7 @@
 				EB8B25AA255DBC4100453506 /* GeneralTextView.swift in Sources */,
 				EBC7FC872516973600102B57 /* BurgerMenuBuilder.swift in Sources */,
 				EBF7991125225E36000B325C /* RegisterViewController.swift in Sources */,
+				EB22E0EF2569D14600453D85 /* Enums.swift in Sources */,
 				EBB677ED2534E4CE00074550 /* PhotoInformationBuilder.swift in Sources */,
 				EB56A6C12556422F00A57448 /* Promise.swift in Sources */,
 				EBC7FC85251691E200102B57 /* BurgerMenuViewModel.swift in Sources */,
@@ -539,6 +554,7 @@
 				EBE7DECD25314D270055309C /* CameraViewController.swift in Sources */,
 				EBBB67C92515A6EE00031C30 /* BurgerMenuCell.swift in Sources */,
 				EB87F48C255F742C0052B51D /* LoginBuilder.swift in Sources */,
+				EB22E0ED2569C77000453D85 /* ForgotPasswordBuilder.swift in Sources */,
 				EB9890B9250C9C5200E35BEF /* TabBarViewController.swift in Sources */,
 				EB87F489255E39110052B51D /* NibOwnerLoadable.swift in Sources */,
 				EB7B0881252987310050EE9F /* DriverInfoViewModel.swift in Sources */,
@@ -554,9 +570,9 @@
 				EBAE646925282F07000F654C /* BurgerMenuModalInteractor.swift in Sources */,
 				EB639A762517F67800D4903B /* DriverInfoViewController.swift in Sources */,
 				EB56A6C32557573B00A57448 /* AccountViewController.swift in Sources */,
+				EB22E0EA2569C71900453D85 /* ForgotPasswordViewModel.swift in Sources */,
 				EB31336D25252AAF008FF586 /* RegisterBuilder.swift in Sources */,
 				EB9002E1250ED61C00F8B015 /* PhotoInformationViewController.swift in Sources */,
-				EBF799152522BD55000B325C /* PasswordSentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,16 +13,16 @@ class RegisterBuilder {
     func buildEmailData() -> GeneralTextView.Data {
         return GeneralTextView.Data(
             keyboardType: .emailAddress,
-            nameLabel: "Email",
-            hintLabel: nil,
+            title: "Email",
+            hint: nil,
             mode: .normal)
     }
 
     func buildPasswordData() -> GeneralTextView.Data {
         return GeneralTextView.Data(
             keyboardType: .default,
-            nameLabel: "Password",
-            hintLabel: "At least 8 characters with a number and a special character",
+            title: "Password",
+            hint: "At least 8 characters with a number and a special character",
             mode: .password,
             rightIconImage: #imageLiteral(resourceName: "show-password-icon"),
             rightButtonType: .password)
@@ -31,8 +31,8 @@ class RegisterBuilder {
     func buildConfirmPasswordData() -> GeneralTextView.Data {
         return GeneralTextView.Data(
             keyboardType: .emailAddress,
-            nameLabel: "Confirm Password",
-            hintLabel: nil,
+            title: "Confirm Password",
+            hint: nil,
             mode: .password,
             rightIconImage: #imageLiteral(resourceName: "show-password-icon"),
             rightButtonType: .password)

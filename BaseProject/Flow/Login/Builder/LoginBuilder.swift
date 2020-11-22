@@ -13,8 +13,8 @@ class LoginBuilder {
     func buildEmailData() -> GeneralTextView.Data {
         return GeneralTextView.Data(
             keyboardType: .emailAddress,
-            nameLabel: "Email",
-            hintLabel: nil,
+            title: "Email",
+            hint: nil,
             mode: .normal,
             leftIconImage: #imageLiteral(resourceName: "user-icon"))
     }
@@ -22,8 +22,8 @@ class LoginBuilder {
     func buildPasswordData() -> GeneralTextView.Data {
         return GeneralTextView.Data(
             keyboardType: .emailAddress,
-            nameLabel: "Password",
-            hintLabel: nil,
+            title: "Password",
+            hint: nil,
             mode: .password,
             leftIconImage: #imageLiteral(resourceName: "lock-icon"),
             rightIconImage: #imageLiteral(resourceName: "show-password-icon"))

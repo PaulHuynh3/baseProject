@@ -54,14 +54,9 @@ extension RegisterViewModel: GeneralTextViewDelegate {
     }
 }
 
-enum CreateAccountButtonState {
-    case enabled
-    case disabled
-}
-
 protocol RegisterViewModelDelegate: class {
     func showAlert(data: AlertManager.Data)
-    func accountButtonState(_ state: CreateAccountButtonState)
+    func accountButtonState(_ state: ButtonState)
     func isValidInputs() -> Bool
     var isEmailValid: Bool { get }
     var isPasswordValid: Bool { get }

@@ -64,7 +64,7 @@ class RegisterViewController: UIViewController, RegisterViewModelDelegate {
         return isEmailValid && isPasswordValid && isPasswordMatch
     }
 
-    func accountButtonState(_ state: CreateAccountButtonState) {
+    func accountButtonState(_ state: ButtonState) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
              switch state {

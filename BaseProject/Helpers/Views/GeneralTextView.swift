@@ -11,7 +11,7 @@ import UIKit
 class GeneralTextView: UIView, NibOwnerLoadable {
     // MARK: - IBOulets
 
-    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
     @IBOutlet var textField: UITextField!
     @IBOutlet var hintLabel: UILabel!
 
@@ -36,8 +36,8 @@ class GeneralTextView: UIView, NibOwnerLoadable {
     func configure(data: Data, delegate: GeneralTextViewDelegate?) {
         self.delegate = delegate
         textField.keyboardType = data.keyboardType
-        nameLabel.text = data.nameLabel
-        hintLabel.text = data.hintLabel
+        titleLabel.text = data.title
+        hintLabel.text = data.hint
         mode = data.mode
 
         textField.isSecureTextEntry = mode == .password
@@ -124,23 +124,23 @@ extension GeneralTextView: UITextFieldDelegate {
 extension GeneralTextView {
     struct Data {
         var keyboardType: UIKeyboardType
-        var nameLabel: String?
-        var hintLabel: String?
+        var title: String?
+        var hint: String?
         var mode: Mode
         var leftIconImage: UIImage?
         var rightIconImage: UIImage?
         var rightButtonType: RightButtonType?
 
         init(keyboardType: UIKeyboardType,
-             nameLabel: String?,
-             hintLabel: String?,
+             title: String?,
+             hint: String?,
              mode: Mode,
              leftIconImage: UIImage? = nil,
              rightIconImage: UIImage? = nil,
              rightButtonType: RightButtonType? = nil) {
             self.keyboardType = keyboardType
-            self.nameLabel = nameLabel
-            self.hintLabel = hintLabel
+            self.title = title
+            self.hint = hint
             self.mode = mode
             self.leftIconImage = leftIconImage
             self.rightIconImage = rightIconImage
