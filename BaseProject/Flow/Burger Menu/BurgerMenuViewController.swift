@@ -56,12 +56,15 @@ extension BurgerMenuViewController: TableView {
 
 extension BurgerMenuViewController: BurgerMenuViewModelDelegate {
     func openCampaign() {
-        guard let passiveLoadingViewController = UIStoryboard(name: StoryboardNavigation.Main.rawValue, bundle: nil).instantiateViewController(withIdentifier:  String(describing: PassiveLoadingViewController.self)) as? PassiveLoadingViewController else { return }
-        present(passiveLoadingViewController, animated: true, completion: nil)
+//        guard let passiveLoadingViewController = UIStoryboard(name: StoryboardNavigation.Main.rawValue, bundle: nil).instantiateViewController(withIdentifier:  String(describing: PassiveLoadingViewController.self)) as? PassiveLoadingViewController else { return }
+//        let navigationController = UINavigationController(rootViewController: passiveLoadingViewController)
+//        present(navigationController, animated: true, completion: nil)
     }
 
     func openDriveWithAyno() {
         guard let driverInfoViewController = UIStoryboard(name: StoryboardNavigation.DriverInfo.rawValue, bundle: nil).instantiateViewController(withIdentifier: String(describing: DriverInfoViewController.self)) as? DriverInfoViewController else { return }
+        driverInfoViewController.configure(callback: createDismissCallback())
+
         let navigationController = UINavigationController(rootViewController: driverInfoViewController)
 
         present(navigationController, animated: true, completion: nil)
@@ -69,6 +72,12 @@ extension BurgerMenuViewController: BurgerMenuViewModelDelegate {
 
     func openHelp() {
 
+    }
+
+    private func createDismissCallback() -> () -> Void {
+        return {
+            self.dismiss(animated: false, completion: nil)
+        }
     }
 }
 

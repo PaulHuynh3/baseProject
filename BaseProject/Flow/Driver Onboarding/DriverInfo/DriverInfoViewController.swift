@@ -14,6 +14,7 @@ class DriverInfoViewController: UIViewController {
     // MARK: - Properties
 
     let viewModel = DriverInfoViewModel()
+    private var dismissCallback: (() -> Void)?
 
     override func viewDidLoad() {
         setup()
@@ -24,6 +25,16 @@ class DriverInfoViewController: UIViewController {
     private func setup() {
         viewModel.configure(delegate: self)
         registerNibForTableView(cellType: String(describing: DriverRequirementCell.self), tableView: tableView)
+    }
+
+    func configure(callback: @escaping (() -> Void)) {
+        dismissCallback = callback
+    }
+
+    @IBAction func doneTapped(_ sender: Any) {
+        dismiss(animated: true, completion: {
+            self.dismissCallback?()
+        })
     }
 }
 
@@ -79,8 +90,4 @@ extension DriverInfoViewController: DriverInfoViewModelDelegate {
     func openVehicleInformation() {
 
     }
-
-
 }
-
-

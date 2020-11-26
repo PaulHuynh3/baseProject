@@ -11,7 +11,7 @@
         <!--Camera View Controller-->
         <scene sceneID="ss4-f5-VUe">
             <objects>
-                <viewController storyboardIdentifier="CameraViewController" id="C8V-cY-EEh" customClass="CameraViewController" customModule="Ayno" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraViewController" id="C8V-cY-EEh" customClass="CameraViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tfk-KB-FTK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,7 +78,7 @@
         <!--Driver Info View Controller-->
         <scene sceneID="4r6-QF-WVO">
             <objects>
-                <viewController storyboardIdentifier="DriverInfoViewController" id="kfU-It-Vn1" customClass="DriverInfoViewController" customModule="Ayno" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DriverInfoViewController" id="kfU-It-Vn1" customClass="DriverInfoViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mL1-Zn-j1D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9L0-t1-IIb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wFe-ix-cHl"/>
+                    <navigationItem key="navigationItem" id="wFe-ix-cHl">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Zaf-ek-QGf">
+                            <connections>
+                                <action selector="doneTapped:" destination="kfU-It-Vn1" id="cbl-I7-PUa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="EYM-fA-GCg" id="zBo-0P-hYn"/>
                     </connections>
@@ -147,7 +153,7 @@
         <!--Photo Information View Controller-->
         <scene sceneID="jd1-wN-WuZ">
             <objects>
-                <viewController storyboardIdentifier="PhotoInformationViewController" id="uNq-FA-MQO" customClass="PhotoInformationViewController" customModule="Ayno" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoInformationViewController" id="uNq-FA-MQO" customClass="PhotoInformationViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dQj-2i-kgq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,7 +167,7 @@
                                     <outlet property="delegate" destination="uNq-FA-MQO" id="ZJM-ce-CBc"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLl-Vs-wnS" customClass="BottomStatusHelperView" customModule="Ayno" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLl-Vs-wnS" customClass="BottomStatusHelperView" customModule="BaseProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="802" width="414" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
