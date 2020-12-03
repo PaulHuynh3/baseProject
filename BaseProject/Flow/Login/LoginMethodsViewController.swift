@@ -20,7 +20,7 @@ class LoginMethodsViewController: UIViewController {
     }
 
     @IBAction func connectFacebookTapped(_ sender: Any) {
-        guard let tabBarViewController = UIStoryboard(name: StoryboardNavigation.Main.rawValue, bundle: nil).instantiateViewController(withIdentifier: String(describing: RootViewController.self)) as? RootViewController else { return }
+        guard let tabBarViewController = UIStoryboard(name: StoryboardNavigation.Root.rawValue, bundle: nil).instantiateViewController(withIdentifier: String(describing: RootViewController.self)) as? RootViewController else { return }
 
         UIApplication.shared.delegate?.window??.rootViewController = tabBarViewController
     }

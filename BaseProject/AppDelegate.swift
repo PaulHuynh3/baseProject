@@ -62,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let isLoggedIn = true
 
         if isLoggedIn {
-            if let rootViewController = UIStoryboard(name: StoryboardNavigation.Main.rawValue, bundle: nil).instantiateViewController(withIdentifier: String(describing: RootViewController.self)) as? RootViewController {
+            if let rootViewController = UIStoryboard(name: StoryboardNavigation.Root.rawValue, bundle: nil).instantiateViewController(withIdentifier: String(describing: RootViewController.self)) as? RootViewController {
                 window?.rootViewController = rootViewController
             }
         } else {

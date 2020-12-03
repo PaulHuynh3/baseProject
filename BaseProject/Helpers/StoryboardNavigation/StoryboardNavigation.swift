@@ -14,7 +14,7 @@ enum StoryboardNavigation: String {
     case DriverInfo = "DriverInfo"
     case Home = "Home"
     case Login = "Login"
-    case Main = "Main"
+    case Root = "Root"
 }
 
 

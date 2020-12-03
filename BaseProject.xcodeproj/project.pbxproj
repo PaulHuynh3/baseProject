@@ -34,7 +34,7 @@
 		EB8B25AA255DBC4100453506 /* GeneralTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B25A9255DBC4100453506 /* GeneralTextView.swift */; };
 		EB9002E1250ED61C00F8B015 /* PhotoInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9002E0250ED61C00F8B015 /* PhotoInformationViewController.swift */; };
 		EB918DFA25297ABB00EC0254 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB918DF925297ABB00EC0254 /* TableView.swift */; };
-		EB9890B7250C9A8B00E35BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890B6250C9A8B00E35BEF /* Main.storyboard */; };
+		EB9890B7250C9A8B00E35BEF /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890B6250C9A8B00E35BEF /* Root.storyboard */; };
 		EB9890B9250C9C5200E35BEF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9890B8250C9C5200E35BEF /* TabBarViewController.swift */; };
 		EB9890BD250DC15000E35BEF /* AccountViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890BC250DC15000E35BEF /* AccountViewController.storyboard */; };
 		EB9890BF250DC15B00E35BEF /* DriverInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890BE250DC15B00E35BEF /* DriverInfo.storyboard */; };
@@ -95,7 +95,7 @@
 		EB8B25A9255DBC4100453506 /* GeneralTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTextView.swift; sourceTree = "<group>"; };
 		EB9002E0250ED61C00F8B015 /* PhotoInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInformationViewController.swift; sourceTree = "<group>"; };
 		EB918DF925297ABB00EC0254 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
-		EB9890B6250C9A8B00E35BEF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EB9890B6250C9A8B00E35BEF /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		EB9890B8250C9C5200E35BEF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EB9890BC250DC15000E35BEF /* AccountViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountViewController.storyboard; sourceTree = "<group>"; };
 		EB9890BE250DC15B00E35BEF /* DriverInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DriverInfo.storyboard; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 				EB6E552B250C8C5B00816820 /* PassiveLoadingViewController.swift */,
 				EB6E5527250C888700816820 /* RootViewController.swift */,
 				EB9890B8250C9C5200E35BEF /* TabBarViewController.swift */,
-				EB9890B6250C9A8B00E35BEF /* Main.storyboard */,
+				EB9890B6250C9A8B00E35BEF /* Root.storyboard */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -516,7 +516,7 @@
 				EB9890BD250DC15000E35BEF /* AccountViewController.storyboard in Resources */,
 				EB9890BF250DC15B00E35BEF /* DriverInfo.storyboard in Resources */,
 				EB6E5535250C90E800816820 /* LaunchScreen.storyboard in Resources */,
-				EB9890B7250C9A8B00E35BEF /* Main.storyboard in Resources */,
+				EB9890B7250C9A8B00E35BEF /* Root.storyboard in Resources */,
 				EB7B088B25298BDD0050EE9F /* DriverRequirementCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
