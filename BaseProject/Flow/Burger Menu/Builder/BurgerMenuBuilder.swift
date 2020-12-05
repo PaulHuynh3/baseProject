@@ -16,7 +16,7 @@ class BurgerMenuBuilder {
 
     func buildDriveData() -> BurgerMenuCell.Data {
         return BurgerMenuCell.Data(
-            menuName: "Drive With Paul Huynh"
+            menuName: "Drive With Us"
         )
     }
 

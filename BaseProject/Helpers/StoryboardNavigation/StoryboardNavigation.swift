@@ -9,12 +9,12 @@
 import Foundation
 
 enum StoryboardNavigation: String {
-    case Account = "Account"
-    case BurgerMenu = "BurgerMenu"
-    case DriverInfo = "DriverInfo"
-    case Home = "Home"
-    case Login = "Login"
-    case Root = "Root"
+    case Account = "AccountViewController"
+    case BurgerMenu = "BurgerMenuViewController"
+    case DriverInfo = "DriverInfoViewController"
+    case Home = "HomeViewController"
+    case Login = "LoginViewController"
+    case Root = "RootViewController"
 }
 
 

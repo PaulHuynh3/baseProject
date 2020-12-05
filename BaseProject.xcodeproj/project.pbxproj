@@ -32,16 +32,22 @@
 		EB87F48C255F742C0052B51D /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB87F48B255F742C0052B51D /* LoginBuilder.swift */; };
 		EB8B25A8255D9F1C00453506 /* GeneralTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB8B25A7255D9F1C00453506 /* GeneralTextView.xib */; };
 		EB8B25AA255DBC4100453506 /* GeneralTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B25A9255DBC4100453506 /* GeneralTextView.swift */; };
+		EB8EF44F257B43CB008BCBD8 /* AuctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8EF44E257B43CB008BCBD8 /* AuctionViewController.swift */; };
+		EB8EF451257B43DF008BCBD8 /* AuctionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8EF450257B43DF008BCBD8 /* AuctionViewController.storyboard */; };
+		EB8EF454257B446A008BCBD8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8EF453257B446A008BCBD8 /* SearchViewController.swift */; };
+		EB8EF456257B447C008BCBD8 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8EF455257B447C008BCBD8 /* SearchViewController.storyboard */; };
 		EB9002E1250ED61C00F8B015 /* PhotoInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9002E0250ED61C00F8B015 /* PhotoInformationViewController.swift */; };
 		EB918DFA25297ABB00EC0254 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB918DF925297ABB00EC0254 /* TableView.swift */; };
-		EB9890B7250C9A8B00E35BEF /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890B6250C9A8B00E35BEF /* Root.storyboard */; };
+		EB9890B7250C9A8B00E35BEF /* RootViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890B6250C9A8B00E35BEF /* RootViewController.storyboard */; };
 		EB9890B9250C9C5200E35BEF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9890B8250C9C5200E35BEF /* TabBarViewController.swift */; };
 		EB9890BD250DC15000E35BEF /* AccountViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890BC250DC15000E35BEF /* AccountViewController.storyboard */; };
-		EB9890BF250DC15B00E35BEF /* DriverInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890BE250DC15B00E35BEF /* DriverInfo.storyboard */; };
+		EB9890BF250DC15B00E35BEF /* DriverInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890BE250DC15B00E35BEF /* DriverInfoViewController.storyboard */; };
 		EB9890C4250DC53100E35BEF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9890C3250DC53100E35BEF /* LoginViewController.swift */; };
 		EB9890C8250DC82F00E35BEF /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9890C7250DC82F00E35BEF /* Bindable.swift */; };
 		EB9890CA250DC9B400E35BEF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9890C9250DC9B400E35BEF /* LoginViewModel.swift */; };
-		EB9890CD250DCC4A00E35BEF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890CC250DCC4A00E35BEF /* Login.storyboard */; };
+		EB9890CD250DCC4A00E35BEF /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9890CC250DCC4A00E35BEF /* LoginViewController.storyboard */; };
+		EB9F5765257B3CD6006447A9 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9F5764257B3CD6006447A9 /* MarketViewController.swift */; };
+		EB9F5767257B3CF5006447A9 /* MarketViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9F5766257B3CF5006447A9 /* MarketViewController.storyboard */; };
 		EBA3942B251191190019B273 /* BottomStatusHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3942A251191190019B273 /* BottomStatusHelperView.swift */; };
 		EBA3942D251191990019B273 /* BottomStatusHelperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA3942C251191990019B273 /* BottomStatusHelperView.xib */; };
 		EBAE645F25281481000F654C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE645E25281481000F654C /* HomeViewController.swift */; };
@@ -52,7 +58,7 @@
 		EBAE646B25282F3B000F654C /* ModalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE646A25282F3B000F654C /* ModalInteractor.swift */; };
 		EBB677ED2534E4CE00074550 /* PhotoInformationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB677EC2534E4CE00074550 /* PhotoInformationBuilder.swift */; };
 		EBBB67C12515A4A400031C30 /* BurgerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB67C02515A4A400031C30 /* BurgerMenuViewController.swift */; };
-		EBBB67C32515A4FD00031C30 /* BurgerMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB67C22515A4FD00031C30 /* BurgerMenu.storyboard */; };
+		EBBB67C32515A4FD00031C30 /* BurgerMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB67C22515A4FD00031C30 /* BurgerMenuViewController.storyboard */; };
 		EBBB67C92515A6EE00031C30 /* BurgerMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB67C72515A6EE00031C30 /* BurgerMenuCell.swift */; };
 		EBBB67CA2515A6EE00031C30 /* BurgerMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBB67C82515A6EE00031C30 /* BurgerMenuCell.xib */; };
 		EBC7FC85251691E200102B57 /* BurgerMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7FC84251691E200102B57 /* BurgerMenuViewModel.swift */; };
@@ -93,16 +99,22 @@
 		EB87F48B255F742C0052B51D /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
 		EB8B25A7255D9F1C00453506 /* GeneralTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralTextView.xib; sourceTree = "<group>"; };
 		EB8B25A9255DBC4100453506 /* GeneralTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTextView.swift; sourceTree = "<group>"; };
+		EB8EF44E257B43CB008BCBD8 /* AuctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionViewController.swift; sourceTree = "<group>"; };
+		EB8EF450257B43DF008BCBD8 /* AuctionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuctionViewController.storyboard; sourceTree = "<group>"; };
+		EB8EF453257B446A008BCBD8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EB8EF455257B447C008BCBD8 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		EB9002E0250ED61C00F8B015 /* PhotoInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInformationViewController.swift; sourceTree = "<group>"; };
 		EB918DF925297ABB00EC0254 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
-		EB9890B6250C9A8B00E35BEF /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		EB9890B6250C9A8B00E35BEF /* RootViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootViewController.storyboard; sourceTree = "<group>"; };
 		EB9890B8250C9C5200E35BEF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EB9890BC250DC15000E35BEF /* AccountViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountViewController.storyboard; sourceTree = "<group>"; };
-		EB9890BE250DC15B00E35BEF /* DriverInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DriverInfo.storyboard; sourceTree = "<group>"; };
+		EB9890BE250DC15B00E35BEF /* DriverInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DriverInfoViewController.storyboard; sourceTree = "<group>"; };
 		EB9890C3250DC53100E35BEF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EB9890C7250DC82F00E35BEF /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		EB9890C9250DC9B400E35BEF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		EB9890CC250DCC4A00E35BEF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		EB9890CC250DCC4A00E35BEF /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		EB9F5764257B3CD6006447A9 /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
+		EB9F5766257B3CF5006447A9 /* MarketViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MarketViewController.storyboard; sourceTree = "<group>"; };
 		EBA3942A251191190019B273 /* BottomStatusHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomStatusHelperView.swift; sourceTree = "<group>"; };
 		EBA3942C251191990019B273 /* BottomStatusHelperView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomStatusHelperView.xib; sourceTree = "<group>"; };
 		EBAE645E25281481000F654C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +125,7 @@
 		EBAE646A25282F3B000F654C /* ModalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalInteractor.swift; sourceTree = "<group>"; };
 		EBB677EC2534E4CE00074550 /* PhotoInformationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInformationBuilder.swift; sourceTree = "<group>"; };
 		EBBB67C02515A4A400031C30 /* BurgerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuViewController.swift; sourceTree = "<group>"; };
-		EBBB67C22515A4FD00031C30 /* BurgerMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BurgerMenu.storyboard; sourceTree = "<group>"; };
+		EBBB67C22515A4FD00031C30 /* BurgerMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BurgerMenuViewController.storyboard; sourceTree = "<group>"; };
 		EBBB67C72515A6EE00031C30 /* BurgerMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuCell.swift; sourceTree = "<group>"; };
 		EBBB67C82515A6EE00031C30 /* BurgerMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BurgerMenuCell.xib; sourceTree = "<group>"; };
 		EBC7FC84251691E200102B57 /* BurgerMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuViewModel.swift; sourceTree = "<group>"; };
@@ -211,8 +223,10 @@
 				EB9890C0250DC4F500E35BEF /* Login */,
 				EB918DFB25297BB900EC0254 /* Driver Onboarding */,
 				EB6E2B08253394A4009EBBD7 /* CameraSession */,
-				EB9890BE250DC15B00E35BEF /* DriverInfo.storyboard */,
 				EBAE645D25281444000F654C /* Home */,
+				EB9F5763257B3CB6006447A9 /* MarketPlace */,
+				EB8EF44D257B439B008BCBD8 /* Auction */,
+				EB8EF452257B4429008BCBD8 /* Search */,
 				EB6E5533250C90C000816820 /* Launch */,
 				EB6E552A250C8B9000816820 /* Tabbar */,
 			);
@@ -225,7 +239,7 @@
 				EB6E552B250C8C5B00816820 /* PassiveLoadingViewController.swift */,
 				EB6E5527250C888700816820 /* RootViewController.swift */,
 				EB9890B8250C9C5200E35BEF /* TabBarViewController.swift */,
-				EB9890B6250C9A8B00E35BEF /* Root.storyboard */,
+				EB9890B6250C9A8B00E35BEF /* RootViewController.storyboard */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -293,6 +307,24 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		EB8EF44D257B439B008BCBD8 /* Auction */ = {
+			isa = PBXGroup;
+			children = (
+				EB8EF44E257B43CB008BCBD8 /* AuctionViewController.swift */,
+				EB8EF450257B43DF008BCBD8 /* AuctionViewController.storyboard */,
+			);
+			path = Auction;
+			sourceTree = "<group>";
+		};
+		EB8EF452257B4429008BCBD8 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				EB8EF453257B446A008BCBD8 /* SearchViewController.swift */,
+				EB8EF455257B447C008BCBD8 /* SearchViewController.storyboard */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		EB918DF82529719000EC0254 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +338,7 @@
 			children = (
 				EB7B088525298A4C0050EE9F /* DriverInfo */,
 				EB7B0882252989BE0050EE9F /* PhotoVerification */,
+				EB9890BE250DC15B00E35BEF /* DriverInfoViewController.storyboard */,
 			);
 			path = "Driver Onboarding";
 			sourceTree = "<group>";
@@ -328,7 +361,7 @@
 				EB87F48A255F73F50052B51D /* Builder */,
 				EB313369252529EA008FF586 /* Register */,
 				EB31336A252529FB008FF586 /* Forgot Password */,
-				EB9890CC250DCC4A00E35BEF /* Login.storyboard */,
+				EB9890CC250DCC4A00E35BEF /* LoginViewController.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -346,6 +379,15 @@
 				EB22E0EE2569D14600453D85 /* Enums.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EB9F5763257B3CB6006447A9 /* MarketPlace */ = {
+			isa = PBXGroup;
+			children = (
+				EB9F5764257B3CD6006447A9 /* MarketViewController.swift */,
+				EB9F5766257B3CF5006447A9 /* MarketViewController.storyboard */,
+			);
+			path = MarketPlace;
 			sourceTree = "<group>";
 		};
 		EBA39429251190CE0019B273 /* Views */ = {
@@ -395,7 +437,7 @@
 				EBBB67C02515A4A400031C30 /* BurgerMenuViewController.swift */,
 				EBC7FC84251691E200102B57 /* BurgerMenuViewModel.swift */,
 				EBC7FC882516B34200102B57 /* Builder */,
-				EBBB67C22515A4FD00031C30 /* BurgerMenu.storyboard */,
+				EBBB67C22515A4FD00031C30 /* BurgerMenuViewController.storyboard */,
 				EBBB67C42515A66800031C30 /* Cell */,
 			);
 			path = "Burger Menu";
@@ -507,16 +549,19 @@
 			files = (
 				EBA3942D251191990019B273 /* BottomStatusHelperView.xib in Resources */,
 				EB02435B2521416100EF93B9 /* HomeViewController.storyboard in Resources */,
+				EB8EF451257B43DF008BCBD8 /* AuctionViewController.storyboard in Resources */,
 				EBBB67CA2515A6EE00031C30 /* BurgerMenuCell.xib in Resources */,
-				EBBB67C32515A4FD00031C30 /* BurgerMenu.storyboard in Resources */,
+				EB9F5767257B3CF5006447A9 /* MarketViewController.storyboard in Resources */,
+				EBBB67C32515A4FD00031C30 /* BurgerMenuViewController.storyboard in Resources */,
 				EBEAF3CE250C250900AA3AAF /* Assets.xcassets in Resources */,
 				EB8B25A8255D9F1C00453506 /* GeneralTextView.xib in Resources */,
 				EB6E2B0E253395A3009EBBD7 /* PhotoInformationCell.xib in Resources */,
-				EB9890CD250DCC4A00E35BEF /* Login.storyboard in Resources */,
+				EB9890CD250DCC4A00E35BEF /* LoginViewController.storyboard in Resources */,
 				EB9890BD250DC15000E35BEF /* AccountViewController.storyboard in Resources */,
-				EB9890BF250DC15B00E35BEF /* DriverInfo.storyboard in Resources */,
+				EB8EF456257B447C008BCBD8 /* SearchViewController.storyboard in Resources */,
+				EB9890BF250DC15B00E35BEF /* DriverInfoViewController.storyboard in Resources */,
 				EB6E5535250C90E800816820 /* LaunchScreen.storyboard in Resources */,
-				EB9890B7250C9A8B00E35BEF /* Root.storyboard in Resources */,
+				EB9890B7250C9A8B00E35BEF /* RootViewController.storyboard in Resources */,
 				EB7B088B25298BDD0050EE9F /* DriverRequirementCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,7 +585,9 @@
 				EB56A6C12556422F00A57448 /* Promise.swift in Sources */,
 				EBC7FC85251691E200102B57 /* BurgerMenuViewModel.swift in Sources */,
 				EB313368252510AD008FF586 /* AlertManager.swift in Sources */,
+				EB9F5765257B3CD6006447A9 /* MarketViewController.swift in Sources */,
 				EB6E2B0D253395A3009EBBD7 /* PhotoInformationCell.swift in Sources */,
+				EB8EF44F257B43CB008BCBD8 /* AuctionViewController.swift in Sources */,
 				EBAE646225281C24000F654C /* StoryboardNavigation.swift in Sources */,
 				EB9890C8250DC82F00E35BEF /* Bindable.swift in Sources */,
 				EBEAF3C5250C250800AA3AAF /* AppDelegate.swift in Sources */,
@@ -568,6 +615,7 @@
 				EBAE646525282DA7000F654C /* BurgerMenuPresentationController.swift in Sources */,
 				EBF799132522BD45000B325C /* ForgotPasswordViewController.swift in Sources */,
 				EBAE646925282F07000F654C /* BurgerMenuModalInteractor.swift in Sources */,
+				EB8EF454257B446A008BCBD8 /* SearchViewController.swift in Sources */,
 				EB639A762517F67800D4903B /* DriverInfoViewController.swift in Sources */,
 				EB56A6C32557573B00A57448 /* AccountViewController.swift in Sources */,
 				EB22E0EA2569C71900453D85 /* ForgotPasswordViewModel.swift in Sources */,
