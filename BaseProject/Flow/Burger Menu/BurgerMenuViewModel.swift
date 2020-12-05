@@ -27,7 +27,7 @@ class BurgerMenuViewModel {
             cell.configure(data: builder.buildCampaignData())
             return cell
         case .driveWithUs:
-            cell.configure(data: builder.buildDriveWithPaul HuynhData())
+            cell.configure(data: builder.buildDriveData())
             return cell
         case .help:
             cell.configure(data: builder.buildHelpData())
@@ -41,7 +41,7 @@ class BurgerMenuViewModel {
         case .campaign:
             delegate?.openCampaign()
         case .driveWithUs:
-            delegate?.openDriveWithPaul Huynh()
+            delegate?.openDrive()
         case .help:
             delegate?.openHelp()
         }
@@ -51,7 +51,7 @@ class BurgerMenuViewModel {
 
 protocol BurgerMenuViewModelDelegate {
     func openCampaign()
-    func openDriveWithPaul Huynh()
+    func openDrive()
     func openHelp()
 }
 

@@ -61,7 +61,7 @@ extension BurgerMenuViewController: BurgerMenuViewModelDelegate {
 //        present(navigationController, animated: true, completion: nil)
     }
 
-    func openDriveWithPaul Huynh() {
+    func openDrive() {
         guard let driverInfoViewController = UIStoryboard(name: StoryboardNavigation.DriverInfo.rawValue, bundle: nil).instantiateViewController(withIdentifier: String(describing: DriverInfoViewController.self)) as? DriverInfoViewController else { return }
         driverInfoViewController.configure(callback: createDismissCallback())
 
