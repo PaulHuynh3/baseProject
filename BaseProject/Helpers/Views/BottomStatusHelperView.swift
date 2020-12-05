@@ -1,6 +1,6 @@
 //
 //  BottomStatusHelperView.swift
-//  Ayno
+//  Paul Huynh
 //
 //  Created by Paul Huynh on 2020-09-15.
 //  Copyright © 2020 BaseProject. All rights reserved.

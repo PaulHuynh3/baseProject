@@ -1,9 +1,9 @@
 //
 //  CameraViewController.swift
-//  Ayno
+//  Paul Huynh
 //
 //  Created by Paul Huynh on 2020-10-09.
-//  Copyright © 2020 Ayno. All rights reserved.
+//  Copyright © 2020 Paul Huynh. All rights reserved.
 //
 
 import UIKit
@@ -118,7 +118,7 @@ class CameraViewController: UIViewController {
         }
         captureSession.commitConfiguration()
 
-        let queue = DispatchQueue(label: "com.ayno.captureQueue")
+        let queue = DispatchQueue(label: "com.Paul Huynh.captureQueue")
         dataOutput.setSampleBufferDelegate(self, queue: queue)
     }
 

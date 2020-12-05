@@ -1,9 +1,9 @@
 //
 //  BurgerMenuViewModel.swift
-//  Ayno
+//  Paul Huynh
 //
 //  Created by Paul Huynh on 2020-09-19.
-//  Copyright © 2020 Ayno. All rights reserved.
+//  Copyright © 2020 Paul Huynh. All rights reserved.
 //
 
 import UIKit
@@ -27,7 +27,7 @@ class BurgerMenuViewModel {
             cell.configure(data: builder.buildCampaignData())
             return cell
         case .driveWithUs:
-            cell.configure(data: builder.buildDriveWithAynoData())
+            cell.configure(data: builder.buildDriveWithPaul HuynhData())
             return cell
         case .help:
             cell.configure(data: builder.buildHelpData())
@@ -41,7 +41,7 @@ class BurgerMenuViewModel {
         case .campaign:
             delegate?.openCampaign()
         case .driveWithUs:
-            delegate?.openDriveWithAyno()
+            delegate?.openDriveWithPaul Huynh()
         case .help:
             delegate?.openHelp()
         }
@@ -51,7 +51,7 @@ class BurgerMenuViewModel {
 
 protocol BurgerMenuViewModelDelegate {
     func openCampaign()
-    func openDriveWithAyno()
+    func openDriveWithPaul Huynh()
     func openHelp()
 }
 

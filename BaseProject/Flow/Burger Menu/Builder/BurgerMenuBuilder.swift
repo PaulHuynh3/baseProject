@@ -1,9 +1,9 @@
 //
 //  BurgerMenuBuilder.swift
-//  Ayno
+//  Paul Huynh
 //
 //  Created by Paul Huynh on 2020-09-19.
-//  Copyright © 2020 Ayno. All rights reserved.
+//  Copyright © 2020 Paul Huynh. All rights reserved.
 //
 
 import UIKit
@@ -14,9 +14,9 @@ class BurgerMenuBuilder {
         return BurgerMenuCell.Data(menuName: "Campaign")
     }
 
-    func buildDriveWithAynoData() -> BurgerMenuCell.Data {
+    func buildDriveWithPaul HuynhData() -> BurgerMenuCell.Data {
         return BurgerMenuCell.Data(
-            menuName: "Drive With Ayno"
+            menuName: "Drive With Paul Huynh"
         )
     }
 

@@ -1,9 +1,9 @@
 //
 //  BurgerMenuTableViewController.swift
-//  Ayno
+//  Paul Huynh
 //
 //  Created by Paul Huynh on 2020-09-18.
-//  Copyright © 2020 Ayno. All rights reserved.
+//  Copyright © 2020 Paul Huynh. All rights reserved.
 //
 
 import UIKit
@@ -61,7 +61,7 @@ extension BurgerMenuViewController: BurgerMenuViewModelDelegate {
 //        present(navigationController, animated: true, completion: nil)
     }
 
-    func openDriveWithAyno() {
+    func openDriveWithPaul Huynh() {
         guard let driverInfoViewController = UIStoryboard(name: StoryboardNavigation.DriverInfo.rawValue, bundle: nil).instantiateViewController(withIdentifier: String(describing: DriverInfoViewController.self)) as? DriverInfoViewController else { return }
         driverInfoViewController.configure(callback: createDismissCallback())
 

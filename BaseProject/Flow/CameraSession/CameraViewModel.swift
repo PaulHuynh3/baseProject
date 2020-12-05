@@ -1,9 +1,9 @@
 //
 //  CameraViewModelDelegate.swift
-//  Ayno
+//  Paul Huynh
 //
 //  Created by Paul Huynh on 2020-10-17.
-//  Copyright © 2020 Ayno. All rights reserved.
+//  Copyright © 2020 Paul Huynh. All rights reserved.
 //
 
 import UIKit
