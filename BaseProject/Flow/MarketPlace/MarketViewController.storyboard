@@ -15,6 +15,7 @@
                     <view key="view" contentMode="scaleToFill" id="bXs-h2-v4j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jtP-yM-4aV"/>
                     </view>
                 </viewController>

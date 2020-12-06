@@ -10,4 +10,9 @@ import UIKit
 
 class MarketViewController: UIViewController {
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //set up a new viewcontrollere here and load it in
+    }
+
 }
+//this is going to be a collectionview of products
