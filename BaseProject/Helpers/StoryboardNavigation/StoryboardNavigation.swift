@@ -15,6 +15,9 @@ enum StoryboardNavigation: String {
     case Home = "HomeViewController"
     case Login = "LoginViewController"
     case Root = "RootViewController"
+    case MarketViewController = "MarketViewController"
+    case MarketResultsViewController = "MarketResultsViewController"
+    case SearchViewController = "SearchViewController"
 }
 
 

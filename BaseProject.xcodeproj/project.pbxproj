@@ -14,6 +14,11 @@
 		EB3133662524DCF3008FF586 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3133652524DCF3008FF586 /* RegisterViewModel.swift */; };
 		EB313368252510AD008FF586 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB313367252510AD008FF586 /* AlertManager.swift */; };
 		EB31336D25252AAF008FF586 /* RegisterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31336C25252AAF008FF586 /* RegisterBuilder.swift */; };
+		EB3F8BFA257ECAAA00FD381D /* MarketResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3F8BF9257ECAAA00FD381D /* MarketResultsViewController.swift */; };
+		EB3F8BFC257ECABA00FD381D /* MarketResultsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB3F8BFB257ECABA00FD381D /* MarketResultsViewController.storyboard */; };
+		EB3F8BFE257ED1C800FD381D /* MarketResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3F8BFD257ED1C800FD381D /* MarketResultsViewModel.swift */; };
+		EB3F8C02257ED90400FD381D /* MarketProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3F8C00257ED90400FD381D /* MarketProductCell.swift */; };
+		EB3F8C03257ED90400FD381D /* MarketProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB3F8C01257ED90400FD381D /* MarketProductCell.xib */; };
 		EB568FC9257D725100FE8B5E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB568FC8257D725100FE8B5E /* NetworkService.swift */; };
 		EB568FCC257D72AB00FE8B5E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB568FCB257D72AB00FE8B5E /* NetworkError.swift */; };
 		EB56A6C12556422F00A57448 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A6C02556422F00A57448 /* Promise.swift */; };
@@ -84,6 +89,11 @@
 		EB3133652524DCF3008FF586 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		EB313367252510AD008FF586 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		EB31336C25252AAF008FF586 /* RegisterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBuilder.swift; sourceTree = "<group>"; };
+		EB3F8BF9257ECAAA00FD381D /* MarketResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketResultsViewController.swift; sourceTree = "<group>"; };
+		EB3F8BFB257ECABA00FD381D /* MarketResultsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MarketResultsViewController.storyboard; sourceTree = "<group>"; };
+		EB3F8BFD257ED1C800FD381D /* MarketResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketResultsViewModel.swift; sourceTree = "<group>"; };
+		EB3F8C00257ED90400FD381D /* MarketProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketProductCell.swift; sourceTree = "<group>"; };
+		EB3F8C01257ED90400FD381D /* MarketProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketProductCell.xib; sourceTree = "<group>"; };
 		EB568FC8257D725100FE8B5E /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		EB568FCB257D72AB00FE8B5E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		EB56A6C02556422F00A57448 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
@@ -193,6 +203,15 @@
 				EB31336C25252AAF008FF586 /* RegisterBuilder.swift */,
 			);
 			path = Builer;
+			sourceTree = "<group>";
+		};
+		EB3F8BFF257ED8C000FD381D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EB3F8C00257ED90400FD381D /* MarketProductCell.swift */,
+				EB3F8C01257ED90400FD381D /* MarketProductCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		EB568FC6257D68A200FE8B5E /* Service */ = {
@@ -417,6 +436,10 @@
 		EBA2DCD0257C46FC0093A505 /* MarketResults */ = {
 			isa = PBXGroup;
 			children = (
+				EB3F8BF9257ECAAA00FD381D /* MarketResultsViewController.swift */,
+				EB3F8BFD257ED1C800FD381D /* MarketResultsViewModel.swift */,
+				EB3F8BFB257ECABA00FD381D /* MarketResultsViewController.storyboard */,
+				EB3F8BFF257ED8C000FD381D /* Cells */,
 			);
 			path = MarketResults;
 			sourceTree = "<group>";
@@ -595,6 +618,7 @@
 				EB9F5767257B3CF5006447A9 /* MarketViewController.storyboard in Resources */,
 				EBBB67C32515A4FD00031C30 /* BurgerMenuViewController.storyboard in Resources */,
 				EBEAF3CE250C250900AA3AAF /* Assets.xcassets in Resources */,
+				EB3F8C03257ED90400FD381D /* MarketProductCell.xib in Resources */,
 				EB8B25A8255D9F1C00453506 /* GeneralTextView.xib in Resources */,
 				EB6E2B0E253395A3009EBBD7 /* PhotoInformationCell.xib in Resources */,
 				EB9890CD250DCC4A00E35BEF /* LoginViewController.storyboard in Resources */,
@@ -604,6 +628,7 @@
 				EB6E5535250C90E800816820 /* LaunchScreen.storyboard in Resources */,
 				EB9890B7250C9A8B00E35BEF /* RootViewController.storyboard in Resources */,
 				EB7B088B25298BDD0050EE9F /* DriverRequirementCell.xib in Resources */,
+				EB3F8BFC257ECABA00FD381D /* MarketResultsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +658,7 @@
 				EB8EF44F257B43CB008BCBD8 /* AuctionViewController.swift in Sources */,
 				EBAE646225281C24000F654C /* StoryboardNavigation.swift in Sources */,
 				EB9890C8250DC82F00E35BEF /* Bindable.swift in Sources */,
+				EB3F8BFA257ECAAA00FD381D /* MarketResultsViewController.swift in Sources */,
 				EBEAF3C5250C250800AA3AAF /* AppDelegate.swift in Sources */,
 				EB568FCC257D72AB00FE8B5E /* NetworkError.swift in Sources */,
 				EBE7DECF25314DCE0055309C /* PhotoInformationViewModel.swift in Sources */,
@@ -656,11 +682,13 @@
 				EB7B088A25298BDD0050EE9F /* DriverRequirementCell.swift in Sources */,
 				EB3133662524DCF3008FF586 /* RegisterViewModel.swift in Sources */,
 				EBEAF3C7250C250800AA3AAF /* SceneDelegate.swift in Sources */,
+				EB3F8BFE257ED1C800FD381D /* MarketResultsViewModel.swift in Sources */,
 				EBAE646525282DA7000F654C /* BurgerMenuPresentationController.swift in Sources */,
 				EBF799132522BD45000B325C /* ForgotPasswordViewController.swift in Sources */,
 				EBAE646925282F07000F654C /* BurgerMenuModalInteractor.swift in Sources */,
 				EB8EF454257B446A008BCBD8 /* SearchViewController.swift in Sources */,
 				EB639A762517F67800D4903B /* DriverInfoViewController.swift in Sources */,
+				EB3F8C02257ED90400FD381D /* MarketProductCell.swift in Sources */,
 				EB56A6C32557573B00A57448 /* AccountViewController.swift in Sources */,
 				EB22E0EA2569C71900453D85 /* ForgotPasswordViewModel.swift in Sources */,
 				EB31336D25252AAF008FF586 /* RegisterBuilder.swift in Sources */,

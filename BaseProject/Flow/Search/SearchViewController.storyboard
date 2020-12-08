@@ -11,7 +11,7 @@
         <!--Search View Controller-->
         <scene sceneID="bHv-R2-F2g">
             <objects>
-                <viewController id="BZq-HO-OY8" customClass="SearchViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="BZq-HO-OY8" customClass="SearchViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cpa-QK-SxD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
