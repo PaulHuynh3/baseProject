@@ -60,8 +60,11 @@ extension MarketResultsViewController: UICollectionViewDelegate, UICollectionVie
 
 extension MarketResultsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+
         let itemsPerRow: CGFloat = 2
-        let sizeForItem = CGSize(width: collectionView.bounds.size.width/itemsPerRow, height: 30)
+        let width = collectionView.bounds.size.width/itemsPerRow - 15
+        let sizeForItem = CGSize(width: width, height: 300)
         return sizeForItem
     }
 

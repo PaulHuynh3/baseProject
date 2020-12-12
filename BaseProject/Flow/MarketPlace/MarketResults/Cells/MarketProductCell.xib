@@ -17,30 +17,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="189" height="300"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-Yg-MYO">
-                        <rect key="frame" x="0.0" y="0.0" width="189" height="290"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GwT-eP-BMV">
-                                <rect key="frame" x="0.0" y="0.0" width="189" height="270.5"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is for the title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFp-fv-eQA">
-                                <rect key="frame" x="0.0" y="275.5" width="189" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GwT-eP-BMV">
+                        <rect key="frame" x="0.0" y="14" width="189" height="270.5"/>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="GwT-eP-BMV" firstAttribute="height" secondItem="9j2-Fp-xBa" secondAttribute="height" multiplier="0.901667" id="XC4-yC-aS3"/>
+                <constraint firstItem="Mjw-1l-SPP" firstAttribute="top" secondItem="GwT-eP-BMV" secondAttribute="top" constant="30" id="3Ub-gK-6NA"/>
+                <constraint firstItem="Mjw-1l-SPP" firstAttribute="bottom" secondItem="GwT-eP-BMV" secondAttribute="bottom" constant="15.5" id="Kkx-sR-vaS"/>
+                <constraint firstItem="GwT-eP-BMV" firstAttribute="leading" secondItem="Mjw-1l-SPP" secondAttribute="leading" id="fFp-sf-JZf"/>
+                <constraint firstItem="Mjw-1l-SPP" firstAttribute="trailing" secondItem="GwT-eP-BMV" secondAttribute="trailing" id="vJk-wi-pls"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Mjw-1l-SPP"/>
             <size key="customSize" width="189" height="251"/>
             <connections>
                 <outlet property="productImage" destination="GwT-eP-BMV" id="oCG-nr-zlV"/>
-                <outlet property="productTitle" destination="sFp-fv-eQA" id="pTm-gp-NE4"/>
             </connections>
             <point key="canvasLocation" x="357" y="125"/>
         </collectionViewCell>

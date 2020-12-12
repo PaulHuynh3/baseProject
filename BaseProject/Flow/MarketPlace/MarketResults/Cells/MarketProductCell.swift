@@ -11,7 +11,7 @@ import UIKit
 class MarketProductCell: UICollectionViewCell {
     
     @IBOutlet weak var productImage: UIImageView!
-    @IBOutlet weak var productTitle: UILabel!
+//    @IBOutlet weak var productTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,10 +19,17 @@ class MarketProductCell: UICollectionViewCell {
     }
 
     func configure(data: Data) {
+//        productImage.image = resizedImage(at: data.image, for: CGSize(width: 300, height: 300))
         productImage.image = data.image
-        productTitle.text = data.title
+//        productTitle.text = data.title
     }
 
+    func resizedImage(at image: UIImage, for size: CGSize) -> UIImage? {
+        let renderer = UIGraphicsImageRenderer(size: size)
+        return renderer.image { (context) in
+            image.draw(in: CGRect(origin: .zero, size: size))
+        }
+    }
 }
 
 extension MarketProductCell {
