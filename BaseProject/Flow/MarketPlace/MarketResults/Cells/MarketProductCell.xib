@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GwT-eP-BMV">
-                        <rect key="frame" x="0.0" y="14" width="189" height="270.5"/>
+                        <rect key="frame" x="0.0" y="44" width="189" height="256"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="Mjw-1l-SPP" firstAttribute="top" secondItem="GwT-eP-BMV" secondAttribute="top" constant="30" id="3Ub-gK-6NA"/>
-                <constraint firstItem="Mjw-1l-SPP" firstAttribute="bottom" secondItem="GwT-eP-BMV" secondAttribute="bottom" constant="15.5" id="Kkx-sR-vaS"/>
+                <constraint firstItem="Mjw-1l-SPP" firstAttribute="top" secondItem="GwT-eP-BMV" secondAttribute="top" id="3Ub-gK-6NA"/>
+                <constraint firstItem="Mjw-1l-SPP" firstAttribute="bottom" secondItem="GwT-eP-BMV" secondAttribute="bottom" id="Kkx-sR-vaS"/>
                 <constraint firstItem="GwT-eP-BMV" firstAttribute="leading" secondItem="Mjw-1l-SPP" secondAttribute="leading" id="fFp-sf-JZf"/>
                 <constraint firstItem="Mjw-1l-SPP" firstAttribute="trailing" secondItem="GwT-eP-BMV" secondAttribute="trailing" id="vJk-wi-pls"/>
             </constraints>

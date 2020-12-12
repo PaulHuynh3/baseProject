@@ -63,7 +63,7 @@ extension MarketResultsViewController: UICollectionViewDelegateFlowLayout {
 
 
         let itemsPerRow: CGFloat = 2
-        let width = collectionView.bounds.size.width/itemsPerRow - 15
+        let width = collectionView.bounds.size.width/itemsPerRow - 10
         let sizeForItem = CGSize(width: width, height: 300)
         return sizeForItem
     }
@@ -73,7 +73,7 @@ extension MarketResultsViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 10
     }
 }
 
