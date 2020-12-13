@@ -11,34 +11,64 @@ import UIKit
 class MarketResultsViewController: UIViewController {
     // MARK: - Properties
 
-    let viewModel = MarketResultsViewModel()
+    private var mode: MarketResultsMode = .featured
+    var viewModel = MarketResultsViewModel()
     var delegate: MarketResultsViewControllerDelegate?
     @IBOutlet weak var collectionView: UICollectionView!
 
     // MARK: - Setup
 
-    func configure(delegate: MarketResultsViewControllerDelegate) {
+    func configure(delegate: MarketResultsViewControllerDelegate?, mode: MarketResultsMode) {
         self.delegate = delegate
+        self.mode = mode
     }
 
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.configure(delegate: self)
-        registerNibForCollection()
+        viewModel.configure(delegate: self, mode: mode)
+        setup()
     }
 
-    private func registerNibForCollection() {
+    func setup() {
+        registerNib()
+        setupNavigationButton()
+    }
+
+    private func setupNavigationButton() {
+        switch viewModel.mode {
+        case .featured:
+            navigationController?.navigationBar.topItem?.backBarButtonItem = nil
+        case .allResults:
+            navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "Featured Posts", style: .plain, target: nil, action: nil)
+        }
+    }
+
+    private func registerNib() {
+        switch viewModel.mode {
+        case .featured:
+            registerCollectionCells()
+            registerReuseableHeaderView()
+        case .allResults:
+            registerCollectionCells()
+        }
+    }
+
+    private func registerCollectionCells() {
         let nib = UINib(nibName: String(describing: MarketProductCell.self), bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: String(describing: MarketProductCell.self))
+    }
+
+    private func registerReuseableHeaderView() {
         let headerNib = UINib(nibName: String(describing: MarketReuseableView.self), bundle: nil)
         collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: MarketReuseableView.self))
     }
 
     private func configureHeaderView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: MarketReuseableView.self), for: indexPath)
-        if let marketHeaderView = headerView as? MarketReuseableView {
+        if let marketHeaderView = headerView as? MarketReuseableView, viewModel.mode == .featured
+            {
             marketHeaderView.configure(delegate: self)
             return marketHeaderView
         }
@@ -73,7 +103,7 @@ extension MarketResultsViewController: UICollectionViewDelegate, UICollectionVie
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.bounds.size.width, height: 50)
+        viewModel.headerSize(collectionView)
     }
 }
 
@@ -97,11 +127,11 @@ extension MarketResultsViewController: UICollectionViewDelegateFlowLayout {
 
 extension MarketResultsViewController: MarketReuseableViewDelegate {
     func viewOptionTapped() {
-        //TODO: - Change this tempViewController thing
-        guard let tempViewController = UIStoryboard(name: String(describing:StoryboardNavigation.MarketResultsViewController.rawValue), bundle: nil).instantiateViewController(withIdentifier: String(describing: MarketResultsViewController.self)) as? MarketResultsViewController else {
+        guard let marketViewController = UIStoryboard(name: String(describing:StoryboardNavigation.MarketResultsViewController.rawValue), bundle: nil).instantiateViewController(withIdentifier: String(describing: MarketResultsViewController.self)) as? MarketResultsViewController else {
             return
         }
-        navigationController?.pushViewController(tempViewController, animated: true)
+        marketViewController.configure(delegate: nil, mode: .allResults)
+        navigationController?.pushViewController(marketViewController, animated: true)
     }
 }
 

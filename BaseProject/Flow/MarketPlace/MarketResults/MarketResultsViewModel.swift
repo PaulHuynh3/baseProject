@@ -12,13 +12,22 @@ class MarketResultsViewModel {
 
     var delegate: MarketResultsViewModelDelegate?
     var marketProducts = [MarketProduct]()
+    var mode: MarketResultsMode = .featured
 
-    func configure(delegate: MarketResultsViewModelDelegate) {
+    func configure(delegate: MarketResultsViewModelDelegate, mode: MarketResultsMode) {
         self.delegate = delegate
-        marketProducts = mockProducts()
+        self.mode = mode
+        marketProducts = createMarketProducts()
     }
 
     let mockProducts = { () -> [MarketProduct] in
+        let redShoe = MarketProduct(name: "red shoe", itemNumber: 5, description: "This is just a normal red shoe", image: #imageLiteral(resourceName: "red-shoe"), numberOfLike: 5, numberOfView: 10, location: "undetermined")
+        let brownShoe = MarketProduct(name: "brown shoe", itemNumber: 5, description: "This is just a normal brown shoe", image: #imageLiteral(resourceName: "brown-shoes"), numberOfLike: 10, numberOfView: 10, location: "undetermined")
+        let jerseyShirt = MarketProduct(name: "jersey shirt", itemNumber: 5, description: "This is just a normal jersey shoe", image: #imageLiteral(resourceName: "jersey-shirt"), numberOfLike: 50, numberOfView: 10, location: "undetermined")
+        return [redShoe, brownShoe, jerseyShirt]
+    }
+
+    let allMockProducts = { () -> [MarketProduct] in
         let redShoe = MarketProduct(name: "red shoe", itemNumber: 5, description: "This is just a normal red shoe", image: #imageLiteral(resourceName: "red-shoe"), numberOfLike: 5, numberOfView: 10, location: "undetermined")
         let brownShoe = MarketProduct(name: "brown shoe", itemNumber: 5, description: "This is just a normal brown shoe", image: #imageLiteral(resourceName: "brown-shoes"), numberOfLike: 10, numberOfView: 10, location: "undetermined")
         let jerseyShirt = MarketProduct(name: "jersey shirt", itemNumber: 5, description: "This is just a normal jersey shoe", image: #imageLiteral(resourceName: "jersey-shirt"), numberOfLike: 50, numberOfView: 10, location: "undetermined")
@@ -29,6 +38,23 @@ class MarketResultsViewModel {
         return [redShoe, brownShoe, jerseyShirt, soccerShirt, redDress, blueDress, pinkHeels]
     }
 
+    func headerSize(_ collectionView: UICollectionView) -> CGSize {
+        switch mode {
+        case .featured:
+            return CGSize(width: collectionView.bounds.size.width, height: 50)
+        case .allResults:
+            return CGSize(width: 0, height: 0)
+        }
+    }
+
+    private func createMarketProducts() -> [MarketProduct] {
+        switch mode {
+        case .featured:
+            return mockProducts()
+        case .allResults:
+            return allMockProducts()
+        }
+    }
 }
 
 protocol MarketResultsViewModelDelegate {

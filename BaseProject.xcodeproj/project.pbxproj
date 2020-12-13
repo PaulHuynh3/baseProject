@@ -65,6 +65,7 @@
 		EBAE646725282E9F000F654C /* BurgerMenuAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE646625282E9F000F654C /* BurgerMenuAnimatedTransitioning.swift */; };
 		EBAE646925282F07000F654C /* BurgerMenuModalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE646825282F07000F654C /* BurgerMenuModalInteractor.swift */; };
 		EBAE646B25282F3B000F654C /* ModalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE646A25282F3B000F654C /* ModalInteractor.swift */; };
+		EBB355F82585BEA100AD10F4 /* MarketResultsMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB355F72585BEA100AD10F4 /* MarketResultsMode.swift */; };
 		EBB677ED2534E4CE00074550 /* PhotoInformationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB677EC2534E4CE00074550 /* PhotoInformationBuilder.swift */; };
 		EBBB67C12515A4A400031C30 /* BurgerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB67C02515A4A400031C30 /* BurgerMenuViewController.swift */; };
 		EBBB67C32515A4FD00031C30 /* BurgerMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB67C22515A4FD00031C30 /* BurgerMenuViewController.storyboard */; };
@@ -142,6 +143,7 @@
 		EBAE646625282E9F000F654C /* BurgerMenuAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		EBAE646825282F07000F654C /* BurgerMenuModalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuModalInteractor.swift; sourceTree = "<group>"; };
 		EBAE646A25282F3B000F654C /* ModalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalInteractor.swift; sourceTree = "<group>"; };
+		EBB355F72585BEA100AD10F4 /* MarketResultsMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketResultsMode.swift; sourceTree = "<group>"; };
 		EBB677EC2534E4CE00074550 /* PhotoInformationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInformationBuilder.swift; sourceTree = "<group>"; };
 		EBBB67C02515A4A400031C30 /* BurgerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuViewController.swift; sourceTree = "<group>"; };
 		EBBB67C22515A4FD00031C30 /* BurgerMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BurgerMenuViewController.storyboard; sourceTree = "<group>"; };
@@ -445,7 +447,7 @@
 				EB3F8BF9257ECAAA00FD381D /* MarketResultsViewController.swift */,
 				EB3F8BFD257ED1C800FD381D /* MarketResultsViewModel.swift */,
 				EB3F8BFB257ECABA00FD381D /* MarketResultsViewController.storyboard */,
-				EBB355F22585946C00AD10F4 /* AllMarketResults */,
+				EBB355F72585BEA100AD10F4 /* MarketResultsMode.swift */,
 				EB3F8BFF257ED8C000FD381D /* Cells */,
 			);
 			path = MarketResults;
@@ -489,13 +491,6 @@
 				EBAE646A25282F3B000F654C /* ModalInteractor.swift */,
 			);
 			path = PresentationController;
-			sourceTree = "<group>";
-		};
-		EBB355F22585946C00AD10F4 /* AllMarketResults */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AllMarketResults;
 			sourceTree = "<group>";
 		};
 		EBBB67BF2515A46F00031C30 /* Burger Menu */ = {
@@ -682,6 +677,7 @@
 				EBAE645F25281481000F654C /* HomeViewController.swift in Sources */,
 				EB7B088725298B690050EE9F /* DriverInfoBuilder.swift in Sources */,
 				EB918DFA25297ABB00EC0254 /* TableView.swift in Sources */,
+				EBB355F82585BEA100AD10F4 /* MarketResultsMode.swift in Sources */,
 				EBBB67C12515A4A400031C30 /* BurgerMenuViewController.swift in Sources */,
 				EB9890C4250DC53100E35BEF /* LoginViewController.swift in Sources */,
 				EBE7DECD25314D270055309C /* CameraViewController.swift in Sources */,
