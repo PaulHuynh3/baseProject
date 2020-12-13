@@ -32,6 +32,17 @@ class MarketResultsViewController: UIViewController {
     private func registerNibForCollection() {
         let nib = UINib(nibName: String(describing: MarketProductCell.self), bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: String(describing: MarketProductCell.self))
+        let headerNib = UINib(nibName: String(describing: MarketReuseableView.self), bundle: nil)
+        collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: MarketReuseableView.self))
+    }
+
+    private func configureHeaderView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: MarketReuseableView.self), for: indexPath)
+        if let marketHeaderView = headerView as? MarketReuseableView {
+            marketHeaderView.configure(delegate: self)
+            return marketHeaderView
+        }
+        return headerView
     }
 }
 
@@ -56,6 +67,14 @@ extension MarketResultsViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
     }
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        return configureHeaderView(collectionView, viewForSupplementaryElementOfKind: kind, at: indexPath)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.bounds.size.width, height: 50)
+    }
 }
 
 extension MarketResultsViewController: UICollectionViewDelegateFlowLayout {
@@ -73,6 +92,16 @@ extension MarketResultsViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
+    }
+}
+
+extension MarketResultsViewController: MarketReuseableViewDelegate {
+    func viewOptionTapped() {
+        //TODO: - Change this tempViewController thing
+        guard let tempViewController = UIStoryboard(name: String(describing:StoryboardNavigation.MarketResultsViewController.rawValue), bundle: nil).instantiateViewController(withIdentifier: String(describing: MarketResultsViewController.self)) as? MarketResultsViewController else {
+            return
+        }
+        navigationController?.pushViewController(tempViewController, animated: true)
     }
 }
 

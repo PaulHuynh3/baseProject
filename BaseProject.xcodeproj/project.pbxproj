@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EB02435B2521416100EF93B9 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB02435A2521416100EF93B9 /* HomeViewController.storyboard */; };
+		EB15FF6225856E8000E98452 /* MarketReuseableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB15FF6125856E8000E98452 /* MarketReuseableView.xib */; };
+		EB15FF6425856E9F00E98452 /* MarketReuseableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB15FF6325856E9F00E98452 /* MarketReuseableView.swift */; };
 		EB22E0EA2569C71900453D85 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0E92569C71900453D85 /* ForgotPasswordViewModel.swift */; };
 		EB22E0ED2569C77000453D85 /* ForgotPasswordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0EC2569C77000453D85 /* ForgotPasswordBuilder.swift */; };
 		EB22E0EF2569D14600453D85 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0EE2569D14600453D85 /* Enums.swift */; };
@@ -83,6 +85,8 @@
 
 /* Begin PBXFileReference section */
 		EB02435A2521416100EF93B9 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		EB15FF6125856E8000E98452 /* MarketReuseableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketReuseableView.xib; sourceTree = "<group>"; };
+		EB15FF6325856E9F00E98452 /* MarketReuseableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketReuseableView.swift; sourceTree = "<group>"; };
 		EB22E0E92569C71900453D85 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		EB22E0EC2569C77000453D85 /* ForgotPasswordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordBuilder.swift; sourceTree = "<group>"; };
 		EB22E0EE2569D14600453D85 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -208,6 +212,8 @@
 		EB3F8BFF257ED8C000FD381D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EB15FF6325856E9F00E98452 /* MarketReuseableView.swift */,
+				EB15FF6125856E8000E98452 /* MarketReuseableView.xib */,
 				EB3F8C00257ED90400FD381D /* MarketProductCell.swift */,
 				EB3F8C01257ED90400FD381D /* MarketProductCell.xib */,
 			);
@@ -439,6 +445,7 @@
 				EB3F8BF9257ECAAA00FD381D /* MarketResultsViewController.swift */,
 				EB3F8BFD257ED1C800FD381D /* MarketResultsViewModel.swift */,
 				EB3F8BFB257ECABA00FD381D /* MarketResultsViewController.storyboard */,
+				EBB355F22585946C00AD10F4 /* AllMarketResults */,
 				EB3F8BFF257ED8C000FD381D /* Cells */,
 			);
 			path = MarketResults;
@@ -482,6 +489,13 @@
 				EBAE646A25282F3B000F654C /* ModalInteractor.swift */,
 			);
 			path = PresentationController;
+			sourceTree = "<group>";
+		};
+		EBB355F22585946C00AD10F4 /* AllMarketResults */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AllMarketResults;
 			sourceTree = "<group>";
 		};
 		EBBB67BF2515A46F00031C30 /* Burger Menu */ = {
@@ -611,6 +625,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB15FF6225856E8000E98452 /* MarketReuseableView.xib in Resources */,
 				EBA3942D251191990019B273 /* BottomStatusHelperView.xib in Resources */,
 				EB02435B2521416100EF93B9 /* HomeViewController.storyboard in Resources */,
 				EB8EF451257B43DF008BCBD8 /* AuctionViewController.storyboard in Resources */,
@@ -659,6 +674,7 @@
 				EBAE646225281C24000F654C /* StoryboardNavigation.swift in Sources */,
 				EB9890C8250DC82F00E35BEF /* Bindable.swift in Sources */,
 				EB3F8BFA257ECAAA00FD381D /* MarketResultsViewController.swift in Sources */,
+				EB15FF6425856E9F00E98452 /* MarketReuseableView.swift in Sources */,
 				EBEAF3C5250C250800AA3AAF /* AppDelegate.swift in Sources */,
 				EB568FCC257D72AB00FE8B5E /* NetworkError.swift in Sources */,
 				EBE7DECF25314DCE0055309C /* PhotoInformationViewModel.swift in Sources */,
