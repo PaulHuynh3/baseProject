@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="edP-ut-9LB" customClass="AuctionTableHeaderView" customModule="BaseProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dU5-vu-QZB">
+                    <rect key="frame" x="150" y="54" width="114" height="36"/>
+                    <gestureRecognizers/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hammer" translatesAutoresizingMaskIntoConstraints="NO" id="ztS-BY-yyb">
+                    <rect key="frame" x="280.5" y="50" width="40" height="40"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ztS-BY-yyb" secondAttribute="height" multiplier="1:1" id="lFK-rT-0hr"/>
+                        <constraint firstAttribute="height" constant="40" id="oak-Fz-ftm"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ztS-BY-yyb" firstAttribute="leading" secondItem="dU5-vu-QZB" secondAttribute="trailing" constant="16.5" id="Mad-ki-1H0"/>
+                <constraint firstItem="dU5-vu-QZB" firstAttribute="centerY" secondItem="a9H-Ra-7cA" secondAttribute="centerY" id="c2H-hX-lHJ"/>
+                <constraint firstItem="ztS-BY-yyb" firstAttribute="bottom" secondItem="dU5-vu-QZB" secondAttribute="bottom" id="rzM-a9-W3R"/>
+                <constraint firstItem="dU5-vu-QZB" firstAttribute="centerX" secondItem="a9H-Ra-7cA" secondAttribute="centerX" id="uRy-2p-B2N"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="a9H-Ra-7cA"/>
+            <connections>
+                <outlet property="titleImageView" destination="ztS-BY-yyb" id="wHr-Zv-juR"/>
+                <outlet property="titleLabel" destination="dU5-vu-QZB" id="xDm-zC-Lrs"/>
+            </connections>
+            <point key="canvasLocation" x="-88.405797101449281" y="40.848214285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="hammer" width="96" height="96"/>
+    </resources>
+</document>

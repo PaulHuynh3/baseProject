@@ -59,6 +59,11 @@
 		EB9F5767257B3CF5006447A9 /* MarketViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9F5766257B3CF5006447A9 /* MarketViewController.storyboard */; };
 		EBA3942B251191190019B273 /* BottomStatusHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3942A251191190019B273 /* BottomStatusHelperView.swift */; };
 		EBA3942D251191990019B273 /* BottomStatusHelperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA3942C251191990019B273 /* BottomStatusHelperView.xib */; };
+		EBAC26B52597CEE800200817 /* AuctionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC26B42597CEE800200817 /* AuctionViewModel.swift */; };
+		EBAC26B92597D27B00200817 /* AuctionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC26B72597D27B00200817 /* AuctionTableViewCell.swift */; };
+		EBAC26BA2597D27B00200817 /* AuctionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAC26B82597D27B00200817 /* AuctionTableViewCell.xib */; };
+		EBAC26BC2598185100200817 /* AuctionTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC26BB2598185100200817 /* AuctionTableHeaderView.swift */; };
+		EBAC26BE2598189600200817 /* AuctionTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAC26BD2598189600200817 /* AuctionTableHeaderView.xib */; };
 		EBAE645F25281481000F654C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE645E25281481000F654C /* HomeViewController.swift */; };
 		EBAE646225281C24000F654C /* StoryboardNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE646125281C24000F654C /* StoryboardNavigation.swift */; };
 		EBAE646525282DA7000F654C /* BurgerMenuPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE646425282DA7000F654C /* BurgerMenuPresentationController.swift */; };
@@ -137,6 +142,11 @@
 		EB9F5766257B3CF5006447A9 /* MarketViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MarketViewController.storyboard; sourceTree = "<group>"; };
 		EBA3942A251191190019B273 /* BottomStatusHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomStatusHelperView.swift; sourceTree = "<group>"; };
 		EBA3942C251191990019B273 /* BottomStatusHelperView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomStatusHelperView.xib; sourceTree = "<group>"; };
+		EBAC26B42597CEE800200817 /* AuctionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionViewModel.swift; sourceTree = "<group>"; };
+		EBAC26B72597D27B00200817 /* AuctionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionTableViewCell.swift; sourceTree = "<group>"; };
+		EBAC26B82597D27B00200817 /* AuctionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionTableViewCell.xib; sourceTree = "<group>"; };
+		EBAC26BB2598185100200817 /* AuctionTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionTableHeaderView.swift; sourceTree = "<group>"; };
+		EBAC26BD2598189600200817 /* AuctionTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionTableHeaderView.xib; sourceTree = "<group>"; };
 		EBAE645E25281481000F654C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EBAE646125281C24000F654C /* StoryboardNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNavigation.swift; sourceTree = "<group>"; };
 		EBAE646425282DA7000F654C /* BurgerMenuPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuPresentationController.swift; sourceTree = "<group>"; };
@@ -361,7 +371,9 @@
 			isa = PBXGroup;
 			children = (
 				EB8EF44E257B43CB008BCBD8 /* AuctionViewController.swift */,
+				EBAC26B42597CEE800200817 /* AuctionViewModel.swift */,
 				EB8EF450257B43DF008BCBD8 /* AuctionViewController.storyboard */,
+				EBAC26B62597D23200200817 /* Cells */,
 			);
 			path = Auction;
 			sourceTree = "<group>";
@@ -463,6 +475,17 @@
 				EB8B25A7255D9F1C00453506 /* GeneralTextView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EBAC26B62597D23200200817 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EBAC26B72597D27B00200817 /* AuctionTableViewCell.swift */,
+				EBAC26B82597D27B00200817 /* AuctionTableViewCell.xib */,
+				EBAC26BB2598185100200817 /* AuctionTableHeaderView.swift */,
+				EBAC26BD2598189600200817 /* AuctionTableHeaderView.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		EBAE645D25281444000F654C /* Home */ = {
@@ -620,6 +643,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBAC26BE2598189600200817 /* AuctionTableHeaderView.xib in Resources */,
 				EB15FF6225856E8000E98452 /* MarketReuseableView.xib in Resources */,
 				EBA3942D251191990019B273 /* BottomStatusHelperView.xib in Resources */,
 				EB02435B2521416100EF93B9 /* HomeViewController.storyboard in Resources */,
@@ -635,6 +659,7 @@
 				EB9890BD250DC15000E35BEF /* AccountViewController.storyboard in Resources */,
 				EB8EF456257B447C008BCBD8 /* SearchViewController.storyboard in Resources */,
 				EB9890BF250DC15B00E35BEF /* DriverInfoViewController.storyboard in Resources */,
+				EBAC26BA2597D27B00200817 /* AuctionTableViewCell.xib in Resources */,
 				EB6E5535250C90E800816820 /* LaunchScreen.storyboard in Resources */,
 				EB9890B7250C9A8B00E35BEF /* RootViewController.storyboard in Resources */,
 				EB7B088B25298BDD0050EE9F /* DriverRequirementCell.xib in Resources */,
@@ -661,9 +686,11 @@
 				EB56A6C12556422F00A57448 /* Promise.swift in Sources */,
 				EBC7FC85251691E200102B57 /* BurgerMenuViewModel.swift in Sources */,
 				EB313368252510AD008FF586 /* AlertManager.swift in Sources */,
+				EBAC26BC2598185100200817 /* AuctionTableHeaderView.swift in Sources */,
 				EBDBBFA5257D7AAD00F67AA4 /* MarketProduct.swift in Sources */,
 				EB9F5765257B3CD6006447A9 /* MarketViewController.swift in Sources */,
 				EB568FC9257D725100FE8B5E /* NetworkService.swift in Sources */,
+				EBAC26B92597D27B00200817 /* AuctionTableViewCell.swift in Sources */,
 				EB6E2B0D253395A3009EBBD7 /* PhotoInformationCell.swift in Sources */,
 				EB8EF44F257B43CB008BCBD8 /* AuctionViewController.swift in Sources */,
 				EBAE646225281C24000F654C /* StoryboardNavigation.swift in Sources */,
@@ -682,6 +709,7 @@
 				EB9890C4250DC53100E35BEF /* LoginViewController.swift in Sources */,
 				EBE7DECD25314D270055309C /* CameraViewController.swift in Sources */,
 				EBBB67C92515A6EE00031C30 /* BurgerMenuCell.swift in Sources */,
+				EBAC26B52597CEE800200817 /* AuctionViewModel.swift in Sources */,
 				EB87F48C255F742C0052B51D /* LoginBuilder.swift in Sources */,
 				EB22E0ED2569C77000453D85 /* ForgotPasswordBuilder.swift in Sources */,
 				EB9890B9250C9C5200E35BEF /* TabBarViewController.swift in Sources */,

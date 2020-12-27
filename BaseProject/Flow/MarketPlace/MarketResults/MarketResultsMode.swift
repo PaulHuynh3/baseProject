@@ -10,5 +10,5 @@ import Foundation
 
 enum MarketResultsMode {
     case featured
-    case allResults
+    case all
 }

@@ -40,7 +40,7 @@ class MarketResultsViewController: UIViewController {
         switch viewModel.mode {
         case .featured:
             navigationController?.navigationBar.topItem?.backBarButtonItem = nil
-        case .allResults:
+        case .all:
             navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "Featured Posts", style: .plain, target: nil, action: nil)
         }
     }
@@ -50,7 +50,7 @@ class MarketResultsViewController: UIViewController {
         case .featured:
             registerCollectionCells()
             registerReuseableHeaderView()
-        case .allResults:
+        case .all:
             registerCollectionCells()
         }
     }
@@ -130,7 +130,7 @@ extension MarketResultsViewController: MarketReuseableViewDelegate {
         guard let marketViewController = UIStoryboard(name: String(describing:StoryboardNavigation.MarketResultsViewController.rawValue), bundle: nil).instantiateViewController(withIdentifier: String(describing: MarketResultsViewController.self)) as? MarketResultsViewController else {
             return
         }
-        marketViewController.configure(delegate: nil, mode: .allResults)
+        marketViewController.configure(delegate: nil, mode: .all)
         navigationController?.pushViewController(marketViewController, animated: true)
     }
 }
