@@ -18,6 +18,7 @@ enum StoryboardNavigation: String {
     case MarketViewController = "MarketViewController"
     case MarketResultsViewController = "MarketResultsViewController"
     case SearchViewController = "SearchViewController"
+    case DetailedAuctionItemViewController = "DetailedAuctionItemViewController"
 }
 
 

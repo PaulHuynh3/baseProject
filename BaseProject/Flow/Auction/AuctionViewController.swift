@@ -23,6 +23,14 @@ class AuctionViewController: UIViewController {
         registerNibForTableView(cellType: String(describing: AuctionTableViewCell.self), tableView: tableView)
         registerHeaderFooterTableView(cellType: String(describing: AuctionTableHeaderView.self), tableView: tableView)
     }
+
+    private func navigateToDetailedItem(data: MarketProduct) {
+         guard let detailedAuctionItemViewController = UIStoryboard(name: String(describing:StoryboardNavigation.DetailedAuctionItemViewController.rawValue), bundle: nil).instantiateViewController(withIdentifier: String(describing: DetailedAuctionItemViewController.self)) as? DetailedAuctionItemViewController else {
+             return
+         }
+         detailedAuctionItemViewController.configure(data: data)
+         navigationController?.pushViewController(detailedAuctionItemViewController, animated: true)
+     }
 }
 
 extension AuctionViewController: TableView {
@@ -50,6 +58,7 @@ extension AuctionViewController: TableView {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        viewModel.createMenuSelectedCellCallback(with: tableView, indexPath: indexPath)
+        let data = viewModel.marketProducts[indexPath.row]
+        navigateToDetailedItem(data: data)
     }
 }
