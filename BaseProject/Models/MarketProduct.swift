@@ -12,17 +12,17 @@ struct MarketProduct {
     let name: String
     let itemNumber: Int
     let description: String
-    let image: UIImage
+    let images: [UIImage]
     let likes: Int
     let views: Int
     let location: String
     let remainingTime: Int?
 
-    init(name: String, itemNumber: Int, description: String, image: UIImage, likes: Int, views: Int, location: String, remainingTime: Int? = 0) {
+    init(name: String, itemNumber: Int, description: String, images: [UIImage], likes: Int, views: Int, location: String, remainingTime: Int? = 0) {
         self.name = name
         self.itemNumber = itemNumber
         self.description = description
-        self.image = image
+        self.images = images
         self.likes = likes
         self.views = views
         self.location = location

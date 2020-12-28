@@ -14,23 +14,33 @@ class DetailedAuctionItemViewController: UIViewController {
 
     private var timer: Timer?
     private var seconds: Int?
+    private var data: MarketProduct?
+    private var auctionPictureViewController: AuctionPictureCollectionController?
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let auctionPictureViewController = segue.destination as? AuctionPictureCollectionController {
+            self.auctionPictureViewController = auctionPictureViewController
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        auctionPictureViewController?.configure(data: data)
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         invalidateTimer()
     }
 
+    func configure(data: MarketProduct) {
+        self.data = data
+        seconds = data.remainingTime
+    }
+
     private func setup() {
         timer = Timer()
         runTimer()
-    }
-
-    func configure(data: MarketProduct) {
-        seconds = data.remainingTime
     }
 
     private func runTimer() {

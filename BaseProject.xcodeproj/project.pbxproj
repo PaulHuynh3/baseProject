@@ -66,6 +66,10 @@
 		EBAC26BE2598189600200817 /* AuctionTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAC26BD2598189600200817 /* AuctionTableHeaderView.xib */; };
 		EBAC26C125982FD600200817 /* DetailedAuctionItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC26C025982FD600200817 /* DetailedAuctionItemViewController.swift */; };
 		EBAC26C32598307700200817 /* DetailedAuctionItemViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBAC26C22598307700200817 /* DetailedAuctionItemViewController.storyboard */; };
+		EBAC26C52599326F00200817 /* AuctionPictureCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC26C42599326F00200817 /* AuctionPictureCollectionController.swift */; };
+		EBAC26C7259942E400200817 /* AuctionPictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC26C6259942E400200817 /* AuctionPictureViewModel.swift */; };
+		EBAC26CB259948F400200817 /* AuctionPicturesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC26C9259948F400200817 /* AuctionPicturesCollectionCell.swift */; };
+		EBAC26CC259948F400200817 /* AuctionPicturesCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAC26CA259948F400200817 /* AuctionPicturesCollectionCell.xib */; };
 		EBAE645F25281481000F654C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE645E25281481000F654C /* HomeViewController.swift */; };
 		EBAE646225281C24000F654C /* StoryboardNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE646125281C24000F654C /* StoryboardNavigation.swift */; };
 		EBAE646525282DA7000F654C /* BurgerMenuPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE646425282DA7000F654C /* BurgerMenuPresentationController.swift */; };
@@ -151,6 +155,10 @@
 		EBAC26BD2598189600200817 /* AuctionTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionTableHeaderView.xib; sourceTree = "<group>"; };
 		EBAC26C025982FD600200817 /* DetailedAuctionItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedAuctionItemViewController.swift; sourceTree = "<group>"; };
 		EBAC26C22598307700200817 /* DetailedAuctionItemViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailedAuctionItemViewController.storyboard; sourceTree = "<group>"; };
+		EBAC26C42599326F00200817 /* AuctionPictureCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionPictureCollectionController.swift; sourceTree = "<group>"; };
+		EBAC26C6259942E400200817 /* AuctionPictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionPictureViewModel.swift; sourceTree = "<group>"; };
+		EBAC26C9259948F400200817 /* AuctionPicturesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionPicturesCollectionCell.swift; sourceTree = "<group>"; };
+		EBAC26CA259948F400200817 /* AuctionPicturesCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionPicturesCollectionCell.xib; sourceTree = "<group>"; };
 		EBAE645E25281481000F654C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EBAE646125281C24000F654C /* StoryboardNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNavigation.swift; sourceTree = "<group>"; };
 		EBAE646425282DA7000F654C /* BurgerMenuPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuPresentationController.swift; sourceTree = "<group>"; };
@@ -489,6 +497,8 @@
 				EBAC26B82597D27B00200817 /* AuctionTableViewCell.xib */,
 				EBAC26BB2598185100200817 /* AuctionTableHeaderView.swift */,
 				EBAC26BD2598189600200817 /* AuctionTableHeaderView.xib */,
+				EBAC26C9259948F400200817 /* AuctionPicturesCollectionCell.swift */,
+				EBAC26CA259948F400200817 /* AuctionPicturesCollectionCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -497,6 +507,8 @@
 			isa = PBXGroup;
 			children = (
 				EBAC26C025982FD600200817 /* DetailedAuctionItemViewController.swift */,
+				EBAC26C42599326F00200817 /* AuctionPictureCollectionController.swift */,
+				EBAC26C6259942E400200817 /* AuctionPictureViewModel.swift */,
 				EBAC26C22598307700200817 /* DetailedAuctionItemViewController.storyboard */,
 			);
 			path = DetailedAuctionItem;
@@ -659,6 +671,7 @@
 			files = (
 				EBAC26BE2598189600200817 /* AuctionTableHeaderView.xib in Resources */,
 				EB15FF6225856E8000E98452 /* MarketReuseableView.xib in Resources */,
+				EBAC26CC259948F400200817 /* AuctionPicturesCollectionCell.xib in Resources */,
 				EBA3942D251191990019B273 /* BottomStatusHelperView.xib in Resources */,
 				EB02435B2521416100EF93B9 /* HomeViewController.storyboard in Resources */,
 				EB8EF451257B43DF008BCBD8 /* AuctionViewController.storyboard in Resources */,
@@ -699,9 +712,11 @@
 				EB22E0EF2569D14600453D85 /* Enums.swift in Sources */,
 				EBB677ED2534E4CE00074550 /* PhotoInformationBuilder.swift in Sources */,
 				EB56A6C12556422F00A57448 /* Promise.swift in Sources */,
+				EBAC26CB259948F400200817 /* AuctionPicturesCollectionCell.swift in Sources */,
 				EBC7FC85251691E200102B57 /* BurgerMenuViewModel.swift in Sources */,
 				EB313368252510AD008FF586 /* AlertManager.swift in Sources */,
 				EBAC26BC2598185100200817 /* AuctionTableHeaderView.swift in Sources */,
+				EBAC26C7259942E400200817 /* AuctionPictureViewModel.swift in Sources */,
 				EBDBBFA5257D7AAD00F67AA4 /* MarketProduct.swift in Sources */,
 				EB9F5765257B3CD6006447A9 /* MarketViewController.swift in Sources */,
 				EB568FC9257D725100FE8B5E /* NetworkService.swift in Sources */,
@@ -747,6 +762,7 @@
 				EB3F8C02257ED90400FD381D /* MarketProductCell.swift in Sources */,
 				EB56A6C32557573B00A57448 /* AccountViewController.swift in Sources */,
 				EB22E0EA2569C71900453D85 /* ForgotPasswordViewModel.swift in Sources */,
+				EBAC26C52599326F00200817 /* AuctionPictureCollectionController.swift in Sources */,
 				EB31336D25252AAF008FF586 /* RegisterBuilder.swift in Sources */,
 				EB9002E1250ED61C00F8B015 /* PhotoInformationViewController.swift in Sources */,
 			);

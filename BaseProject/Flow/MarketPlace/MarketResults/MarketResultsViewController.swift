@@ -90,7 +90,7 @@ extension MarketResultsViewController: UICollectionViewDelegate, UICollectionVie
             fatalError("Could not DequeingReuseableCell for MarketProductCell")
         }
         let product = viewModel.marketProducts[indexPath.row]
-        marketProductCell.configure(data: MarketProductCell.Data(image: product.image, title: product.name))
+        marketProductCell.configure(data: MarketProductCell.Data(image: product.images.first ?? UIImage(), title: product.name))
         return marketProductCell
     }
 
