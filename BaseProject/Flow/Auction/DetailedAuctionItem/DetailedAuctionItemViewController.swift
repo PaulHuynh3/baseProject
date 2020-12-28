@@ -15,10 +15,8 @@ class DetailedAuctionItemViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
 
-    private var timer: Timer?
-    private var seconds: Int?
-    private var data: MarketProduct?
     private var auctionPictureViewController: AuctionPictureCollectionController?
+    private var viewModel = DetailedAuctionItemViewModel()
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let auctionPictureViewController = segue.destination as? AuctionPictureCollectionController {
@@ -28,50 +26,24 @@ class DetailedAuctionItemViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-        auctionPictureViewController?.configure(data: data)
+        auctionPictureViewController?.configure(data: viewModel.data)
         offerButton.centerTextVertically(padding: 5)
         saveButton.centerTextVertically(padding: 5)
         shareButton.centerTextVertically(padding: 5)
     }
 
     override func viewDidDisappear(_ animated: Bool) {
-        invalidateTimer()
+        viewModel.invalidateTimer()
     }
 
     func configure(data: MarketProduct) {
-        self.data = data
-        seconds = data.remainingTime
+        viewModel.configure(delegate: self, data: data)
     }
 
-    private func setup() {
-        timer = Timer()
-        runTimer()
-    }
+}
 
-    private func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
-    }
-
-    @objc func updateTimer() {
-        guard seconds ?? 0 > 1 else {
-            countDownLabel.text = timeString(time: TimeInterval(0))
-            invalidateTimer()
-            return
-        }
-        seconds! -= 1
-        countDownLabel.text = timeString(time: TimeInterval(seconds ?? 0))
-    }
-
-    private func invalidateTimer() {
-        timer?.invalidate()
-        timer = nil
-    }
-
-    private func timeString(time: TimeInterval) -> String {
-        let hours = Int(time) / 3600
-        let minutes = Int(time) / 60 % 60
-        let seconds = Int(time) % 60
-        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+extension DetailedAuctionItemViewController: DetailedAuctionItemViewModelDelegate {
+    func updateCountDown(with timeString: String) {
+        countDownLabel.text = timeString
     }
 }
