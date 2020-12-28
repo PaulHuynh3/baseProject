@@ -11,6 +11,9 @@ import UIKit
 class DetailedAuctionItemViewController: UIViewController {
     @IBOutlet weak var remainingTimeLabel: UILabel!
     @IBOutlet weak var countDownLabel: UILabel!
+    @IBOutlet weak var offerButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
 
     private var timer: Timer?
     private var seconds: Int?
@@ -27,6 +30,9 @@ class DetailedAuctionItemViewController: UIViewController {
         super.viewDidLoad()
         setup()
         auctionPictureViewController?.configure(data: data)
+        offerButton.centerTextVertically(padding: 5)
+        saveButton.centerTextVertically(padding: 5)
+        shareButton.centerTextVertically(padding: 5)
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -68,5 +74,4 @@ class DetailedAuctionItemViewController: UIViewController {
         let seconds = Int(time) % 60
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
-
 }

@@ -73,17 +73,26 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MqQ-7U-m6Z">
                                                         <rect key="frame" x="8" y="89.5" width="398" height="50"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hti-Yc-xax">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bww-iJ-19C">
                                                                 <rect key="frame" x="0.0" y="0.0" width="132.5" height="50"/>
-                                                                <state key="normal" image="money-icon"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                <state key="normal" title="Bid" image="money-icon">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9j-NM-cEY">
                                                                 <rect key="frame" x="132.5" y="0.0" width="133" height="50"/>
-                                                                <state key="normal" image="save-icon"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                <state key="normal" title="Save" image="save-icon">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vln-P4-7xT">
                                                                 <rect key="frame" x="265.5" y="0.0" width="132.5" height="50"/>
-                                                                <state key="normal" image="share-icon"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                <state key="normal" title="Share" image="share-icon">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -116,7 +125,10 @@
                     </view>
                     <connections>
                         <outlet property="countDownLabel" destination="tRI-W3-Sgs" id="jRF-k4-NaQ"/>
+                        <outlet property="offerButton" destination="bww-iJ-19C" id="pdt-JX-z1U"/>
                         <outlet property="remainingTimeLabel" destination="Ht8-eR-nMD" id="kEk-tg-ImS"/>
+                        <outlet property="saveButton" destination="d9j-NM-cEY" id="DD6-rR-aDI"/>
+                        <outlet property="shareButton" destination="Vln-P4-7xT" id="YbB-wD-9wY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQQ-lj-mTS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

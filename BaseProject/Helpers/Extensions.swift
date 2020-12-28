@@ -8,11 +8,15 @@
 
 import UIKit
 
+//MARK: - UITableView
+
 extension UITableView {
     func dequeue<T: UITableViewCell>(cell identifier: T.Type, in tableView: UITableView, for indexPath: IndexPath) -> T {
         return tableView.dequeueReusableCell(withIdentifier: String(describing: identifier), for: indexPath) as! T
     }
 }
+
+//MARK: - Strings
 
 extension String {
     func trim() -> String {
@@ -49,6 +53,8 @@ extension String {
         return capitalResult && lowerCaseResult && numberResult && specialResult && requiredLengthResult
     }
 }
+
+//MARK: - UITextField
 
 extension UITextField {
     enum TextFieldType {
@@ -92,8 +98,9 @@ extension UITextField {
     
 }
 
-extension UIColor {
+//MARK: - UIColor
 
+extension UIColor {
     enum ColourTheme {
         case disabledButton
         case orangeButton
@@ -109,4 +116,39 @@ extension UIColor {
         }
     }
 
+}
+
+//MARK: - UIButtons
+
+extension UIButton {
+ func centerTextVertically(padding : CGFloat = 3) {
+        guard
+            let imageViewSize = self.imageView?.frame.size,
+            let titleLabelSize = self.titleLabel?.frame.size else {
+            return
+        }
+
+        let totalHeight = imageViewSize.height + titleLabelSize.height + padding
+
+        self.imageEdgeInsets = UIEdgeInsets(
+            top: max(0, -(totalHeight - imageViewSize.height)),
+            left: 0.0,
+            bottom: 0.0,
+            right: -titleLabelSize.width
+        )
+
+        self.titleEdgeInsets = UIEdgeInsets(
+            top: (totalHeight - imageViewSize.height),
+            left: -imageViewSize.width,
+            bottom: -(totalHeight - titleLabelSize.height),
+            right: 0.0
+        )
+
+        self.contentEdgeInsets = UIEdgeInsets(
+            top: 0.0,
+            left: 0.0,
+            bottom: titleLabelSize.height,
+            right: 0.0
+        )
+    }
 }
