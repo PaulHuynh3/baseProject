@@ -154,17 +154,23 @@
                                     <outlet property="delegate" destination="ulf-ay-Zn8" id="TQP-tJ-TjS"/>
                                 </connections>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="TCP-cp-7NH">
+                                <rect key="frame" x="187.5" y="240" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hQw-kf-GO3" firstAttribute="leading" secondItem="bE0-fR-SsL" secondAttribute="leading" id="9Is-ea-Gt7"/>
                             <constraint firstItem="hQw-kf-GO3" firstAttribute="top" secondItem="bE0-fR-SsL" secondAttribute="top" id="DTs-EV-QdY"/>
                             <constraint firstAttribute="trailing" secondItem="hQw-kf-GO3" secondAttribute="trailing" id="Exc-cv-7li"/>
+                            <constraint firstItem="TCP-cp-7NH" firstAttribute="centerX" secondItem="bE0-fR-SsL" secondAttribute="centerX" id="LSD-ch-cLu"/>
                             <constraint firstAttribute="bottom" secondItem="hQw-kf-GO3" secondAttribute="bottom" id="ogp-tt-lAe"/>
+                            <constraint firstAttribute="bottom" secondItem="TCP-cp-7NH" secondAttribute="bottom" constant="20" id="twB-cm-NJN"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="hQw-kf-GO3" id="Ugt-7R-Lyu"/>
+                        <outlet property="pageControl" destination="TCP-cp-7NH" id="adQ-O9-psr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyj-c0-tdl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

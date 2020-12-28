@@ -12,7 +12,7 @@ class AuctionPictureCollectionController: UIViewController {
 
     let viewModel = AuctionPictureViewModel()
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var pageControl: UIPageControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,8 @@ class AuctionPictureCollectionController: UIViewController {
 
     func configure(data: MarketProduct?) {
         viewModel.configure(delegate: self, data: data)
+        pageControl.numberOfPages = viewModel.marketProduct?.images.count ?? 0
+        pageControl.hidesForSinglePage = true
     }
 
     private func setup() {
@@ -45,6 +47,10 @@ extension AuctionPictureCollectionController: UICollectionViewDataSource, UIColl
 
         cell.configure(image: viewModel.marketProduct?.images[indexPath.row])
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        pageControl.currentPage = indexPath.row
     }
 }
 
