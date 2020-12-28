@@ -16,17 +16,17 @@ class AuctionPictureCollectionController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        registerCollectionCell()
     }
 
     func configure(data: MarketProduct?) {
         viewModel.configure(delegate: self, data: data)
-        pageControl.numberOfPages = viewModel.marketProduct?.images.count ?? 0
-        pageControl.hidesForSinglePage = true
+        configurePageControl()
     }
 
-    private func setup() {
-        registerCollectionCell()
+    private func configurePageControl() {
+        pageControl.numberOfPages = viewModel.marketProduct?.images.count ?? 0
+        pageControl.hidesForSinglePage = true
     }
 
     private func registerCollectionCell() {
