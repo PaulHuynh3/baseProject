@@ -27,6 +27,7 @@
 		EB56A6C32557573B00A57448 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A6C22557573B00A57448 /* AccountViewController.swift */; };
 		EB639A742517F3DB00D4903B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB639A732517F3DB00D4903B /* Extensions.swift */; };
 		EB639A762517F67800D4903B /* DriverInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB639A752517F67800D4903B /* DriverInfoViewController.swift */; };
+		EB6BF26B259BD97200CE1614 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6BF26A259BD97200CE1614 /* KeyboardLayoutConstraint.swift */; };
 		EB6CC0E1253B7D5100BBF7D5 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6CC0E0253B7D5100BBF7D5 /* CameraViewModel.swift */; };
 		EB6E2B0D253395A3009EBBD7 /* PhotoInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E2B0B253395A3009EBBD7 /* PhotoInformationCell.swift */; };
 		EB6E2B0E253395A3009EBBD7 /* PhotoInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6E2B0C253395A3009EBBD7 /* PhotoInformationCell.xib */; };
@@ -78,8 +79,8 @@
 		EBAE646B25282F3B000F654C /* ModalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE646A25282F3B000F654C /* ModalInteractor.swift */; };
 		EBB355F82585BEA100AD10F4 /* MarketResultsMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB355F72585BEA100AD10F4 /* MarketResultsMode.swift */; };
 		EBB66BB1259A86B20027AEF3 /* DetailedAuctionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB66BB0259A86B20027AEF3 /* DetailedAuctionItemViewModel.swift */; };
-		EBB66BB3259ABDE70027AEF3 /* DismissableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB66BB2259ABDE70027AEF3 /* DismissableViewController.swift */; };
-		EBB66BB5259AC17C0027AEF3 /* DismissableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB66BB4259AC17C0027AEF3 /* DismissableViewController.storyboard */; };
+		EBB66BB3259ABDE70027AEF3 /* DismissableOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB66BB2259ABDE70027AEF3 /* DismissableOfferViewController.swift */; };
+		EBB66BB5259AC17C0027AEF3 /* DismissableOfferViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB66BB4259AC17C0027AEF3 /* DismissableOfferViewController.storyboard */; };
 		EBB677ED2534E4CE00074550 /* PhotoInformationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB677EC2534E4CE00074550 /* PhotoInformationBuilder.swift */; };
 		EBBB67C12515A4A400031C30 /* BurgerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB67C02515A4A400031C30 /* BurgerMenuViewController.swift */; };
 		EBBB67C32515A4FD00031C30 /* BurgerMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB67C22515A4FD00031C30 /* BurgerMenuViewController.storyboard */; };
@@ -119,6 +120,7 @@
 		EB56A6C22557573B00A57448 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		EB639A732517F3DB00D4903B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EB639A752517F67800D4903B /* DriverInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoViewController.swift; sourceTree = "<group>"; };
+		EB6BF26A259BD97200CE1614 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 		EB6CC0E0253B7D5100BBF7D5 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		EB6E2B0B253395A3009EBBD7 /* PhotoInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInformationCell.swift; sourceTree = "<group>"; };
 		EB6E2B0C253395A3009EBBD7 /* PhotoInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoInformationCell.xib; sourceTree = "<group>"; };
@@ -170,8 +172,8 @@
 		EBAE646A25282F3B000F654C /* ModalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalInteractor.swift; sourceTree = "<group>"; };
 		EBB355F72585BEA100AD10F4 /* MarketResultsMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketResultsMode.swift; sourceTree = "<group>"; };
 		EBB66BB0259A86B20027AEF3 /* DetailedAuctionItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedAuctionItemViewModel.swift; sourceTree = "<group>"; };
-		EBB66BB2259ABDE70027AEF3 /* DismissableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableViewController.swift; sourceTree = "<group>"; };
-		EBB66BB4259AC17C0027AEF3 /* DismissableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DismissableViewController.storyboard; sourceTree = "<group>"; };
+		EBB66BB2259ABDE70027AEF3 /* DismissableOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableOfferViewController.swift; sourceTree = "<group>"; };
+		EBB66BB4259AC17C0027AEF3 /* DismissableOfferViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DismissableOfferViewController.storyboard; sourceTree = "<group>"; };
 		EBB677EC2534E4CE00074550 /* PhotoInformationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInformationBuilder.swift; sourceTree = "<group>"; };
 		EBBB67C02515A4A400031C30 /* BurgerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuViewController.swift; sourceTree = "<group>"; };
 		EBBB67C22515A4FD00031C30 /* BurgerMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BurgerMenuViewController.storyboard; sourceTree = "<group>"; };
@@ -265,6 +267,17 @@
 				EB568FCB257D72AB00FE8B5E /* NetworkError.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		EB6BF26C259BDF9A00CE1614 /* BiddingFlow */ = {
+			isa = PBXGroup;
+			children = (
+				EBAC26C42599326F00200817 /* AuctionPictureCollectionController.swift */,
+				EBAC26C6259942E400200817 /* AuctionPictureViewModel.swift */,
+				EBB66BB2259ABDE70027AEF3 /* DismissableOfferViewController.swift */,
+				EBB66BB4259AC17C0027AEF3 /* DismissableOfferViewController.storyboard */,
+			);
+			path = BiddingFlow;
 			sourceTree = "<group>";
 		};
 		EB6E2B08253394A4009EBBD7 /* CameraSession */ = {
@@ -392,6 +405,7 @@
 				EBAC26B42597CEE800200817 /* AuctionViewModel.swift */,
 				EB8EF450257B43DF008BCBD8 /* AuctionViewController.storyboard */,
 				EBAC26BF25982F9F00200817 /* DetailedAuctionItem */,
+				EBAC26C22598307700200817 /* DetailedAuctionItemViewController.storyboard */,
 				EBAC26B62597D23200200817 /* Cells */,
 			);
 			path = Auction;
@@ -514,11 +528,7 @@
 			children = (
 				EBAC26C025982FD600200817 /* DetailedAuctionItemViewController.swift */,
 				EBB66BB0259A86B20027AEF3 /* DetailedAuctionItemViewModel.swift */,
-				EBAC26C42599326F00200817 /* AuctionPictureCollectionController.swift */,
-				EBAC26C6259942E400200817 /* AuctionPictureViewModel.swift */,
-				EBAC26C22598307700200817 /* DetailedAuctionItemViewController.storyboard */,
-				EBB66BB2259ABDE70027AEF3 /* DismissableViewController.swift */,
-				EBB66BB4259AC17C0027AEF3 /* DismissableViewController.storyboard */,
+				EB6BF26C259BDF9A00CE1614 /* BiddingFlow */,
 			);
 			path = DetailedAuctionItem;
 			sourceTree = "<group>";
@@ -614,6 +624,7 @@
 				EB9890C6250DC7E900E35BEF /* Helpers */,
 				EBEAF3C4250C250800AA3AAF /* AppDelegate.swift */,
 				EBEAF3C6250C250800AA3AAF /* SceneDelegate.swift */,
+				EB6BF26A259BD97200CE1614 /* KeyboardLayoutConstraint.swift */,
 				EBEAF3CD250C250900AA3AAF /* Assets.xcassets */,
 				EBEAF3D2250C250900AA3AAF /* Info.plist */,
 			);
@@ -688,7 +699,7 @@
 				EB9F5767257B3CF5006447A9 /* MarketViewController.storyboard in Resources */,
 				EBBB67C32515A4FD00031C30 /* BurgerMenuViewController.storyboard in Resources */,
 				EBEAF3CE250C250900AA3AAF /* Assets.xcassets in Resources */,
-				EBB66BB5259AC17C0027AEF3 /* DismissableViewController.storyboard in Resources */,
+				EBB66BB5259AC17C0027AEF3 /* DismissableOfferViewController.storyboard in Resources */,
 				EB3F8C03257ED90400FD381D /* MarketProductCell.xib in Resources */,
 				EB8B25A8255D9F1C00453506 /* GeneralTextView.xib in Resources */,
 				EB6E2B0E253395A3009EBBD7 /* PhotoInformationCell.xib in Resources */,
@@ -747,6 +758,7 @@
 				EBB355F82585BEA100AD10F4 /* MarketResultsMode.swift in Sources */,
 				EBAC26C125982FD600200817 /* DetailedAuctionItemViewController.swift in Sources */,
 				EBBB67C12515A4A400031C30 /* BurgerMenuViewController.swift in Sources */,
+				EB6BF26B259BD97200CE1614 /* KeyboardLayoutConstraint.swift in Sources */,
 				EBB66BB1259A86B20027AEF3 /* DetailedAuctionItemViewModel.swift in Sources */,
 				EB9890C4250DC53100E35BEF /* LoginViewController.swift in Sources */,
 				EBE7DECD25314D270055309C /* CameraViewController.swift in Sources */,
@@ -768,7 +780,7 @@
 				EBAE646525282DA7000F654C /* BurgerMenuPresentationController.swift in Sources */,
 				EBF799132522BD45000B325C /* ForgotPasswordViewController.swift in Sources */,
 				EBAE646925282F07000F654C /* BurgerMenuModalInteractor.swift in Sources */,
-				EBB66BB3259ABDE70027AEF3 /* DismissableViewController.swift in Sources */,
+				EBB66BB3259ABDE70027AEF3 /* DismissableOfferViewController.swift in Sources */,
 				EB8EF454257B446A008BCBD8 /* SearchViewController.swift in Sources */,
 				EB639A762517F67800D4903B /* DriverInfoViewController.swift in Sources */,
 				EB3F8C02257ED90400FD381D /* MarketProductCell.swift in Sources */,

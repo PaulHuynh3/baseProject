@@ -45,24 +45,12 @@ class DetailedAuctionItemViewController: UIViewController {
     }
 
     @IBAction func bidTapped(_ sender: Any) {
-        guard let dismissableController = UIStoryboard(name: String(describing: DismissableViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DismissableViewController.self)) as? DismissableViewController else { return }
-        //configure for the data .bid
-        dismissableController.configure(delegate: self)
+        guard let dismissableController = UIStoryboard(name: String(describing: DismissableOfferViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DismissableOfferViewController.self)) as? DismissableOfferViewController else { return }
+        dismissableController.configure(delegate: self, data: viewModel.buildDismissableData())
         UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseInOut, animations: {
             //set background colour to back if you want.. with alpha of 0.5
         }) { _ in
             self.present(dismissableController, animated: true, completion: nil)
-        }
-    }
-
-    @IBAction func conditionTapped(_ sender: Any) {
-        guard let dismissableController = UIStoryboard(name: String(describing: DismissableViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DismissableViewController.self)) as? DismissableViewController else { return }
-        //enum .condition
-        dismissableController.configure(delegate: self)
-        UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseInOut, animations: {
-            self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        }) { _ in
-            self.present(dismissableController, animated: false, completion: nil)
         }
     }
 

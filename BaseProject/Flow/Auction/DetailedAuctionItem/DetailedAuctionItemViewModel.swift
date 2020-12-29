@@ -27,6 +27,20 @@ class DetailedAuctionItemViewModel {
         timer = nil
     }
 
+    func buildDismissableData() -> DismissableData {
+        return DismissableData(
+            dismissableTitle: "Your Offer",
+            marketProduct: data,
+            offerBidConfirmCallback: createConfirmBidCallback()
+        )
+    }
+
+    private func createConfirmBidCallback() -> ((Int) -> Void)? {
+        return { price in
+            //update the price here
+        }
+    }
+
     private func setup() {
         timer = Timer()
         runTimer()
