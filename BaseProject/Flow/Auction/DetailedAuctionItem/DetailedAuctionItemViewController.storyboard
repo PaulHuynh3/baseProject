@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="bJb-4b-cLb">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="884.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8Is-9c-93y">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
@@ -56,7 +56,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JXr-pd-Z4q">
-                                                <rect key="frame" x="0.0" y="566" width="414" height="147.5"/>
+                                                <rect key="frame" x="0.0" y="566" width="414" height="318.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ergonomic Brown Shoes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXk-TJ-CAh">
                                                         <rect key="frame" x="8" y="8" width="398" height="27.5"/>
@@ -96,24 +96,27 @@
                                                             </button>
                                                         </subviews>
                                                     </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="6bu-Xj-0Eh">
+                                                        <rect key="frame" x="8" y="154.5" width="398" height="156"/>
+                                                        <subviews>
+                                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="G6G-cf-RHq">
+                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="132.5"/>
+                                                            </mapView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Honolulu, Hawaii" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSZ-bJ-flI">
+                                                                <rect key="frame" x="0.0" y="135.5" width="398" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6bu-Xj-0Eh">
-                                                <rect key="frame" x="0.0" y="713.5" width="414" height="148.5"/>
-                                                <subviews>
-                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="G6G-cf-RHq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
-                                                    </mapView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toronto, Ontario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSZ-bJ-flI">
-                                                        <rect key="frame" x="0.0" y="128" width="414" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="G6G-cf-RHq" firstAttribute="height" secondItem="bJb-4b-cLb" secondAttribute="height" multiplier="0.15" id="F0d-RD-lw9"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -139,6 +142,7 @@
                     </view>
                     <connections>
                         <outlet property="countDownLabel" destination="tRI-W3-Sgs" id="jRF-k4-NaQ"/>
+                        <outlet property="mapView" destination="G6G-cf-RHq" id="fzs-Ma-FUb"/>
                         <outlet property="offerButton" destination="bww-iJ-19C" id="pdt-JX-z1U"/>
                         <outlet property="remainingTimeLabel" destination="Ht8-eR-nMD" id="kEk-tg-ImS"/>
                         <outlet property="saveButton" destination="d9j-NM-cEY" id="DD6-rR-aDI"/>
