@@ -78,6 +78,8 @@
 		EBAE646B25282F3B000F654C /* ModalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE646A25282F3B000F654C /* ModalInteractor.swift */; };
 		EBB355F82585BEA100AD10F4 /* MarketResultsMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB355F72585BEA100AD10F4 /* MarketResultsMode.swift */; };
 		EBB66BB1259A86B20027AEF3 /* DetailedAuctionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB66BB0259A86B20027AEF3 /* DetailedAuctionItemViewModel.swift */; };
+		EBB66BB3259ABDE70027AEF3 /* DismissableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB66BB2259ABDE70027AEF3 /* DismissableViewController.swift */; };
+		EBB66BB5259AC17C0027AEF3 /* DismissableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB66BB4259AC17C0027AEF3 /* DismissableViewController.storyboard */; };
 		EBB677ED2534E4CE00074550 /* PhotoInformationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB677EC2534E4CE00074550 /* PhotoInformationBuilder.swift */; };
 		EBBB67C12515A4A400031C30 /* BurgerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB67C02515A4A400031C30 /* BurgerMenuViewController.swift */; };
 		EBBB67C32515A4FD00031C30 /* BurgerMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBB67C22515A4FD00031C30 /* BurgerMenuViewController.storyboard */; };
@@ -168,6 +170,8 @@
 		EBAE646A25282F3B000F654C /* ModalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalInteractor.swift; sourceTree = "<group>"; };
 		EBB355F72585BEA100AD10F4 /* MarketResultsMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketResultsMode.swift; sourceTree = "<group>"; };
 		EBB66BB0259A86B20027AEF3 /* DetailedAuctionItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedAuctionItemViewModel.swift; sourceTree = "<group>"; };
+		EBB66BB2259ABDE70027AEF3 /* DismissableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableViewController.swift; sourceTree = "<group>"; };
+		EBB66BB4259AC17C0027AEF3 /* DismissableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DismissableViewController.storyboard; sourceTree = "<group>"; };
 		EBB677EC2534E4CE00074550 /* PhotoInformationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInformationBuilder.swift; sourceTree = "<group>"; };
 		EBBB67C02515A4A400031C30 /* BurgerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuViewController.swift; sourceTree = "<group>"; };
 		EBBB67C22515A4FD00031C30 /* BurgerMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BurgerMenuViewController.storyboard; sourceTree = "<group>"; };
@@ -513,6 +517,8 @@
 				EBAC26C42599326F00200817 /* AuctionPictureCollectionController.swift */,
 				EBAC26C6259942E400200817 /* AuctionPictureViewModel.swift */,
 				EBAC26C22598307700200817 /* DetailedAuctionItemViewController.storyboard */,
+				EBB66BB2259ABDE70027AEF3 /* DismissableViewController.swift */,
+				EBB66BB4259AC17C0027AEF3 /* DismissableViewController.storyboard */,
 			);
 			path = DetailedAuctionItem;
 			sourceTree = "<group>";
@@ -682,6 +688,7 @@
 				EB9F5767257B3CF5006447A9 /* MarketViewController.storyboard in Resources */,
 				EBBB67C32515A4FD00031C30 /* BurgerMenuViewController.storyboard in Resources */,
 				EBEAF3CE250C250900AA3AAF /* Assets.xcassets in Resources */,
+				EBB66BB5259AC17C0027AEF3 /* DismissableViewController.storyboard in Resources */,
 				EB3F8C03257ED90400FD381D /* MarketProductCell.xib in Resources */,
 				EB8B25A8255D9F1C00453506 /* GeneralTextView.xib in Resources */,
 				EB6E2B0E253395A3009EBBD7 /* PhotoInformationCell.xib in Resources */,
@@ -761,6 +768,7 @@
 				EBAE646525282DA7000F654C /* BurgerMenuPresentationController.swift in Sources */,
 				EBF799132522BD45000B325C /* ForgotPasswordViewController.swift in Sources */,
 				EBAE646925282F07000F654C /* BurgerMenuModalInteractor.swift in Sources */,
+				EBB66BB3259ABDE70027AEF3 /* DismissableViewController.swift in Sources */,
 				EB8EF454257B446A008BCBD8 /* SearchViewController.swift in Sources */,
 				EB639A762517F67800D4903B /* DriverInfoViewController.swift in Sources */,
 				EB3F8C02257ED90400FD381D /* MarketProductCell.swift in Sources */,

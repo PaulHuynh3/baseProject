@@ -79,6 +79,9 @@
                                                                 <state key="normal" title="Bid" image="money-icon">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="bidTapped:" destination="AuA-K0-v8t" eventType="touchUpInside" id="108-nS-Jym"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9j-NM-cEY">
                                                                 <rect key="frame" x="132.5" y="0.0" width="133" height="50"/>
@@ -125,6 +128,9 @@
                                                                 <state key="normal" title="Condition - New">
                                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="conditionTapped:" destination="AuA-K0-v8t" eventType="touchUpInside" id="njg-Sv-Wyv"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
