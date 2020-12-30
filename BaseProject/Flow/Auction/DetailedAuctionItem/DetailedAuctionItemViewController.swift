@@ -57,6 +57,7 @@ class DetailedAuctionItemViewController: UIViewController {
         itemTitleLabel.text = viewModel.data?.title
         bidPriceLabel.text = "Bid: $" + String(viewModel.data?.price ?? 0)
         conditionButton.setTitle(viewModel.data?.condition.identifier, for: .normal)
+        conditionButton.alignImageRightEdge()
         descriptionLabel.text = viewModel.data?.description
     }
 
@@ -73,6 +74,9 @@ class DetailedAuctionItemViewController: UIViewController {
         }) { _ in
             self.present(dismissableController, animated: true, completion: nil)
         }
+    }
+    @IBAction func conditionTapped(_ sender: Any) {
+        
     }
 }
 

@@ -121,7 +121,7 @@ extension UIColor {
 //MARK: - UIButtons
 
 extension UIButton {
- func centerTextVertically(padding : CGFloat = 3) {
+    func centerTextVertically(padding : CGFloat = 3) {
         guard
             let imageViewSize = self.imageView?.frame.size,
             let titleLabelSize = self.titleLabel?.frame.size else {
@@ -150,6 +150,11 @@ extension UIButton {
             bottom: titleLabelSize.height,
             right: 0.0
         )
+    }
+
+    func alignImageRightEdge() {
+        let endWidth = frame.size.width - 25
+        imageEdgeInsets = UIEdgeInsets(top: 0, left: endWidth, bottom: 0, right: 0)
     }
 }
 
