@@ -24,7 +24,6 @@ class AuctionViewModel {
         let cell = tableView.dequeue(cell: AuctionTableViewCell.self, in: tableView, for: indexPath) as AuctionTableViewCell
         let product = products[indexPath.row]
         cell.configure(data: product)
-
         return cell
     }
 

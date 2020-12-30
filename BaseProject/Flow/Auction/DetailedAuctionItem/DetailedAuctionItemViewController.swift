@@ -80,6 +80,10 @@ extension DetailedAuctionItemViewController: DetailedAuctionItemViewModelDelegat
     func updateCountDown(with timeString: String) {
         countDownLabel.text = timeString
     }
+
+    func updateBid(with price: Int) {
+        bidPriceLabel.text = "Bid: $" + String(price)
+    }
 }
 
 extension MKMapView {

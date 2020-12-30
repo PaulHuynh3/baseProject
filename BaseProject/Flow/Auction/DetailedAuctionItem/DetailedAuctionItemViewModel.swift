@@ -36,8 +36,8 @@ class DetailedAuctionItemViewModel {
     }
 
     private func createConfirmBidCallback() -> ((Int) -> Void)? {
-        return { price in
-            //update the price here
+        return { [weak self] price in
+            self?.delegate?.updateBid(with: price)
         }
     }
 
@@ -70,4 +70,5 @@ class DetailedAuctionItemViewModel {
 
 protocol DetailedAuctionItemViewModelDelegate {
     func updateCountDown(with timeString: String)
+    func updateBid(with price: Int)
 }
