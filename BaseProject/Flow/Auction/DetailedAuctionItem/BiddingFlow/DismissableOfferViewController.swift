@@ -9,19 +9,20 @@
 import UIKit
 
 class DismissableOfferViewController: UIViewController {
-
+    //TODO - NEED TO SET A BETTER HEIGHT INSTEAD OF A MAGIC NUMBER
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var marketPriceLabel: UILabel!
     @IBOutlet weak var offerTextField: UITextField!
     @IBOutlet weak var confirmBidButton: UIButton!
     @IBOutlet weak var discretionLabel: UILabel!
+    @IBOutlet var materialView: UIView!
 
     var offerPriceString: String? {
         return offerTextField.text?.replacingOccurrences(of: "$", with: "")
     }
     var delegate: DismissableViewControllerDelegate?
 
-    private var data: DismissableData?
+    private var data: Data?
     private var offerBidConfirmCallback: ((Int) -> Void)?
     private var marketPrice: Int?
 
@@ -65,7 +66,7 @@ class DismissableOfferViewController: UIViewController {
                                     : .red
     }
 
-    func configure(delegate: DismissableViewControllerDelegate, data: DismissableData) {
+    func configure(delegate: DismissableViewControllerDelegate, data: Data) {
         self.delegate = delegate
         self.data = data
     }
@@ -78,6 +79,14 @@ class DismissableOfferViewController: UIViewController {
 
     @IBAction func exitTapped(_ sender: Any) {
         delegate?.dismiss()
+    }
+}
+
+extension DismissableOfferViewController {
+    struct Data {
+        let dismissableTitle: String
+        let marketProduct: Product?
+        let offerBidConfirmCallback: ((Int) -> Void)?
     }
 }
 
@@ -102,10 +111,4 @@ extension DismissableOfferViewController: UITextFieldDelegate {
 
 protocol DismissableViewControllerDelegate {
     func dismiss()
-}
-
-struct DismissableData {
-    let dismissableTitle: String
-    let marketProduct: Product?
-    let offerBidConfirmCallback: ((Int) -> Void)?
 }

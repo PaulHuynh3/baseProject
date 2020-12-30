@@ -13,6 +13,8 @@
 		EB22E0EA2569C71900453D85 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0E92569C71900453D85 /* ForgotPasswordViewModel.swift */; };
 		EB22E0ED2569C77000453D85 /* ForgotPasswordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0EC2569C77000453D85 /* ForgotPasswordBuilder.swift */; };
 		EB22E0EF2569D14600453D85 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0EE2569D14600453D85 /* Enums.swift */; };
+		EB30EBB3259D12F700D36DE1 /* DismissableConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBB2259D12F700D36DE1 /* DismissableConditionViewController.swift */; };
+		EB30EBB6259D133000D36DE1 /* DismissableConditionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB30EBB5259D133000D36DE1 /* DismissableConditionViewController.storyboard */; };
 		EB3133662524DCF3008FF586 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3133652524DCF3008FF586 /* RegisterViewModel.swift */; };
 		EB313368252510AD008FF586 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB313367252510AD008FF586 /* AlertManager.swift */; };
 		EB31336D25252AAF008FF586 /* RegisterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31336C25252AAF008FF586 /* RegisterBuilder.swift */; };
@@ -106,6 +108,8 @@
 		EB22E0E92569C71900453D85 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		EB22E0EC2569C77000453D85 /* ForgotPasswordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordBuilder.swift; sourceTree = "<group>"; };
 		EB22E0EE2569D14600453D85 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		EB30EBB2259D12F700D36DE1 /* DismissableConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableConditionViewController.swift; sourceTree = "<group>"; };
+		EB30EBB5259D133000D36DE1 /* DismissableConditionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DismissableConditionViewController.storyboard; sourceTree = "<group>"; };
 		EB3133652524DCF3008FF586 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		EB313367252510AD008FF586 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		EB31336C25252AAF008FF586 /* RegisterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBuilder.swift; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 				EBAC26C6259942E400200817 /* AuctionPictureViewModel.swift */,
 				EBB66BB2259ABDE70027AEF3 /* DismissableOfferViewController.swift */,
 				EBB66BB4259AC17C0027AEF3 /* DismissableOfferViewController.storyboard */,
+				EB30EBB2259D12F700D36DE1 /* DismissableConditionViewController.swift */,
+				EB30EBB5259D133000D36DE1 /* DismissableConditionViewController.storyboard */,
 			);
 			path = BiddingFlow;
 			sourceTree = "<group>";
@@ -712,6 +718,7 @@
 				EB6E5535250C90E800816820 /* LaunchScreen.storyboard in Resources */,
 				EB9890B7250C9A8B00E35BEF /* RootViewController.storyboard in Resources */,
 				EB7B088B25298BDD0050EE9F /* DriverRequirementCell.xib in Resources */,
+				EB30EBB6259D133000D36DE1 /* DismissableConditionViewController.storyboard in Resources */,
 				EB3F8BFC257ECABA00FD381D /* MarketResultsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,6 +761,7 @@
 				EB6E5528250C888700816820 /* RootViewController.swift in Sources */,
 				EBAE645F25281481000F654C /* HomeViewController.swift in Sources */,
 				EB7B088725298B690050EE9F /* DriverInfoBuilder.swift in Sources */,
+				EB30EBB3259D12F700D36DE1 /* DismissableConditionViewController.swift in Sources */,
 				EB918DFA25297ABB00EC0254 /* TableView.swift in Sources */,
 				EBB355F82585BEA100AD10F4 /* MarketResultsMode.swift in Sources */,
 				EBAC26C125982FD600200817 /* DetailedAuctionItemViewController.swift in Sources */,

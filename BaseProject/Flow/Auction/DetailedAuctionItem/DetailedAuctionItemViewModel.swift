@@ -27,8 +27,8 @@ class DetailedAuctionItemViewModel {
         timer = nil
     }
 
-    func buildDismissableData() -> DismissableData {
-        return DismissableData(
+    func buildDismissableData() -> DismissableOfferViewController.Data {
+        return DismissableOfferViewController.Data(
             dismissableTitle: "Your Offer",
             marketProduct: data,
             offerBidConfirmCallback: createConfirmBidCallback()

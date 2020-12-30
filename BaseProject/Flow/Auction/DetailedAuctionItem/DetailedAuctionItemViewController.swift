@@ -76,7 +76,8 @@ class DetailedAuctionItemViewController: UIViewController {
         }
     }
     @IBAction func conditionTapped(_ sender: Any) {
-        
+        //pop up sheet
+
     }
 }
 

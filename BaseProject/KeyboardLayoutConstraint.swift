@@ -85,8 +85,8 @@ public class KeyboardLayoutConstraint: NSLayoutConstraint {
             }
         }
     }
-
+    //TODO - Put this temporary 5 to fix the gap...
     func updateConstant() {
-        self.constant = offset + keyboardVisibleHeight - (UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0) - (UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0)
+        self.constant = offset + keyboardVisibleHeight - 5 - (UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0) - (UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0)
     }
 }
