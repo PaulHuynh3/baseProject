@@ -24,7 +24,7 @@ class AuctionViewController: UIViewController {
         registerHeaderFooterTableView(cellType: String(describing: AuctionTableHeaderView.self), tableView: tableView)
     }
 
-    private func navigateToDetailedItem(data: MarketProduct) {
+    private func navigateToDetailedItem(data: Product) {
          guard let detailedAuctionItemViewController = UIStoryboard(name: String(describing:StoryboardNavigation.DetailedAuctionItemViewController.rawValue), bundle: nil).instantiateViewController(withIdentifier: String(describing: DetailedAuctionItemViewController.self)) as? DetailedAuctionItemViewController else {
              return
          }

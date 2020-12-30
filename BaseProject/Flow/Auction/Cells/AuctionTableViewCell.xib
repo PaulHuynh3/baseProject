@@ -71,6 +71,10 @@
             </tableViewCellContentView>
             <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="8"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="expirationLabel" destination="Nq3-kh-zbs" id="x9a-47-3fa"/>
+                <outlet property="productImageView" destination="x95-Cd-iO4" id="Quc-Ad-QoW"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="136.60714285714286"/>
         </tableViewCell>
     </objects>

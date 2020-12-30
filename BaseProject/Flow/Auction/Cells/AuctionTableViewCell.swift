@@ -10,14 +10,16 @@ import UIKit
 
 class AuctionTableViewCell: UITableViewCell {
 
-    func configure(data: Data) {
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var expirationLabel: UILabel!
 
+    func configure(data: Data) {
+        productImageView.image = data.product.images.first
+        expirationLabel.text = String(data.product.remainingTime ?? 0)
     }
 
 }
 
 struct Data {
-    let image: UIImage
-    let expiration: String
-    let lastBid: Double
+    let product: Product
 }

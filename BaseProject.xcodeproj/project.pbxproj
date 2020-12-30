@@ -88,7 +88,7 @@
 		EBBB67CA2515A6EE00031C30 /* BurgerMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBB67C82515A6EE00031C30 /* BurgerMenuCell.xib */; };
 		EBC7FC85251691E200102B57 /* BurgerMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7FC84251691E200102B57 /* BurgerMenuViewModel.swift */; };
 		EBC7FC872516973600102B57 /* BurgerMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7FC862516973600102B57 /* BurgerMenuBuilder.swift */; };
-		EBDBBFA5257D7AAD00F67AA4 /* MarketProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBBFA4257D7AAD00F67AA4 /* MarketProduct.swift */; };
+		EBDBBFA5257D7AAD00F67AA4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDBBFA4257D7AAD00F67AA4 /* Product.swift */; };
 		EBE7DECD25314D270055309C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7DECC25314D270055309C /* CameraViewController.swift */; };
 		EBE7DECF25314DCE0055309C /* PhotoInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE7DECE25314DCE0055309C /* PhotoInformationViewModel.swift */; };
 		EBEAF3C5250C250800AA3AAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEAF3C4250C250800AA3AAF /* AppDelegate.swift */; };
@@ -181,7 +181,7 @@
 		EBBB67C82515A6EE00031C30 /* BurgerMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BurgerMenuCell.xib; sourceTree = "<group>"; };
 		EBC7FC84251691E200102B57 /* BurgerMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuViewModel.swift; sourceTree = "<group>"; };
 		EBC7FC862516973600102B57 /* BurgerMenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuBuilder.swift; sourceTree = "<group>"; };
-		EBDBBFA4257D7AAD00F67AA4 /* MarketProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketProduct.swift; sourceTree = "<group>"; };
+		EBDBBFA4257D7AAD00F67AA4 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		EBE7DECC25314D270055309C /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		EBE7DECE25314DCE0055309C /* PhotoInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInformationViewModel.swift; sourceTree = "<group>"; };
 		EBEAF3C1250C250800AA3AAF /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -594,7 +594,7 @@
 		EBDBBFA3257D7A9100F67AA4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EBDBBFA4257D7AAD00F67AA4 /* MarketProduct.swift */,
+				EBDBBFA4257D7AAD00F67AA4 /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -738,7 +738,7 @@
 				EB313368252510AD008FF586 /* AlertManager.swift in Sources */,
 				EBAC26BC2598185100200817 /* AuctionTableHeaderView.swift in Sources */,
 				EBAC26C7259942E400200817 /* AuctionPictureViewModel.swift in Sources */,
-				EBDBBFA5257D7AAD00F67AA4 /* MarketProduct.swift in Sources */,
+				EBDBBFA5257D7AAD00F67AA4 /* Product.swift in Sources */,
 				EB9F5765257B3CD6006447A9 /* MarketViewController.swift in Sources */,
 				EB568FC9257D725100FE8B5E /* NetworkService.swift in Sources */,
 				EBAC26B92597D27B00200817 /* AuctionTableViewCell.swift in Sources */,

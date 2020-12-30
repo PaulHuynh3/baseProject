@@ -10,12 +10,12 @@ import Foundation
 
 class DetailedAuctionItemViewModel {
 
-    var data: MarketProduct?
+    var data: Product?
     private var seconds = 0
     private var timer: Timer?
     var delegate: DetailedAuctionItemViewModelDelegate?
 
-    func configure(delegate: DetailedAuctionItemViewModelDelegate, data: MarketProduct?) {
+    func configure(delegate: DetailedAuctionItemViewModelDelegate, data: Product?) {
         self.data = data
         self.delegate = delegate
         seconds = data?.remainingTime ?? 0

@@ -15,6 +15,11 @@ class DetailedAuctionItemViewController: UIViewController {
     @IBOutlet weak var offerButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var itemTitleLabel: UILabel!
+    @IBOutlet weak var bidPriceLabel: UILabel!
+    @IBOutlet weak var conditionButton: UIButton!
+    @IBOutlet weak var descriptionLabel: UILabel!
+
     @IBOutlet weak var mapView: MKMapView!
 
     private var auctionPictureViewController: AuctionPictureCollectionController?
@@ -28,20 +33,36 @@ class DetailedAuctionItemViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupMap()
+        setup()
         auctionPictureViewController?.configure(data: viewModel.data)
         offerButton.centerTextVertically(padding: 5)
         saveButton.centerTextVertically(padding: 5)
         shareButton.centerTextVertically(padding: 5)
-
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         viewModel.invalidateTimer()
     }
 
-    func configure(data: MarketProduct) {
+    func configure(data: Product) {
         viewModel.configure(delegate: self, data: data)
+    }
+
+    private func setup() {
+        setupMap()
+        setupLabels()
+    }
+
+    private func setupLabels() {
+        itemTitleLabel.text = viewModel.data?.title
+        bidPriceLabel.text = "Bid: $" + String(viewModel.data?.price ?? 0)
+        conditionButton.setTitle(viewModel.data?.condition.identifier, for: .normal)
+        descriptionLabel.text = viewModel.data?.description
+    }
+
+    private func setupMap() {
+        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        mapView.centerToLocation(initialLocation)
     }
 
     @IBAction func bidTapped(_ sender: Any) {
@@ -52,11 +73,6 @@ class DetailedAuctionItemViewController: UIViewController {
         }) { _ in
             self.present(dismissableController, animated: true, completion: nil)
         }
-    }
-
-    private func setupMap() {
-        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
-        mapView.centerToLocation(initialLocation)
     }
 }
 

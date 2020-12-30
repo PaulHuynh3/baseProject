@@ -179,7 +179,11 @@
                         <viewLayoutGuide key="safeArea" id="Wx1-hT-n5E"/>
                     </view>
                     <connections>
+                        <outlet property="bidPriceLabel" destination="Zxq-fA-U6J" id="L9x-l7-sBe"/>
+                        <outlet property="conditionButton" destination="Dif-2Z-Pvy" id="mTv-uE-WmQ"/>
                         <outlet property="countDownLabel" destination="tRI-W3-Sgs" id="jRF-k4-NaQ"/>
+                        <outlet property="descriptionLabel" destination="S8c-6c-hDB" id="zQo-KI-OjI"/>
+                        <outlet property="itemTitleLabel" destination="tXk-TJ-CAh" id="6Yg-OE-jfV"/>
                         <outlet property="mapView" destination="G6G-cf-RHq" id="fzs-Ma-FUb"/>
                         <outlet property="offerButton" destination="bww-iJ-19C" id="pdt-JX-z1U"/>
                         <outlet property="remainingTimeLabel" destination="Ht8-eR-nMD" id="kEk-tg-ImS"/>

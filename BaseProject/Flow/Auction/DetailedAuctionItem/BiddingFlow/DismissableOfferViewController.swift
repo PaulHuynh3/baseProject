@@ -106,6 +106,6 @@ protocol DismissableViewControllerDelegate {
 
 struct DismissableData {
     let dismissableTitle: String
-    let marketProduct: MarketProduct?
+    let marketProduct: Product?
     let offerBidConfirmCallback: ((Int) -> Void)?
 }

@@ -10,10 +10,10 @@ import Foundation
 
 class AuctionPictureViewModel {
 
-    var marketProduct: MarketProduct?
+    var marketProduct: Product?
     var delegate: AuctionPictureViewModelDelegate?
 
-    func configure(delegate: AuctionPictureViewModelDelegate?, data: MarketProduct?) {
+    func configure(delegate: AuctionPictureViewModelDelegate?, data: Product?) {
         self.marketProduct = data
     }
 

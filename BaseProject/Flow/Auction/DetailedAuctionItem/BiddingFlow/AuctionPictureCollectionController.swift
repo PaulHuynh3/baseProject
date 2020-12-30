@@ -19,7 +19,7 @@ class AuctionPictureCollectionController: UIViewController {
         registerCollectionCell()
     }
 
-    func configure(data: MarketProduct?) {
+    func configure(data: Product?) {
         viewModel.configure(delegate: self, data: data)
         configurePageControl()
     }
