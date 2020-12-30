@@ -58,7 +58,7 @@ extension AuctionViewController: TableView {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let data = viewModel.marketProducts[indexPath.row]
+        let data = viewModel.products[indexPath.row]
         navigateToDetailedItem(data: data)
     }
 }

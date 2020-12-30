@@ -13,13 +13,19 @@ class AuctionTableViewCell: UITableViewCell {
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var expirationLabel: UILabel!
 
-    func configure(data: Data) {
-        productImageView.image = data.product.images.first
-        expirationLabel.text = String(data.product.remainingTime ?? 0)
+    func configure(data: Product) {
+        productImageView.image = data.images.first
+        expirationLabel.text = expirationDate(seconds: data.remainingTime ?? 0)
     }
 
-}
+    private func expirationDate(seconds: Int) -> String {
+        let expirationDate = Date(timeIntervalSinceNow: TimeInterval(seconds))
 
-struct Data {
-    let product: Product
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        let formattedDate = formatter.string(from: expirationDate)
+        return formattedDate
+    }
+
 }
