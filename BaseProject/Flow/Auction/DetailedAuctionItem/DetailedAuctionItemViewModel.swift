@@ -15,6 +15,8 @@ class DetailedAuctionItemViewModel {
     private var timer: Timer?
     var delegate: DetailedAuctionItemViewModelDelegate?
 
+    private let builder = DetailedAuctionBuilder()
+
     func configure(delegate: DetailedAuctionItemViewModelDelegate, data: Product?) {
         self.data = data
         self.delegate = delegate
@@ -25,6 +27,14 @@ class DetailedAuctionItemViewModel {
     func invalidateTimer() {
         timer?.invalidate()
         timer = nil
+    }
+
+    func buildOfferData() -> DismissableData {
+        builder.buildOfferData()
+    }
+
+    func buildConditionData() -> DismissableData {
+        builder.buildConditionData()
     }
 
     func buildDismissableData() -> DismissableOfferViewController.Data {

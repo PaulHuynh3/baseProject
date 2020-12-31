@@ -15,6 +15,14 @@
 		EB22E0EF2569D14600453D85 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0EE2569D14600453D85 /* Enums.swift */; };
 		EB30EBB3259D12F700D36DE1 /* DismissableConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBB2259D12F700D36DE1 /* DismissableConditionViewController.swift */; };
 		EB30EBB6259D133000D36DE1 /* DismissableConditionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB30EBB5259D133000D36DE1 /* DismissableConditionViewController.storyboard */; };
+		EB30EBBC259D5CCF00D36DE1 /* ConditionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBBA259D5CCF00D36DE1 /* ConditionViewCell.swift */; };
+		EB30EBBD259D5CCF00D36DE1 /* ConditionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB30EBBB259D5CCF00D36DE1 /* ConditionViewCell.xib */; };
+		EB30EBC1259D6B1600D36DE1 /* ConditionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBC0259D6B1600D36DE1 /* ConditionHeaderView.swift */; };
+		EB30EBC4259D6BDD00D36DE1 /* ConditionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB30EBC3259D6BDD00D36DE1 /* ConditionHeaderView.xib */; };
+		EB30EBC7259E29EE00D36DE1 /* DismissableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBC6259E29EE00D36DE1 /* DismissableViewModel.swift */; };
+		EB30EBCB259E388D00D36DE1 /* OfferViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBC9259E388D00D36DE1 /* OfferViewCell.swift */; };
+		EB30EBCC259E388D00D36DE1 /* OfferViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB30EBCA259E388D00D36DE1 /* OfferViewCell.xib */; };
+		EB30EBD0259E3DC100D36DE1 /* DetailedAuctionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBCF259E3DC100D36DE1 /* DetailedAuctionBuilder.swift */; };
 		EB3133662524DCF3008FF586 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3133652524DCF3008FF586 /* RegisterViewModel.swift */; };
 		EB313368252510AD008FF586 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB313367252510AD008FF586 /* AlertManager.swift */; };
 		EB31336D25252AAF008FF586 /* RegisterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31336C25252AAF008FF586 /* RegisterBuilder.swift */; };
@@ -96,6 +104,7 @@
 		EBEAF3C5250C250800AA3AAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEAF3C4250C250800AA3AAF /* AppDelegate.swift */; };
 		EBEAF3C7250C250800AA3AAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEAF3C6250C250800AA3AAF /* SceneDelegate.swift */; };
 		EBEAF3CE250C250900AA3AAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBEAF3CD250C250900AA3AAF /* Assets.xcassets */; };
+		EBF33361259E5D9B00E92762 /* ConditionInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF33360259E5D9B00E92762 /* ConditionInformation.swift */; };
 		EBF7990F25225DC3000B325C /* LoginMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7990E25225DC3000B325C /* LoginMethodsViewController.swift */; };
 		EBF7991125225E36000B325C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7991025225E36000B325C /* RegisterViewController.swift */; };
 		EBF799132522BD45000B325C /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF799122522BD45000B325C /* ForgotPasswordViewController.swift */; };
@@ -110,6 +119,14 @@
 		EB22E0EE2569D14600453D85 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		EB30EBB2259D12F700D36DE1 /* DismissableConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableConditionViewController.swift; sourceTree = "<group>"; };
 		EB30EBB5259D133000D36DE1 /* DismissableConditionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DismissableConditionViewController.storyboard; sourceTree = "<group>"; };
+		EB30EBBA259D5CCF00D36DE1 /* ConditionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionViewCell.swift; sourceTree = "<group>"; };
+		EB30EBBB259D5CCF00D36DE1 /* ConditionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConditionViewCell.xib; sourceTree = "<group>"; };
+		EB30EBC0259D6B1600D36DE1 /* ConditionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionHeaderView.swift; sourceTree = "<group>"; };
+		EB30EBC3259D6BDD00D36DE1 /* ConditionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConditionHeaderView.xib; sourceTree = "<group>"; };
+		EB30EBC6259E29EE00D36DE1 /* DismissableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableViewModel.swift; sourceTree = "<group>"; };
+		EB30EBC9259E388D00D36DE1 /* OfferViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewCell.swift; sourceTree = "<group>"; };
+		EB30EBCA259E388D00D36DE1 /* OfferViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferViewCell.xib; sourceTree = "<group>"; };
+		EB30EBCF259E3DC100D36DE1 /* DetailedAuctionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedAuctionBuilder.swift; sourceTree = "<group>"; };
 		EB3133652524DCF3008FF586 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		EB313367252510AD008FF586 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		EB31336C25252AAF008FF586 /* RegisterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBuilder.swift; sourceTree = "<group>"; };
@@ -193,6 +210,7 @@
 		EBEAF3C6250C250800AA3AAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EBEAF3CD250C250900AA3AAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBEAF3D2250C250900AA3AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBF33360259E5D9B00E92762 /* ConditionInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionInformation.swift; sourceTree = "<group>"; };
 		EBF7990E25225DC3000B325C /* LoginMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMethodsViewController.swift; sourceTree = "<group>"; };
 		EBF7991025225E36000B325C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EBF799122522BD45000B325C /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +231,27 @@
 			isa = PBXGroup;
 			children = (
 				EB22E0EC2569C77000453D85 /* ForgotPasswordBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		EB30EBB9259D5C9300D36DE1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EB30EBBA259D5CCF00D36DE1 /* ConditionViewCell.swift */,
+				EB30EBBB259D5CCF00D36DE1 /* ConditionViewCell.xib */,
+				EB30EBC9259E388D00D36DE1 /* OfferViewCell.swift */,
+				EB30EBCA259E388D00D36DE1 /* OfferViewCell.xib */,
+				EB30EBC0259D6B1600D36DE1 /* ConditionHeaderView.swift */,
+				EB30EBC3259D6BDD00D36DE1 /* ConditionHeaderView.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EB30EBCE259E3D8800D36DE1 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				EB30EBCF259E3DC100D36DE1 /* DetailedAuctionBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -281,7 +320,9 @@
 				EBB66BB2259ABDE70027AEF3 /* DismissableOfferViewController.swift */,
 				EBB66BB4259AC17C0027AEF3 /* DismissableOfferViewController.storyboard */,
 				EB30EBB2259D12F700D36DE1 /* DismissableConditionViewController.swift */,
+				EB30EBC6259E29EE00D36DE1 /* DismissableViewModel.swift */,
 				EB30EBB5259D133000D36DE1 /* DismissableConditionViewController.storyboard */,
+				EB30EBB9259D5C9300D36DE1 /* Cells */,
 			);
 			path = BiddingFlow;
 			sourceTree = "<group>";
@@ -534,6 +575,7 @@
 			children = (
 				EBAC26C025982FD600200817 /* DetailedAuctionItemViewController.swift */,
 				EBB66BB0259A86B20027AEF3 /* DetailedAuctionItemViewModel.swift */,
+				EB30EBCE259E3D8800D36DE1 /* Builder */,
 				EB6BF26C259BDF9A00CE1614 /* BiddingFlow */,
 			);
 			path = DetailedAuctionItem;
@@ -601,6 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				EBDBBFA4257D7AAD00F67AA4 /* Product.swift */,
+				EBF33360259E5D9B00E92762 /* ConditionInformation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -706,11 +749,14 @@
 				EBBB67C32515A4FD00031C30 /* BurgerMenuViewController.storyboard in Resources */,
 				EBEAF3CE250C250900AA3AAF /* Assets.xcassets in Resources */,
 				EBB66BB5259AC17C0027AEF3 /* DismissableOfferViewController.storyboard in Resources */,
+				EB30EBCC259E388D00D36DE1 /* OfferViewCell.xib in Resources */,
 				EB3F8C03257ED90400FD381D /* MarketProductCell.xib in Resources */,
 				EB8B25A8255D9F1C00453506 /* GeneralTextView.xib in Resources */,
 				EB6E2B0E253395A3009EBBD7 /* PhotoInformationCell.xib in Resources */,
+				EB30EBC4259D6BDD00D36DE1 /* ConditionHeaderView.xib in Resources */,
 				EB9890CD250DCC4A00E35BEF /* LoginViewController.storyboard in Resources */,
 				EB9890BD250DC15000E35BEF /* AccountViewController.storyboard in Resources */,
+				EB30EBBD259D5CCF00D36DE1 /* ConditionViewCell.xib in Resources */,
 				EB8EF456257B447C008BCBD8 /* SearchViewController.storyboard in Resources */,
 				EB9890BF250DC15B00E35BEF /* DriverInfoViewController.storyboard in Resources */,
 				EBAC26C32598307700200817 /* DetailedAuctionItemViewController.storyboard in Resources */,
@@ -735,6 +781,7 @@
 				EBA3942B251191190019B273 /* BottomStatusHelperView.swift in Sources */,
 				EB6E552D250C8C5B00816820 /* PassiveLoadingViewController.swift in Sources */,
 				EB8B25AA255DBC4100453506 /* GeneralTextView.swift in Sources */,
+				EB30EBC1259D6B1600D36DE1 /* ConditionHeaderView.swift in Sources */,
 				EBC7FC872516973600102B57 /* BurgerMenuBuilder.swift in Sources */,
 				EBF7991125225E36000B325C /* RegisterViewController.swift in Sources */,
 				EB22E0EF2569D14600453D85 /* Enums.swift in Sources */,
@@ -742,6 +789,7 @@
 				EB56A6C12556422F00A57448 /* Promise.swift in Sources */,
 				EBAC26CB259948F400200817 /* AuctionPicturesCollectionCell.swift in Sources */,
 				EBC7FC85251691E200102B57 /* BurgerMenuViewModel.swift in Sources */,
+				EB30EBC7259E29EE00D36DE1 /* DismissableViewModel.swift in Sources */,
 				EB313368252510AD008FF586 /* AlertManager.swift in Sources */,
 				EBAC26BC2598185100200817 /* AuctionTableHeaderView.swift in Sources */,
 				EBAC26C7259942E400200817 /* AuctionPictureViewModel.swift in Sources */,
@@ -778,15 +826,19 @@
 				EB87F489255E39110052B51D /* NibOwnerLoadable.swift in Sources */,
 				EB7B0881252987310050EE9F /* DriverInfoViewModel.swift in Sources */,
 				EB639A742517F3DB00D4903B /* Extensions.swift in Sources */,
+				EB30EBBC259D5CCF00D36DE1 /* ConditionViewCell.swift in Sources */,
 				EB9890CA250DC9B400E35BEF /* LoginViewModel.swift in Sources */,
 				EBAE646B25282F3B000F654C /* ModalInteractor.swift in Sources */,
+				EB30EBD0259E3DC100D36DE1 /* DetailedAuctionBuilder.swift in Sources */,
 				EBAE646725282E9F000F654C /* BurgerMenuAnimatedTransitioning.swift in Sources */,
 				EB7B088A25298BDD0050EE9F /* DriverRequirementCell.swift in Sources */,
 				EB3133662524DCF3008FF586 /* RegisterViewModel.swift in Sources */,
 				EBEAF3C7250C250800AA3AAF /* SceneDelegate.swift in Sources */,
 				EB3F8BFE257ED1C800FD381D /* MarketResultsViewModel.swift in Sources */,
+				EBF33361259E5D9B00E92762 /* ConditionInformation.swift in Sources */,
 				EBAE646525282DA7000F654C /* BurgerMenuPresentationController.swift in Sources */,
 				EBF799132522BD45000B325C /* ForgotPasswordViewController.swift in Sources */,
+				EB30EBCB259E388D00D36DE1 /* OfferViewCell.swift in Sources */,
 				EBAE646925282F07000F654C /* BurgerMenuModalInteractor.swift in Sources */,
 				EBB66BB3259ABDE70027AEF3 /* DismissableOfferViewController.swift in Sources */,
 				EB8EF454257B446A008BCBD8 /* SearchViewController.swift in Sources */,
