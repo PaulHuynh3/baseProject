@@ -67,24 +67,15 @@ class DetailedAuctionItemViewController: UIViewController {
     }
 
     @IBAction func bidTapped(_ sender: Any) {
-//        guard let dismissableController = UIStoryboard(name: String(describing: DismissableOfferViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DismissableOfferViewController.self)) as? DismissableOfferViewController else { return }
-//        dismissableController.configure(delegate: self, data: viewModel.buildDismissableData())
-//        UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseInOut, animations: {
-//            //set background colour to back if you want.. with alpha of 0.5
-//        }) { _ in
-//            self.present(dismissableController, animated: true, completion: nil)
-//        }
-
-        guard let dismissableController = UIStoryboard(name: String(describing: DismissableConditionViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DismissableConditionViewController.self)) as? DismissableConditionViewController else { return }
+        guard let dismissableController = UIStoryboard(name: String(describing: DismissableViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DismissableViewController.self)) as? DismissableViewController else { return }
         dismissableController.configure(delegate: self, data: viewModel.buildOfferData())
-        self.present(dismissableController, animated: true, completion: nil)
+        present(dismissableController, animated: true, completion: nil)
     }
 
     @IBAction func itemConditionTapped(_ sender: Any) {
-        //pop up sheet no trigger
-        guard let dismissableController = UIStoryboard(name: String(describing: DismissableConditionViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DismissableConditionViewController.self)) as? DismissableConditionViewController else { return }
+        guard let dismissableController = UIStoryboard(name: String(describing: DismissableViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DismissableViewController.self)) as? DismissableViewController else { return }
         dismissableController.configure(delegate: self, data: viewModel.buildConditionData())
-        self.present(dismissableController, animated: true, completion: nil)
+        present(dismissableController, animated: true, completion: nil)
     }
 }
 
@@ -111,13 +102,13 @@ extension MKMapView {
     }
 }
 
-extension DetailedAuctionItemViewController: DismissableViewControllerDelegate {
+extension DetailedAuctionItemViewController: DismissableOfferViewControllerDelegate {
     func dismiss() {
         dismiss(animated: false, completion: nil)
     }
 }
 
-extension DetailedAuctionItemViewController: DismissableConditionViewDelegate {
+extension DetailedAuctionItemViewController: DismissableViewControllerDelegate {
     func dismissSheet() {
         dismiss(animated: false, completion: nil)
     }

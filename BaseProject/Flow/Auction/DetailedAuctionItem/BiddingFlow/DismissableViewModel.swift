@@ -19,13 +19,12 @@ class DismissableViewModel {
         data?.tableRowHeight ?? 0
     }
 
-    func configure(delegate: DismissableViewModelDelegate?, data: DismissableData?) {
+    func configure(delegate: DismissableViewModelDelegate?) {
         self.delegate = delegate
-        self.data = data
     }
 
-    func buildHeaderViewData(title: String) -> ConditionHeaderView.Data {
-        return ConditionHeaderView.Data(title: title,
+    func buildHeaderViewData(title: String) -> DismissableHeaderView.Data {
+        return DismissableHeaderView.Data(title: title,
                                         exitButtonCallback: createExitCallback())
     }
 

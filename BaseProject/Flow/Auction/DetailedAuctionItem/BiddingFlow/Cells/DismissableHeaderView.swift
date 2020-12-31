@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConditionHeaderView: UITableViewHeaderFooterView {
+class DismissableHeaderView: UITableViewHeaderFooterView {
 
     @IBOutlet weak var titleLabel: UILabel!
     var exitButtonCallback: (() -> Void)?
@@ -23,7 +23,7 @@ class ConditionHeaderView: UITableViewHeaderFooterView {
     }
 }
 
-extension ConditionHeaderView {
+extension DismissableHeaderView {
     struct Data {
         let title: String
         let exitButtonCallback: (() -> Void)?

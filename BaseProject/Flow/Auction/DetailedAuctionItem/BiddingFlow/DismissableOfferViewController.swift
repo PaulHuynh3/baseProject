@@ -20,7 +20,7 @@ class DismissableOfferViewController: UIViewController {
     var offerPriceString: String? {
         return offerTextField.text?.replacingOccurrences(of: "$", with: "")
     }
-    var delegate: DismissableViewControllerDelegate?
+    var delegate: DismissableOfferViewControllerDelegate?
 
     private var data: Data?
     private var offerBidConfirmCallback: ((Int) -> Void)?
@@ -66,7 +66,7 @@ class DismissableOfferViewController: UIViewController {
                                     : .red
     }
 
-    func configure(delegate: DismissableViewControllerDelegate, data: Data) {
+    func configure(delegate: DismissableOfferViewControllerDelegate, data: Data) {
         self.delegate = delegate
         self.data = data
     }
@@ -109,6 +109,6 @@ extension DismissableOfferViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {}
 }
 
-protocol DismissableViewControllerDelegate {
+protocol DismissableOfferViewControllerDelegate {
     func dismiss()
 }

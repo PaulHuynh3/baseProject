@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dismissable Condition View Controller-->
+        <!--Dismissable View Controller-->
         <scene sceneID="H9r-Pm-ZmA">
             <objects>
-                <viewController storyboardIdentifier="DismissableConditionViewController" modalPresentationStyle="overCurrentContext" id="3I8-P3-T2K" customClass="DismissableConditionViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DismissableViewController" modalPresentationStyle="overCurrentContext" id="3I8-P3-T2K" customClass="DismissableViewController" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Eo-FJ-Jcm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

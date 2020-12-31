@@ -8,19 +8,19 @@
 
 import UIKit
 
-class DismissableConditionViewController: UIViewController {
+class DismissableViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
-    var delegate: DismissableConditionViewDelegate?
+    var delegate: DismissableViewControllerDelegate?
     let viewModel = DismissableViewModel()
 
     override func viewDidLoad() {
         setup()
-        viewModel.configure(delegate: self, data: viewModel.data)
+        viewModel.configure(delegate: self)
     }
 
-    func configure(delegate: DismissableConditionViewDelegate, data: DismissableData) {
+    func configure(delegate: DismissableViewControllerDelegate, data: DismissableData) {
         self.delegate = delegate
         viewModel.data = data
     }
@@ -36,7 +36,7 @@ class DismissableConditionViewController: UIViewController {
             tableViewHeightConstraint.constant = CGFloat(viewModel.rowHeight * (viewModel.data?.condition.count ?? 0) + viewModel.headerHeight)
         }
 
-        registerHeaderFooterTableView(cellType: String(describing: ConditionHeaderView.self), tableView: tableView)
+        registerHeaderFooterTableView(cellType: String(describing: DismissableHeaderView.self), tableView: tableView)
     }
 
     @IBAction func dismissTapped(_ sender: Any) {
@@ -50,7 +50,7 @@ struct DismissableData {
     let condition: [ConditionInformation?]
 }
 
-extension DismissableConditionViewController: TableView {
+extension DismissableViewController: TableView {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.createNumberOfRows()
     }
@@ -72,14 +72,14 @@ extension DismissableConditionViewController: TableView {
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing: ConditionHeaderView.self)) as? ConditionHeaderView else { fatalError("Condition Collection header messed up") }
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing: DismissableHeaderView.self)) as? DismissableHeaderView else { fatalError("Condition Collection header messed up") }
         let title = viewModel.data?.dismissableType.title ?? ""
         headerView.configure(data: viewModel.buildHeaderViewData(title: title))
         return headerView
     }
 }
 
-extension DismissableConditionViewController: DismissableViewModelDelegate {
+extension DismissableViewController: DismissableViewModelDelegate {
     func dismiss() {
         delegate?.dismissSheet()
     }
@@ -99,6 +99,6 @@ enum DismissableType {
     }
 }
 
-protocol DismissableConditionViewDelegate {
+protocol DismissableViewControllerDelegate {
     func dismissSheet()
 }

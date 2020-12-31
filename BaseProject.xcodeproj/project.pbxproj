@@ -13,12 +13,12 @@
 		EB22E0EA2569C71900453D85 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0E92569C71900453D85 /* ForgotPasswordViewModel.swift */; };
 		EB22E0ED2569C77000453D85 /* ForgotPasswordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0EC2569C77000453D85 /* ForgotPasswordBuilder.swift */; };
 		EB22E0EF2569D14600453D85 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB22E0EE2569D14600453D85 /* Enums.swift */; };
-		EB30EBB3259D12F700D36DE1 /* DismissableConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBB2259D12F700D36DE1 /* DismissableConditionViewController.swift */; };
-		EB30EBB6259D133000D36DE1 /* DismissableConditionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB30EBB5259D133000D36DE1 /* DismissableConditionViewController.storyboard */; };
+		EB30EBB3259D12F700D36DE1 /* DismissableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBB2259D12F700D36DE1 /* DismissableViewController.swift */; };
+		EB30EBB6259D133000D36DE1 /* DismissableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB30EBB5259D133000D36DE1 /* DismissableViewController.storyboard */; };
 		EB30EBBC259D5CCF00D36DE1 /* ConditionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBBA259D5CCF00D36DE1 /* ConditionViewCell.swift */; };
 		EB30EBBD259D5CCF00D36DE1 /* ConditionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB30EBBB259D5CCF00D36DE1 /* ConditionViewCell.xib */; };
-		EB30EBC1259D6B1600D36DE1 /* ConditionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBC0259D6B1600D36DE1 /* ConditionHeaderView.swift */; };
-		EB30EBC4259D6BDD00D36DE1 /* ConditionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB30EBC3259D6BDD00D36DE1 /* ConditionHeaderView.xib */; };
+		EB30EBC1259D6B1600D36DE1 /* DismissableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBC0259D6B1600D36DE1 /* DismissableHeaderView.swift */; };
+		EB30EBC4259D6BDD00D36DE1 /* DismissableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB30EBC3259D6BDD00D36DE1 /* DismissableHeaderView.xib */; };
 		EB30EBC7259E29EE00D36DE1 /* DismissableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBC6259E29EE00D36DE1 /* DismissableViewModel.swift */; };
 		EB30EBCB259E388D00D36DE1 /* OfferViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30EBC9259E388D00D36DE1 /* OfferViewCell.swift */; };
 		EB30EBCC259E388D00D36DE1 /* OfferViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB30EBCA259E388D00D36DE1 /* OfferViewCell.xib */; };
@@ -117,12 +117,12 @@
 		EB22E0E92569C71900453D85 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		EB22E0EC2569C77000453D85 /* ForgotPasswordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordBuilder.swift; sourceTree = "<group>"; };
 		EB22E0EE2569D14600453D85 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		EB30EBB2259D12F700D36DE1 /* DismissableConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableConditionViewController.swift; sourceTree = "<group>"; };
-		EB30EBB5259D133000D36DE1 /* DismissableConditionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DismissableConditionViewController.storyboard; sourceTree = "<group>"; };
+		EB30EBB2259D12F700D36DE1 /* DismissableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableViewController.swift; sourceTree = "<group>"; };
+		EB30EBB5259D133000D36DE1 /* DismissableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DismissableViewController.storyboard; sourceTree = "<group>"; };
 		EB30EBBA259D5CCF00D36DE1 /* ConditionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionViewCell.swift; sourceTree = "<group>"; };
 		EB30EBBB259D5CCF00D36DE1 /* ConditionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConditionViewCell.xib; sourceTree = "<group>"; };
-		EB30EBC0259D6B1600D36DE1 /* ConditionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionHeaderView.swift; sourceTree = "<group>"; };
-		EB30EBC3259D6BDD00D36DE1 /* ConditionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConditionHeaderView.xib; sourceTree = "<group>"; };
+		EB30EBC0259D6B1600D36DE1 /* DismissableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableHeaderView.swift; sourceTree = "<group>"; };
+		EB30EBC3259D6BDD00D36DE1 /* DismissableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DismissableHeaderView.xib; sourceTree = "<group>"; };
 		EB30EBC6259E29EE00D36DE1 /* DismissableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableViewModel.swift; sourceTree = "<group>"; };
 		EB30EBC9259E388D00D36DE1 /* OfferViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewCell.swift; sourceTree = "<group>"; };
 		EB30EBCA259E388D00D36DE1 /* OfferViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferViewCell.xib; sourceTree = "<group>"; };
@@ -242,8 +242,8 @@
 				EB30EBBB259D5CCF00D36DE1 /* ConditionViewCell.xib */,
 				EB30EBC9259E388D00D36DE1 /* OfferViewCell.swift */,
 				EB30EBCA259E388D00D36DE1 /* OfferViewCell.xib */,
-				EB30EBC0259D6B1600D36DE1 /* ConditionHeaderView.swift */,
-				EB30EBC3259D6BDD00D36DE1 /* ConditionHeaderView.xib */,
+				EB30EBC0259D6B1600D36DE1 /* DismissableHeaderView.swift */,
+				EB30EBC3259D6BDD00D36DE1 /* DismissableHeaderView.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -319,9 +319,9 @@
 				EBAC26C6259942E400200817 /* AuctionPictureViewModel.swift */,
 				EBB66BB2259ABDE70027AEF3 /* DismissableOfferViewController.swift */,
 				EBB66BB4259AC17C0027AEF3 /* DismissableOfferViewController.storyboard */,
-				EB30EBB2259D12F700D36DE1 /* DismissableConditionViewController.swift */,
+				EB30EBB2259D12F700D36DE1 /* DismissableViewController.swift */,
 				EB30EBC6259E29EE00D36DE1 /* DismissableViewModel.swift */,
-				EB30EBB5259D133000D36DE1 /* DismissableConditionViewController.storyboard */,
+				EB30EBB5259D133000D36DE1 /* DismissableViewController.storyboard */,
 				EB30EBB9259D5C9300D36DE1 /* Cells */,
 			);
 			path = BiddingFlow;
@@ -753,7 +753,7 @@
 				EB3F8C03257ED90400FD381D /* MarketProductCell.xib in Resources */,
 				EB8B25A8255D9F1C00453506 /* GeneralTextView.xib in Resources */,
 				EB6E2B0E253395A3009EBBD7 /* PhotoInformationCell.xib in Resources */,
-				EB30EBC4259D6BDD00D36DE1 /* ConditionHeaderView.xib in Resources */,
+				EB30EBC4259D6BDD00D36DE1 /* DismissableHeaderView.xib in Resources */,
 				EB9890CD250DCC4A00E35BEF /* LoginViewController.storyboard in Resources */,
 				EB9890BD250DC15000E35BEF /* AccountViewController.storyboard in Resources */,
 				EB30EBBD259D5CCF00D36DE1 /* ConditionViewCell.xib in Resources */,
@@ -764,7 +764,7 @@
 				EB6E5535250C90E800816820 /* LaunchScreen.storyboard in Resources */,
 				EB9890B7250C9A8B00E35BEF /* RootViewController.storyboard in Resources */,
 				EB7B088B25298BDD0050EE9F /* DriverRequirementCell.xib in Resources */,
-				EB30EBB6259D133000D36DE1 /* DismissableConditionViewController.storyboard in Resources */,
+				EB30EBB6259D133000D36DE1 /* DismissableViewController.storyboard in Resources */,
 				EB3F8BFC257ECABA00FD381D /* MarketResultsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -781,7 +781,7 @@
 				EBA3942B251191190019B273 /* BottomStatusHelperView.swift in Sources */,
 				EB6E552D250C8C5B00816820 /* PassiveLoadingViewController.swift in Sources */,
 				EB8B25AA255DBC4100453506 /* GeneralTextView.swift in Sources */,
-				EB30EBC1259D6B1600D36DE1 /* ConditionHeaderView.swift in Sources */,
+				EB30EBC1259D6B1600D36DE1 /* DismissableHeaderView.swift in Sources */,
 				EBC7FC872516973600102B57 /* BurgerMenuBuilder.swift in Sources */,
 				EBF7991125225E36000B325C /* RegisterViewController.swift in Sources */,
 				EB22E0EF2569D14600453D85 /* Enums.swift in Sources */,
@@ -809,7 +809,7 @@
 				EB6E5528250C888700816820 /* RootViewController.swift in Sources */,
 				EBAE645F25281481000F654C /* HomeViewController.swift in Sources */,
 				EB7B088725298B690050EE9F /* DriverInfoBuilder.swift in Sources */,
-				EB30EBB3259D12F700D36DE1 /* DismissableConditionViewController.swift in Sources */,
+				EB30EBB3259D12F700D36DE1 /* DismissableViewController.swift in Sources */,
 				EB918DFA25297ABB00EC0254 /* TableView.swift in Sources */,
 				EBB355F82585BEA100AD10F4 /* MarketResultsMode.swift in Sources */,
 				EBAC26C125982FD600200817 /* DetailedAuctionItemViewController.swift in Sources */,
