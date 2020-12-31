@@ -240,6 +240,8 @@
 		EB30EBB9259D5C9300D36DE1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EBAC26C9259948F400200817 /* AuctionPicturesCollectionCell.swift */,
+				EBAC26CA259948F400200817 /* AuctionPicturesCollectionCell.xib */,
 				EB30EBBA259D5CCF00D36DE1 /* ConditionViewCell.swift */,
 				EB30EBBB259D5CCF00D36DE1 /* ConditionViewCell.xib */,
 				EB30EBC9259E388D00D36DE1 /* OfferViewCell.swift */,
@@ -560,8 +562,6 @@
 				EBAC26B82597D27B00200817 /* AuctionTableViewCell.xib */,
 				EBAC26BB2598185100200817 /* AuctionTableHeaderView.swift */,
 				EBAC26BD2598189600200817 /* AuctionTableHeaderView.xib */,
-				EBAC26C9259948F400200817 /* AuctionPicturesCollectionCell.swift */,
-				EBAC26CA259948F400200817 /* AuctionPicturesCollectionCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
