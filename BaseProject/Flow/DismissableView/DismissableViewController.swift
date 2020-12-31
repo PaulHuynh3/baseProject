@@ -44,13 +44,6 @@ class DismissableViewController: UIViewController {
     }
 }
 
-struct DismissableData {
-    let dismissableType: DismissableType
-    let tableRowHeight: Int
-    let condition: [ConditionInformation?]
-    let offer: OfferInformation?
-}
-
 extension DismissableViewController: TableView {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.createNumberOfRows()
@@ -83,20 +76,6 @@ extension DismissableViewController: TableView {
 extension DismissableViewController: DismissableViewModelDelegate {
     func dismiss() {
         delegate?.dismissSheet()
-    }
-}
-
-enum DismissableType {
-    case offer
-    case condition
-
-    var title: String {
-        switch self {
-        case .offer:
-            return "Your Offer"
-        case .condition:
-            return "Condition"
-        }
     }
 }
 
