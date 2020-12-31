@@ -74,10 +74,18 @@ class DetailedAuctionItemViewController: UIViewController {
         }) { _ in
             self.present(dismissableController, animated: true, completion: nil)
         }
+        
     }
-    @IBAction func conditionTapped(_ sender: Any) {
-        //pop up sheet
 
+    @IBAction func itemConditionTapped(_ sender: Any) {
+        //pop up sheet no trigger
+        guard let dismissableController = UIStoryboard(name: String(describing: DismissableConditionViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DismissableConditionViewController.self)) as? DismissableConditionViewController else { return }
+        dismissableController.configure(delegate: self)
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseInOut, animations: {
+            //set background colour to back if you want.. with alpha of 0.5
+        }) { _ in
+            self.present(dismissableController, animated: true, completion: nil)
+        }
     }
 }
 
@@ -106,6 +114,12 @@ extension MKMapView {
 
 extension DetailedAuctionItemViewController: DismissableViewControllerDelegate {
     func dismiss() {
+        dismiss(animated: false, completion: nil)
+    }
+}
+
+extension DetailedAuctionItemViewController: DismissableConditionViewDelegate {
+    func dismissSheet() {
         dismiss(animated: false, completion: nil)
     }
 }
