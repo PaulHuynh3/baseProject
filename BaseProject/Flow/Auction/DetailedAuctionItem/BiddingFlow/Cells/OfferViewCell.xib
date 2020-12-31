@@ -61,6 +61,9 @@
                                                         <state key="normal" title="Confirm Bid">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="confirmBidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IZ7-eK-mRx"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
@@ -87,6 +90,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="confirmBidButton" destination="e6X-vf-6J7" id="Fvi-bI-VxH"/>
+                <outlet property="discretionLabel" destination="RRM-Tb-aIJ" id="JJH-bs-3A3"/>
+                <outlet property="marketPriceLabel" destination="Z0E-G8-Jbm" id="Vpt-D8-eB3"/>
+                <outlet property="offerTextField" destination="8K1-iP-wYZ" id="YK2-g2-XPW"/>
+            </connections>
             <point key="canvasLocation" x="140.57971014492756" y="101.78571428571428"/>
         </tableViewCell>
     </objects>

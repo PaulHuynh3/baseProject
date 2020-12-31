@@ -22,6 +22,7 @@ class DetailedAuctionItemViewModel {
         self.delegate = delegate
         seconds = data?.remainingTime ?? 0
         setup()
+        builder.configure(delegate: self)
     }
 
     func invalidateTimer() {
@@ -30,25 +31,11 @@ class DetailedAuctionItemViewModel {
     }
 
     func buildOfferData() -> DismissableData {
-        builder.buildOfferData()
+        builder.buildOfferData(product: data)
     }
 
     func buildConditionData() -> DismissableData {
         builder.buildConditionData()
-    }
-
-    func buildDismissableData() -> DismissableOfferViewController.Data {
-        return DismissableOfferViewController.Data(
-            dismissableTitle: "Your Offer",
-            marketProduct: data,
-            offerBidConfirmCallback: createConfirmBidCallback()
-        )
-    }
-
-    private func createConfirmBidCallback() -> ((Int) -> Void)? {
-        return { [weak self] price in
-            self?.delegate?.updateBid(with: price)
-        }
     }
 
     private func setup() {
@@ -75,6 +62,12 @@ class DetailedAuctionItemViewModel {
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+    }
+}
+
+extension DetailedAuctionItemViewModel: DetailedAuctionBuilderDelegate {
+    func updateBid(price: Int) {
+        delegate?.updateBid(with: price)
     }
 }
 

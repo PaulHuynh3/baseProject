@@ -48,6 +48,7 @@ struct DismissableData {
     let dismissableType: DismissableType
     let tableRowHeight: Int
     let condition: [ConditionInformation?]
+    let offer: OfferInformation?
 }
 
 extension DismissableViewController: TableView {

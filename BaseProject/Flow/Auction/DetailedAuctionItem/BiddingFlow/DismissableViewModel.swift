@@ -40,6 +40,7 @@ class DismissableViewModel {
             return cell
         case .offer:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: OfferViewCell.self)) as? OfferViewCell else { fatalError("DismissableCondition Crashed") }
+            cell.configure(data: data?.offer, dismissCallback: createExitCallback())
             return cell
         }
     }

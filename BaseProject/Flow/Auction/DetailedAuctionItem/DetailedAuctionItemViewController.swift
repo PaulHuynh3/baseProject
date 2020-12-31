@@ -102,11 +102,11 @@ extension MKMapView {
     }
 }
 
-extension DetailedAuctionItemViewController: DismissableOfferViewControllerDelegate {
-    func dismiss() {
-        dismiss(animated: false, completion: nil)
-    }
-}
+//extension DetailedAuctionItemViewController: DismissableOfferViewControllerDelegate {
+//    func dismiss() {
+//        dismiss(animated: false, completion: nil)
+//    }
+//}
 
 extension DetailedAuctionItemViewController: DismissableViewControllerDelegate {
     func dismissSheet() {

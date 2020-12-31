@@ -10,10 +10,17 @@ import Foundation
 
 class DetailedAuctionBuilder {
 
+    var delegate: DetailedAuctionBuilderDelegate?
+
+    func configure(delegate: DetailedAuctionBuilderDelegate) {
+        self.delegate = delegate
+    }
+
     func buildConditionData() -> DismissableData {
         return DismissableData(dismissableType: .condition,
                                tableRowHeight: 100,
-                               condition: conditionInformation
+                               condition: conditionInformation,
+                               offer: nil
         )
     }
 
@@ -32,10 +39,26 @@ class DetailedAuctionBuilder {
         )
     ]
 
-    func buildOfferData() -> DismissableData {
+    func buildOfferData(product: Product?) -> DismissableData {
         return DismissableData(dismissableType: .offer,
                                tableRowHeight: 200,
-                               condition: []
+                               condition: [],
+                               offer: offerInformation(product: product)
         )
     }
+
+    private func offerInformation(product: Product?) -> OfferInformation {
+        return OfferInformation(marketProduct: product,
+                                offerBidConfirmCallback: createBidConfirmCallback())
+    }
+
+    private func createBidConfirmCallback() -> ((Int) -> Void)? {
+        return { [weak self] price in
+            self?.delegate?.updateBid(price: price)
+        }
+    }
+}
+
+protocol DetailedAuctionBuilderDelegate {
+    func updateBid(price: Int)
 }
