@@ -24,7 +24,8 @@ class OfferViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        //TODO - Keep watch to see if this cause potential problems with the keyboard.
+        offerTextField.becomeFirstResponder()
     }
 
     func configure(data: OfferInformation?, dismissCallback: (() -> Void)?) {

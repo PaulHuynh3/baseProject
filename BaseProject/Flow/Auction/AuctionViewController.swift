@@ -25,8 +25,11 @@ class AuctionViewController: UIViewController {
     }()
 
     @objc func floatingButtonTapped(_ button: UIButton) {
-        print("button tapped")
-        //open the page and
+        guard let listProductViewController = UIStoryboard(name: String(describing:ListProductViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: ListProductViewController.self)) as? ListProductViewController else {
+            return
+        }
+//        detailedAuctionItemViewController.configure(data: data)
+        navigationController?.pushViewController(listProductViewController, animated: true)
     }
 
     private func setup() {

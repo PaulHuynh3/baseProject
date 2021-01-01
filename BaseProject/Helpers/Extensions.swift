@@ -153,7 +153,7 @@ extension UIButton {
     }
 
     func alignImageRightEdge() {
-        let endWidth = frame.size.width - 25
+        let endWidth = frame.size.width - 30
         imageEdgeInsets = UIEdgeInsets(top: 0, left: endWidth, bottom: 0, right: 0)
     }
 }

@@ -35,7 +35,6 @@ class DismissableViewController: UIViewController {
             registerNibForTableView(cellType: String(describing: ConditionViewCell.self), tableView: tableView)
             tableViewHeightConstraint.constant = CGFloat(viewModel.rowHeight * (viewModel.data?.condition.count ?? 0) + viewModel.headerHeight)
         }
-
         registerHeaderFooterTableView(cellType: String(describing: DismissableHeaderView.self), tableView: tableView)
     }
 
