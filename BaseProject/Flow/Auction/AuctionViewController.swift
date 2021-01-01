@@ -18,10 +18,27 @@ class AuctionViewController: UIViewController {
         setup()
     }
 
+    lazy var floatingButton: FloatingButton = {
+        let button = FloatingButton(frame: .zero)
+        button.addTarget(self, action: #selector(floatingButtonTapped(_:)), for: .touchUpInside)
+        return button
+    }()
+
+    @objc func floatingButtonTapped(_ button: UIButton) {
+        print("button tapped")
+        //open the page and
+    }
+
     private func setup() {
         viewModel.configure()
+        setupFloatingView()
         registerNibForTableView(cellType: String(describing: AuctionTableViewCell.self), tableView: tableView)
         registerHeaderFooterTableView(cellType: String(describing: AuctionTableHeaderView.self), tableView: tableView)
+    }
+
+    private func setupFloatingView() {
+        view.addSubview(floatingButton)
+        floatingButton.configure(title: "Post", image: UIImage(named: "add-icon"), view: view)
     }
 
     private func navigateToDetailedItem(data: Product) {

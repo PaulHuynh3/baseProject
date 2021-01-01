@@ -34,6 +34,23 @@ class MarketResultsViewController: UIViewController {
     func setup() {
         registerNib()
         setupNavigationButton()
+        setupFloatingView()
+    }
+
+    lazy var floatingButton: FloatingButton = {
+        let button = FloatingButton(frame: .zero)
+        button.addTarget(self, action: #selector(floatingButtonTapped(_:)), for: .touchUpInside)
+        return button
+    }()
+
+    @objc func floatingButtonTapped(_ button: UIButton) {
+        print("button tapped")
+        //open the page and
+    }
+
+    private func setupFloatingView() {
+        view.addSubview(floatingButton)
+        floatingButton.configure(title: "Post", image: UIImage(named: "add-icon"), view: view)
     }
 
     private func setupNavigationButton() {
