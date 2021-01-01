@@ -11,14 +11,14 @@ import UIKit
 class ListProductViewController: UIViewController {
 
     @IBOutlet weak var addPhotoButton: UIButton!
-    @IBOutlet weak var titleTextView: UITextView!
-    @IBOutlet weak var priceTextView: UITextView!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var conditionButton: UIButton!
     @IBOutlet weak var locationButton: UIButton!
-    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var descriptionTextField: UITextField!
 
-    let padding = UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10)
+    let viewModel = ListProductViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,7 @@ class ListProductViewController: UIViewController {
     }
 
     private func setup() {
+        viewModel.configure(delegate: self)
         configureBorderWidth()
         configureBorderColour()
         alignImageRightEdge()
@@ -35,34 +36,34 @@ class ListProductViewController: UIViewController {
     private func configureBorderColour() {
         let borderColor = UIColor.lightGray.cgColor
         addPhotoButton.layer.borderColor = borderColor
-        titleTextView.layer.borderColor = borderColor
-        priceTextView.layer.borderColor = borderColor
+        titleTextField.layer.borderColor = borderColor
+        priceTextField.layer.borderColor = borderColor
         categoryButton.layer.borderColor = borderColor
         conditionButton.layer.borderColor = borderColor
         locationButton.layer.borderColor = borderColor
-        descriptionTextView.layer.borderColor = borderColor
+        descriptionTextField.layer.borderColor = borderColor
     }
 
     private func configureBorderWidth() {
         let borderWidth = 1
         addPhotoButton.layer.borderWidth = CGFloat(borderWidth)
-        titleTextView.layer.borderWidth = CGFloat(borderWidth)
-        priceTextView.layer.borderWidth = CGFloat(borderWidth)
+        titleTextField.layer.borderWidth = CGFloat(borderWidth)
+        priceTextField.layer.borderWidth = CGFloat(borderWidth)
         categoryButton.layer.borderWidth = CGFloat(borderWidth)
         conditionButton.layer.borderWidth = CGFloat(borderWidth)
         locationButton.layer.borderWidth = CGFloat(borderWidth)
-        descriptionTextView.layer.borderWidth = CGFloat(borderWidth)
+        descriptionTextField.layer.borderWidth = CGFloat(borderWidth)
     }
 
     private func configureCornerRadius() {
         let cornerRadius = 5.0
         addPhotoButton.layer.cornerRadius = CGFloat(cornerRadius)
-        titleTextView.layer.cornerRadius = CGFloat(cornerRadius)
-        priceTextView.layer.cornerRadius = CGFloat(cornerRadius)
+        titleTextField.layer.cornerRadius = CGFloat(cornerRadius)
+        priceTextField.layer.cornerRadius = CGFloat(cornerRadius)
         categoryButton.layer.cornerRadius = CGFloat(cornerRadius)
         conditionButton.layer.cornerRadius = CGFloat(cornerRadius)
         locationButton.layer.cornerRadius = CGFloat(cornerRadius)
-        descriptionTextView.layer.cornerRadius = CGFloat(cornerRadius)
+        descriptionTextField.layer.cornerRadius = CGFloat(cornerRadius)
     }
 
     private func alignImageRightEdge() {
@@ -76,5 +77,17 @@ class ListProductViewController: UIViewController {
         //hide button when user selects an image, unhide button when user deselect image.
     }
 
+    @IBAction func publishPostTapped(_ sender: Any) {
 
+    }
+
+    @IBAction func discardPostTapped(_ sender: Any) {
+        AlertManager.show(in: self, with: viewModel.discardAlertData)
+    }
+}
+
+extension ListProductViewController: ListProductViewModelDelegate {
+    func discardPost() {
+        navigationController?.popViewController(animated: true)
+    }
 }
