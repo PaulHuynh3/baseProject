@@ -78,4 +78,29 @@ extension AuctionViewController: TableView {
         let data = viewModel.products[indexPath.row]
         navigateToDetailedItem(data: data)
     }
+
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        viewModel.lastContentOffset = scrollView.contentOffset.y
+
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if viewModel.lastContentOffset < scrollView.contentOffset.y {
+            // did scroll up
+            // put post
+//            floatingButton.state(title: "", view: view)
+        } else if viewModel.lastContentOffset > scrollView.contentOffset.y {
+            // did scroll down
+
+//            floatingButton.state(title: "Post", view: view)
+            // dont put post
+        } else {
+            // didn't move
+//            floatingButton.state(title: "Post", view: view)
+        }
+    }
+
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+
+    }
 }

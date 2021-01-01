@@ -15,6 +15,7 @@ class AuctionViewModel {
     var auctionItems: Int {
         return products.count
     }
+    var lastContentOffset: CGFloat = 0
 
     func configure() {
         products = allMockProducts()
