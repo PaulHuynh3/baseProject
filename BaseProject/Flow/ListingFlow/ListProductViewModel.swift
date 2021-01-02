@@ -22,6 +22,14 @@ class ListProductViewModel {
         UIColor.lightGray.cgColor
     }
 
+    var condition: Condition? {
+        return builder.condition
+    }
+
+    var category: Category? {
+        return builder.category
+    }
+
     var borderWidth: CGFloat {
         1
     }
@@ -36,6 +44,10 @@ class ListProductViewModel {
 
     var conditionSelectionDismissableData: DismissableData {
         return builder.buildDismissableSelectionData()
+    }
+
+    var categorySelectionDismissableData: DismissableData {
+        return builder.buildCategorySelectionData()
     }
 
     func configure(delegate: ListProductViewModelDelegate) {

@@ -11,7 +11,8 @@ import UIKit
 class ListProductBuilder {
 
     var delegate: ListProductBuilderDelgate?
-    private var condition: Condition?
+    var condition: Condition?
+    var category: Category?
 
     func configure(delegate: ListProductBuilderDelgate) {
         self.delegate = delegate
@@ -37,8 +38,26 @@ class ListProductBuilder {
     }
 
     func buildDismissableSelectionData() -> DismissableData {
-        return DismissableData(dismissableType: .conditionSelection, tableRowHeight: 200, conditionInfo: [], offer: nil, conditionSelection: buildConditionSelectionData()
+        return DismissableData(dismissableType: .conditionSelection, tableRowHeight: 200, conditionSelection: buildConditionSelectionData()
         )
+    }
+
+    func buildCategorySelectionData() -> DismissableData {
+        return DismissableData(dismissableType: .selectCategory, tableRowHeight: 50, categorySelection: categorySelectionData())
+    }
+
+    private func categorySelectionData() -> CategorySelection {
+        let categoryType: [CategoryType] = [.clothingAccessories, .electronics, .entertainmentHobbies, .healthBeauty, .homeGarden, .miscellaneous]
+
+
+        return CategorySelection(categoryTypes: categoryType, categorySelectedCallback: categorySelectedCallback())
+    }
+
+    private func categorySelectedCallback() -> ((Category) -> Void)? {
+        return { [weak self] category in
+            self?.category = category
+            self?.delegate?.dismissViewController()
+        }
     }
 
     private func buildConditionSelectionData() -> ConditionTableViewCell.Data {
@@ -63,4 +82,9 @@ class ListProductBuilder {
 protocol ListProductBuilderDelgate {
     func popViewController()
     func dismissViewController()
+}
+
+struct CategorySelection {
+    var categoryTypes: [CategoryType]
+    var categorySelectedCallback: ((Category) -> Void)?
 }

@@ -14,12 +14,14 @@ struct DismissableData {
     let conditionInfo: [ConditionInformation?]
     let offer: OfferViewCell.Data?
     let conditionSelection: ConditionTableViewCell.Data?
+    let categorySelection: CategorySelection?
 
-    init(dismissableType: DismissableType, tableRowHeight: Int, conditionInfo: [ConditionInformation?] = [], offer: OfferViewCell.Data? = nil, conditionSelection: ConditionTableViewCell.Data? = nil) {
+    init(dismissableType: DismissableType, tableRowHeight: Int, conditionInfo: [ConditionInformation?] = [], offer: OfferViewCell.Data? = nil, conditionSelection: ConditionTableViewCell.Data? = nil, categorySelection: CategorySelection? = nil) {
         self.dismissableType = dismissableType
         self.tableRowHeight = tableRowHeight
         self.conditionInfo = conditionInfo
         self.offer = offer
         self.conditionSelection = conditionSelection
+        self.categorySelection = categorySelection
     }
 }

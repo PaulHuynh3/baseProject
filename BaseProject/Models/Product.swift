@@ -12,7 +12,7 @@ struct Product {
     let title: String
     let price: Int
     let images: [UIImage]
-    let category: Category
+    let category: CategoryType
     let condition: Condition
     let description: String
     let location: String
@@ -34,7 +34,7 @@ struct Product {
         self.price = price
 
         self.productID = ""
-        self.category = .clothingAccessory
+        self.category = .healthBeauty
         self.condition = .usedGood
         self.stock = .singleItem
     }

@@ -90,8 +90,8 @@ class ListProductViewController: UIViewController {
 
     @IBAction func categoryButtonTapped(_ sender: Any) {
         guard let dismissableController = viewModel.dismissableController else { return }
-//        dismissableController.configure(delegate: self, data: viewModel.buildOfferData())
-//        present(dismissableController, animated: true, completion: nil)
+        dismissableController.configure(delegate: self, data: viewModel.categorySelectionDismissableData)
+        present(dismissableController, animated: true, completion: nil)
     }
 
     @IBAction func conditionButtonTapped(_ sender: Any) {
@@ -107,7 +107,7 @@ class ListProductViewController: UIViewController {
     @IBAction func publishPostTapped(_ sender: Any) {
         //check that all fields are filled
         //highlight the fields that are not filled..
-        if priceTextField.text == "", titleTextField.text == "" {
+        if priceTextField.text == nil, titleTextField.text == nil, viewModel.condition == nil {
 
         }
     }

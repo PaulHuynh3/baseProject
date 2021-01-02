@@ -16,7 +16,8 @@ class DismissableViewController: UIViewController {
     let viewModel = DismissableViewModel()
 
     override func viewDidLoad() {
-        setup()
+        setupCell()
+        setupHeader()
         viewModel.configure(delegate: self)
     }
 
@@ -25,21 +26,30 @@ class DismissableViewController: UIViewController {
         viewModel.data = data
     }
 
-    private func setup() {
-        guard let type = viewModel.data?.dismissableType else { return }
-        switch type {
+    private func setupCell() {
+        switch viewModel.dismissableType {
         case .offer:
             registerNibForTableView(cellType: String(describing: OfferViewCell.self), tableView: tableView)
             tableViewHeightConstraint.constant = CGFloat(viewModel.rowHeight + viewModel.headerHeight)
         case .conditionInformation:
             registerNibForTableView(cellType: String(describing: ConditionViewCell.self), tableView: tableView)
             tableViewHeightConstraint.constant = CGFloat(viewModel.rowHeight * (viewModel.data?.conditionInfo.count ?? 0) + viewModel.headerHeight)
-        //this doesnt have to be an array
         case .conditionSelection:
             registerNibForTableView(cellType: String(describing: ConditionTableViewCell.self), tableView: tableView)
             tableViewHeightConstraint.constant = CGFloat(viewModel.rowHeight + viewModel.headerHeight)
+        case .selectCategory:
+            registerNibForTableView(cellType: String(describing: CategoryTableViewCell.self), tableView: tableView)
+            tableViewHeightConstraint.constant = CGFloat(view.frame.height/1.5)
         }
-        registerHeaderFooterTableView(cellType: String(describing: DismissableHeaderView.self), tableView: tableView)
+    }
+
+    private func setupHeader() {
+        switch viewModel.dismissableType {
+        case .selectCategory:
+            registerHeaderFooterTableView(cellType: String(describing: CategoryHeaderView.self), tableView: tableView)
+        default:
+            registerHeaderFooterTableView(cellType: String(describing: DismissableHeaderView.self), tableView: tableView)
+        }
     }
 
     @IBAction func dismissTapped(_ sender: Any) {
@@ -48,31 +58,34 @@ class DismissableViewController: UIViewController {
 }
 
 extension DismissableViewController: TableView {
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        viewModel.createHeaderSectionView(tableView: tableView, section: section)
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        CGFloat(viewModel.headerHeight)
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        viewModel.numberOfSection()
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.createNumberOfRows()
+        viewModel.numberOfRowsInSection(section: section)
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        viewModel.setHeightForRow()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         viewModel.createTableViewCell(tableView: tableView, indexPath: indexPath)
     }
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return viewModel.setHeightForRow()
-    }
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat(viewModel.headerHeight)
-    }
-
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing: DismissableHeaderView.self)) as? DismissableHeaderView else { fatalError("Condition Collection header messed up") }
-        let title = viewModel.data?.dismissableType.title ?? ""
-        headerView.configure(data: viewModel.buildHeaderViewData(title: title))
-        return headerView
+        viewModel.didSelectRowAtIndexPath(indexPath: indexPath)
     }
 }
 
