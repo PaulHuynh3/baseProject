@@ -160,6 +160,7 @@
                         <outlet property="descriptionTextField" destination="gVT-9M-BNb" id="0ds-OG-Wz4"/>
                         <outlet property="locationButton" destination="UQz-cT-iGH" id="YYO-9l-jpB"/>
                         <outlet property="priceTextField" destination="tAo-Y2-MuB" id="6sM-9K-erf"/>
+                        <outlet property="scrollView" destination="TG7-YS-2Io" id="TNL-CL-f2O"/>
                         <outlet property="titleTextField" destination="xZm-oX-S2X" id="OFX-Dm-t7E"/>
                     </connections>
                 </viewController>

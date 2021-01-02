@@ -17,6 +17,7 @@ class ListProductViewController: UIViewController {
     @IBOutlet weak var conditionButton: UIButton!
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var descriptionTextField: UITextField! //TODO this might have to be a textView
+    @IBOutlet weak var scrollView: UIScrollView!
 
     let viewModel = ListProductViewModel()
     var offerPriceString: String? {
@@ -39,6 +40,13 @@ class ListProductViewController: UIViewController {
         alignImageRightEdge()
         configureCornerRadius()
         configureTextFields()
+        setupKeyboard()
+    }
+
+    private func setupKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
+        hideKeyboardWhenTappedAround()
     }
 
     private func configureBorderColour() {
@@ -81,6 +89,21 @@ class ListProductViewController: UIViewController {
         titleTextField.delegate = self
         priceTextField.delegate = self
         priceTextField.keyboardType = .numberPad
+    }
+
+    @objc func keyboardWillShow(notification:NSNotification) {
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame: CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 10
+        scrollView.contentInset = contentInset
+    }
+
+    @objc func keyboardWillHide(notification:NSNotification) {
+        let contentInset: UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
     }
 
     @IBAction func addPhotosTapped(_ sender: Any) {
