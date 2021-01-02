@@ -31,9 +31,13 @@ class DismissableViewController: UIViewController {
         case .offer:
             registerNibForTableView(cellType: String(describing: OfferViewCell.self), tableView: tableView)
             tableViewHeightConstraint.constant = CGFloat(viewModel.rowHeight + viewModel.headerHeight)
-        case .condition:
+        case .conditionInformation:
             registerNibForTableView(cellType: String(describing: ConditionViewCell.self), tableView: tableView)
-            tableViewHeightConstraint.constant = CGFloat(viewModel.rowHeight * (viewModel.data?.condition.count ?? 0) + viewModel.headerHeight)
+            tableViewHeightConstraint.constant = CGFloat(viewModel.rowHeight * (viewModel.data?.conditionInfo.count ?? 0) + viewModel.headerHeight)
+        //this doesnt have to be an array
+        case .conditionSelection:
+            registerNibForTableView(cellType: String(describing: ConditionTableViewCell.self), tableView: tableView)
+            tableViewHeightConstraint.constant = CGFloat(viewModel.rowHeight + viewModel.headerHeight)
         }
         registerHeaderFooterTableView(cellType: String(describing: DismissableHeaderView.self), tableView: tableView)
     }

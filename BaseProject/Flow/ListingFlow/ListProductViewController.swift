@@ -16,7 +16,7 @@ class ListProductViewController: UIViewController {
     @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var conditionButton: UIButton!
     @IBOutlet weak var locationButton: UIButton!
-    @IBOutlet weak var descriptionTextField: UITextField! //this might have to be a textView
+    @IBOutlet weak var descriptionTextField: UITextField! //TODO this might have to be a textView
 
     let viewModel = ListProductViewModel()
     var offerPriceString: String? {
@@ -88,6 +88,22 @@ class ListProductViewController: UIViewController {
         //hide button when user selects an image, unhide button when user deselect image.
     }
 
+    @IBAction func categoryButtonTapped(_ sender: Any) {
+        guard let dismissableController = viewModel.dismissableController else { return }
+//        dismissableController.configure(delegate: self, data: viewModel.buildOfferData())
+//        present(dismissableController, animated: true, completion: nil)
+    }
+
+    @IBAction func conditionButtonTapped(_ sender: Any) {
+        guard let dismissableController = viewModel.dismissableController else { return }
+        dismissableController.configure(delegate: self, data: viewModel.conditionSelectionDismissableData)
+        present(dismissableController, animated: true, completion: nil)
+    }
+
+    @IBAction func locationButtonTapped(_ sender: Any) {
+
+    }
+
     @IBAction func publishPostTapped(_ sender: Any) {
         //check that all fields are filled
         //highlight the fields that are not filled..
@@ -127,8 +143,18 @@ extension ListProductViewController: UITextFieldDelegate {
     }
 }
 
+extension ListProductViewController: DismissableViewControllerDelegate {
+    func dismissSheet() {
+        dismissViewController()
+    }
+}
+
 extension ListProductViewController: ListProductViewModelDelegate {
-    func discardPost() {
+    func dismissViewController() {
+        dismiss(animated: true)
+    }
+
+    func popViewController() {
         navigationController?.popViewController(animated: true)
     }
 }

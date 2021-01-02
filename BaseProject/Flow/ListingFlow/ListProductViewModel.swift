@@ -13,6 +13,11 @@ class ListProductViewModel {
     var delegate: ListProductViewModelDelegate?
     private let builder = ListProductBuilder()
 
+    var dismissableController: DismissableViewController? {
+        let dismissableController = UIStoryboard(name: String(describing: DismissableViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DismissableViewController.self)) as? DismissableViewController
+        return dismissableController
+    }
+
     var borderColour: CGColor {
         UIColor.lightGray.cgColor
     }
@@ -25,23 +30,31 @@ class ListProductViewModel {
         5
     }
 
+    var discardAlertData: AlertManager.Data {
+        return builder.buildDiscardPostAlertData()
+    }
+
+    var conditionSelectionDismissableData: DismissableData {
+        return builder.buildDismissableSelectionData()
+    }
 
     func configure(delegate: ListProductViewModelDelegate) {
         self.delegate = delegate
         builder.configure(delegate: self)
     }
-
-    var discardAlertData: AlertManager.Data {
-        return builder.buildDiscardPostAlertData()
-    }
 }
 
 extension ListProductViewModel: ListProductBuilderDelgate {
-    func discardPost() {
-        delegate?.discardPost()
+    func dismissViewController() {
+        delegate?.dismissViewController()
+    }
+
+    func popViewController() {
+        delegate?.popViewController()
     }
 }
 
 protocol ListProductViewModelDelegate {
-    func discardPost()
+    func popViewController()
+    func dismissViewController()
 }

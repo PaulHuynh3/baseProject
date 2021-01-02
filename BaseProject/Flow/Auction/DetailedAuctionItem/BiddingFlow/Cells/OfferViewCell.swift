@@ -28,7 +28,7 @@ class OfferViewCell: UITableViewCell {
         offerTextField.becomeFirstResponder()
     }
 
-    func configure(data: OfferInformation?, dismissCallback: (() -> Void)?) {
+    func configure(data: Data?, dismissCallback: (() -> Void)?) {
         setupTextField()
         let price = data?.marketProduct?.price ?? 0
         marketPriceLabel.text = "Current Price: " + "$" + String(price)
@@ -83,4 +83,11 @@ extension OfferViewCell: UITextFieldDelegate {
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {}
     func textFieldDidEndEditing(_ textField: UITextField) {}
+}
+
+extension OfferViewCell {
+    struct Data {
+        let marketProduct: Product?
+        let offerBidConfirmCallback: ((Int) -> Void)?
+    }
 }

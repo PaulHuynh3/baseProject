@@ -17,9 +17,9 @@ class DetailedAuctionBuilder {
     }
 
     func buildConditionData() -> DismissableData {
-        return DismissableData(dismissableType: .condition,
+        return DismissableData(dismissableType: .conditionInformation,
                                tableRowHeight: 100,
-                               condition: conditionInformation,
+                               conditionInfo: conditionInformation,
                                offer: nil
         )
     }
@@ -42,13 +42,12 @@ class DetailedAuctionBuilder {
     func buildOfferData(product: Product?) -> DismissableData {
         return DismissableData(dismissableType: .offer,
                                tableRowHeight: 200,
-                               condition: [],
                                offer: offerInformation(product: product)
         )
     }
 
-    private func offerInformation(product: Product?) -> OfferInformation {
-        return OfferInformation(marketProduct: product,
+    private func offerInformation(product: Product?) -> OfferViewCell.Data {
+        return OfferViewCell.Data(marketProduct: product,
                                 offerBidConfirmCallback: createBidConfirmCallback())
     }
 

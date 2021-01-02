@@ -6,11 +6,12 @@
 //  Copyright © 2021 BaseProject. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ListProductBuilder {
 
     var delegate: ListProductBuilderDelgate?
+    private var condition: Condition?
 
     func configure(delegate: ListProductBuilderDelgate) {
         self.delegate = delegate
@@ -35,13 +36,31 @@ class ListProductBuilder {
         )
     }
 
+    func buildDismissableSelectionData() -> DismissableData {
+        return DismissableData(dismissableType: .conditionSelection, tableRowHeight: 200, conditionInfo: [], offer: nil, conditionSelection: buildConditionSelectionData()
+        )
+    }
+
+    private func buildConditionSelectionData() -> ConditionTableViewCell.Data {
+        return ConditionTableViewCell.Data(condition: condition,
+                                           selectedConditionCallback: createConditionSelectionCallback())
+    }
+
+    private func createConditionSelectionCallback() -> ((Condition) -> Void)? {
+        return { [weak self] condition in
+            self?.condition = condition
+            self?.delegate?.dismissViewController()
+        }
+    }
+
     private func createDiscardPostCallback() -> (() -> Void)? {
         return { [weak self] in
-            self?.delegate?.discardPost()
+            self?.delegate?.popViewController()
         }
     }
 }
 
 protocol ListProductBuilderDelgate {
-    func discardPost()
+    func popViewController()
+    func dismissViewController()
 }

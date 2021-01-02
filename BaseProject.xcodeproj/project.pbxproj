@@ -103,7 +103,6 @@
 		EBEAF3C7250C250800AA3AAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEAF3C6250C250800AA3AAF /* SceneDelegate.swift */; };
 		EBEAF3CE250C250900AA3AAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBEAF3CD250C250900AA3AAF /* Assets.xcassets */; };
 		EBF33361259E5D9B00E92762 /* ConditionInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF33360259E5D9B00E92762 /* ConditionInformation.swift */; };
-		EBF33368259E66DC00E92762 /* OfferInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF33367259E66DC00E92762 /* OfferInformation.swift */; };
 		EBF33370259E735A00E92762 /* DismissableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3336F259E735A00E92762 /* DismissableType.swift */; };
 		EBF33373259E738900E92762 /* DismissableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF33372259E738900E92762 /* DismissableData.swift */; };
 		EBF33378259E923C00E92762 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF33377259E923C00E92762 /* FloatingButton.swift */; };
@@ -113,6 +112,8 @@
 		EBF3338F259FE53F00E92762 /* ListProductBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3338E259FE53F00E92762 /* ListProductBuilder.swift */; };
 		EBF3339525A016CA00E92762 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3339425A016CA00E92762 /* Condition.swift */; };
 		EBF3339925A016FB00E92762 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3339825A016FB00E92762 /* Category.swift */; };
+		EBF3339D25A019AA00E92762 /* ConditionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3339C25A019AA00E92762 /* ConditionTableViewCell.swift */; };
+		EBF333A125A019E800E92762 /* ConditionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF333A025A019E800E92762 /* ConditionTableViewCell.xib */; };
 		EBF7990F25225DC3000B325C /* LoginMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7990E25225DC3000B325C /* LoginMethodsViewController.swift */; };
 		EBF7991125225E36000B325C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7991025225E36000B325C /* RegisterViewController.swift */; };
 		EBF799132522BD45000B325C /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF799122522BD45000B325C /* ForgotPasswordViewController.swift */; };
@@ -217,7 +218,6 @@
 		EBEAF3CD250C250900AA3AAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBEAF3D2250C250900AA3AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBF33360259E5D9B00E92762 /* ConditionInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionInformation.swift; sourceTree = "<group>"; };
-		EBF33367259E66DC00E92762 /* OfferInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferInformation.swift; sourceTree = "<group>"; };
 		EBF3336F259E735A00E92762 /* DismissableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableType.swift; sourceTree = "<group>"; };
 		EBF33372259E738900E92762 /* DismissableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableData.swift; sourceTree = "<group>"; };
 		EBF33377259E923C00E92762 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
@@ -227,6 +227,8 @@
 		EBF3338E259FE53F00E92762 /* ListProductBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductBuilder.swift; sourceTree = "<group>"; };
 		EBF3339425A016CA00E92762 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		EBF3339825A016FB00E92762 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		EBF3339C25A019AA00E92762 /* ConditionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionTableViewCell.swift; sourceTree = "<group>"; };
+		EBF333A025A019E800E92762 /* ConditionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConditionTableViewCell.xib; sourceTree = "<group>"; };
 		EBF7990E25225DC3000B325C /* LoginMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMethodsViewController.swift; sourceTree = "<group>"; };
 		EBF7991025225E36000B325C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EBF799122522BD45000B325C /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -658,7 +660,6 @@
 				EBF3339425A016CA00E92762 /* Condition.swift */,
 				EBF3339825A016FB00E92762 /* Category.swift */,
 				EBF33360259E5D9B00E92762 /* ConditionInformation.swift */,
-				EBF33367259E66DC00E92762 /* OfferInformation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -724,6 +725,7 @@
 				EBF3338B259FB21000E92762 /* ListProductViewModel.swift */,
 				EBF33388259FA35800E92762 /* ListProductViewController.storyboard */,
 				EBF33391259FE54F00E92762 /* Builder */,
+				EBF3339B25A0196F00E92762 /* Cells */,
 			);
 			path = ListingFlow;
 			sourceTree = "<group>";
@@ -734,6 +736,15 @@
 				EBF3338E259FE53F00E92762 /* ListProductBuilder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		EBF3339B25A0196F00E92762 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EBF3339C25A019AA00E92762 /* ConditionTableViewCell.swift */,
+				EBF333A025A019E800E92762 /* ConditionTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -803,6 +814,7 @@
 				EBBB67CA2515A6EE00031C30 /* BurgerMenuCell.xib in Resources */,
 				EB9F5767257B3CF5006447A9 /* MarketViewController.storyboard in Resources */,
 				EBBB67C32515A4FD00031C30 /* BurgerMenuViewController.storyboard in Resources */,
+				EBF333A125A019E800E92762 /* ConditionTableViewCell.xib in Resources */,
 				EBEAF3CE250C250900AA3AAF /* Assets.xcassets in Resources */,
 				EB30EBCC259E388D00D36DE1 /* OfferViewCell.xib in Resources */,
 				EB3F8C03257ED90400FD381D /* MarketProductCell.xib in Resources */,
@@ -871,10 +883,10 @@
 				EB6E5528250C888700816820 /* RootViewController.swift in Sources */,
 				EBAE645F25281481000F654C /* HomeViewController.swift in Sources */,
 				EB7B088725298B690050EE9F /* DriverInfoBuilder.swift in Sources */,
-				EBF33368259E66DC00E92762 /* OfferInformation.swift in Sources */,
 				EB30EBB3259D12F700D36DE1 /* DismissableViewController.swift in Sources */,
 				EB918DFA25297ABB00EC0254 /* TableView.swift in Sources */,
 				EBB355F82585BEA100AD10F4 /* MarketResultsMode.swift in Sources */,
+				EBF3339D25A019AA00E92762 /* ConditionTableViewCell.swift in Sources */,
 				EBAC26C125982FD600200817 /* DetailedAuctionItemViewController.swift in Sources */,
 				EBBB67C12515A4A400031C30 /* BurgerMenuViewController.swift in Sources */,
 				EB6BF26B259BD97200CE1614 /* KeyboardLayoutConstraint.swift in Sources */,

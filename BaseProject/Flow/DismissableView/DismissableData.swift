@@ -11,6 +11,15 @@ import Foundation
 struct DismissableData {
     let dismissableType: DismissableType
     let tableRowHeight: Int
-    let condition: [ConditionInformation?]
-    let offer: OfferInformation?
+    let conditionInfo: [ConditionInformation?]
+    let offer: OfferViewCell.Data?
+    let conditionSelection: ConditionTableViewCell.Data?
+
+    init(dismissableType: DismissableType, tableRowHeight: Int, conditionInfo: [ConditionInformation?] = [], offer: OfferViewCell.Data? = nil, conditionSelection: ConditionTableViewCell.Data? = nil) {
+        self.dismissableType = dismissableType
+        self.tableRowHeight = tableRowHeight
+        self.conditionInfo = conditionInfo
+        self.offer = offer
+        self.conditionSelection = conditionSelection
+    }
 }

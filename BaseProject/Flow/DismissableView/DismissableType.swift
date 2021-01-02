@@ -10,13 +10,16 @@ import Foundation
 
 enum DismissableType {
     case offer
-    case condition
+    case conditionInformation
+    case conditionSelection
 
     var title: String {
         switch self {
         case .offer:
             return "Your Offer"
-        case .condition:
+        case .conditionInformation:
+            return "Condition"
+        case .conditionSelection:
             return "Condition"
         }
     }

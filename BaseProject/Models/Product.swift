@@ -12,8 +12,8 @@ struct Product {
     let title: String
     let price: Int
     let images: [UIImage]
-    let category: ProductCategory
-    let condition: ProductCondition
+    let category: Category
+    let condition: Condition
     let description: String
     let location: String
     let stock: ProductStock
