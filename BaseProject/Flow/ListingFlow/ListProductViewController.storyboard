@@ -56,12 +56,12 @@
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZm-oX-S2X">
                                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tAo-Y2-MuB">
                                                                 <rect key="frame" x="0.0" y="70" width="394" height="50"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etb-XM-E0U">
@@ -105,11 +105,16 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="B0l-NH-5EE">
                                                 <rect key="frame" x="10" y="559" width="394" height="130"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gVT-9M-BNb">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="grJ-qs-L5D">
                                                         <rect key="frame" x="0.0" y="0.0" width="394" height="130"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="sMJ-w0-WE8" id="f1c-ky-B8Q"/>
+                                                        </connections>
+                                                    </textView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="130" id="Ipa-3F-yot"/>
@@ -157,7 +162,7 @@
                         <outlet property="addPhotoButton" destination="5Ng-ag-pjh" id="wla-me-a64"/>
                         <outlet property="categoryButton" destination="etb-XM-E0U" id="kBS-f0-xkH"/>
                         <outlet property="conditionButton" destination="3u7-Fy-0wU" id="1tl-XQ-jTW"/>
-                        <outlet property="descriptionTextField" destination="gVT-9M-BNb" id="0ds-OG-Wz4"/>
+                        <outlet property="descriptionTextView" destination="grJ-qs-L5D" id="h45-0D-n4P"/>
                         <outlet property="locationButton" destination="UQz-cT-iGH" id="YYO-9l-jpB"/>
                         <outlet property="priceTextField" destination="tAo-Y2-MuB" id="6sM-9K-erf"/>
                         <outlet property="scrollView" destination="TG7-YS-2Io" id="TNL-CL-f2O"/>
@@ -190,6 +195,9 @@
     <resources>
         <image name="addPhoto-icon" width="25" height="25"/>
         <image name="dropDown-icon" width="10" height="5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

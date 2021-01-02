@@ -16,7 +16,7 @@ class ListProductViewController: UIViewController {
     @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var conditionButton: UIButton!
     @IBOutlet weak var locationButton: UIButton!
-    @IBOutlet weak var descriptionTextField: UITextField! //TODO this might have to be a textView
+    @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
 
     let viewModel = ListProductViewModel()
@@ -56,7 +56,7 @@ class ListProductViewController: UIViewController {
         categoryButton.layer.borderColor = viewModel.borderColour
         conditionButton.layer.borderColor = viewModel.borderColour
         locationButton.layer.borderColor = viewModel.borderColour
-        descriptionTextField.layer.borderColor = viewModel.borderColour
+        descriptionTextView.layer.borderColor = viewModel.borderColour
     }
 
     private func configureBorderWidth() {
@@ -66,7 +66,7 @@ class ListProductViewController: UIViewController {
         categoryButton.layer.borderWidth = viewModel.borderWidth
         conditionButton.layer.borderWidth = viewModel.borderWidth
         locationButton.layer.borderWidth = viewModel.borderWidth
-        descriptionTextField.layer.borderWidth = viewModel.borderWidth
+        descriptionTextView.layer.borderWidth = viewModel.borderWidth
     }
 
     private func configureCornerRadius() {
@@ -76,7 +76,7 @@ class ListProductViewController: UIViewController {
         categoryButton.layer.cornerRadius = viewModel.cornerRadius
         conditionButton.layer.cornerRadius = viewModel.cornerRadius
         locationButton.layer.cornerRadius = viewModel.cornerRadius
-        descriptionTextField.layer.cornerRadius = viewModel.cornerRadius
+        descriptionTextView.layer.cornerRadius = viewModel.cornerRadius
     }
 
     private func alignImageRightEdge() {
@@ -89,6 +89,10 @@ class ListProductViewController: UIViewController {
         titleTextField.delegate = self
         priceTextField.delegate = self
         priceTextField.keyboardType = .numberPad
+
+        descriptionTextView.delegate = self
+        descriptionTextView.text = "Description"
+        descriptionTextView.textColor = UIColor.lightGray
     }
 
     @objc func keyboardWillShow(notification:NSNotification) {
@@ -97,7 +101,7 @@ class ListProductViewController: UIViewController {
         keyboardFrame = self.view.convert(keyboardFrame, from: nil)
 
         var contentInset:UIEdgeInsets = self.scrollView.contentInset
-        contentInset.bottom = keyboardFrame.size.height + 10
+        contentInset.bottom = keyboardFrame.size.height + 20
         scrollView.contentInset = contentInset
     }
 
@@ -150,6 +154,7 @@ extension ListProductViewController: UITextFieldDelegate {
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        dismissKeyboard()
         return true
     }
 
@@ -162,6 +167,22 @@ extension ListProductViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == priceTextField, textField.text?.count == 1 {
             textField.text = nil
+        }
+    }
+}
+
+extension ListProductViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if descriptionTextView.textColor == UIColor.lightGray {
+            descriptionTextView.text = nil
+            descriptionTextView.textColor = UIColor.black
+        }
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if descriptionTextView.text.isEmpty {
+            descriptionTextView.text = "Description"
+            descriptionTextView.textColor = UIColor.lightGray
         }
     }
 }
