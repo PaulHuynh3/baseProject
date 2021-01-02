@@ -57,6 +57,14 @@ class ListProductViewModel {
 }
 
 extension ListProductViewModel: ListProductBuilderDelgate {
+    func update(condition: Condition) {
+        delegate?.update(condition: condition)
+    }
+
+    func update(category: Category) {
+        delegate?.update(category: category)
+    }
+
     func dismissViewController() {
         delegate?.dismissViewController()
     }
@@ -67,6 +75,8 @@ extension ListProductViewModel: ListProductBuilderDelgate {
 }
 
 protocol ListProductViewModelDelegate {
+    func update(category: Category)
+    func update(condition: Condition)
     func popViewController()
     func dismissViewController()
 }

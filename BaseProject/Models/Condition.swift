@@ -26,4 +26,17 @@ enum Condition {
             return "Condition: Used - Fair"
         }
     }
+
+    var title: String {
+        switch self {
+        case .new:
+            return "New"
+        case .usedLikeNew:
+            return "Used - Like New"
+        case .usedGood:
+            return "Used - Good"
+        case .usedFair:
+            return "Used - Fair"
+        }
+    }
 }

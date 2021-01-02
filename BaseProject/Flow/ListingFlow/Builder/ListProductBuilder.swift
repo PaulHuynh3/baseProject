@@ -57,6 +57,7 @@ class ListProductBuilder {
         return { [weak self] category in
             self?.category = category
             self?.delegate?.dismissViewController()
+            self?.delegate?.update(category: category)
         }
     }
 
@@ -69,6 +70,7 @@ class ListProductBuilder {
         return { [weak self] condition in
             self?.condition = condition
             self?.delegate?.dismissViewController()
+            self?.delegate?.update(condition: condition)
         }
     }
 
@@ -82,6 +84,8 @@ class ListProductBuilder {
 protocol ListProductBuilderDelgate {
     func popViewController()
     func dismissViewController()
+    func update(condition: Condition)
+    func update(category: Category)
 }
 
 struct CategorySelection {

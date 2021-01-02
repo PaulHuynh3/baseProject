@@ -150,6 +150,14 @@ extension ListProductViewController: DismissableViewControllerDelegate {
 }
 
 extension ListProductViewController: ListProductViewModelDelegate {
+    func update(category: Category) {
+        categoryButton.setTitle(category.title, for: .normal)
+    }
+
+    func update(condition: Condition) {
+        conditionButton.setTitle(condition.title, for: .normal)
+    }
+
     func dismissViewController() {
         dismiss(animated: true)
     }
