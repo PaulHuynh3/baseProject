@@ -18,7 +18,7 @@ class DismissableHeaderView: UITableViewHeaderFooterView {
         self.exitButtonCallback = data.exitButtonCallback
     }
 
-    @IBAction func exitButtonTapped(_ sender: Any) {
+    @IBAction func exitTapped(_ sender: Any) {
         exitButtonCallback?()
     }
 }

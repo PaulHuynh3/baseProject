@@ -28,7 +28,7 @@
                                     </constraints>
                                     <state key="normal" image="exit-icon"/>
                                     <connections>
-                                        <action selector="exitButtonTapped:" destination="-2" eventType="touchUpInside" id="nIo-WN-aPk"/>
+                                        <action selector="exitTapped:" destination="Kkn-EG-KXd" eventType="touchUpInside" id="V6J-hD-be6"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feZ-Da-bgW">
