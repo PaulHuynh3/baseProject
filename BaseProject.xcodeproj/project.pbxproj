@@ -111,6 +111,8 @@
 		EBF33389259FA35800E92762 /* ListProductViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF33388259FA35800E92762 /* ListProductViewController.storyboard */; };
 		EBF3338C259FB21000E92762 /* ListProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3338B259FB21000E92762 /* ListProductViewModel.swift */; };
 		EBF3338F259FE53F00E92762 /* ListProductBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3338E259FE53F00E92762 /* ListProductBuilder.swift */; };
+		EBF3339525A016CA00E92762 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3339425A016CA00E92762 /* Condition.swift */; };
+		EBF3339925A016FB00E92762 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3339825A016FB00E92762 /* Category.swift */; };
 		EBF7990F25225DC3000B325C /* LoginMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7990E25225DC3000B325C /* LoginMethodsViewController.swift */; };
 		EBF7991125225E36000B325C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7991025225E36000B325C /* RegisterViewController.swift */; };
 		EBF799132522BD45000B325C /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF799122522BD45000B325C /* ForgotPasswordViewController.swift */; };
@@ -223,6 +225,8 @@
 		EBF33388259FA35800E92762 /* ListProductViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListProductViewController.storyboard; sourceTree = "<group>"; };
 		EBF3338B259FB21000E92762 /* ListProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductViewModel.swift; sourceTree = "<group>"; };
 		EBF3338E259FE53F00E92762 /* ListProductBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductBuilder.swift; sourceTree = "<group>"; };
+		EBF3339425A016CA00E92762 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
+		EBF3339825A016FB00E92762 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		EBF7990E25225DC3000B325C /* LoginMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMethodsViewController.swift; sourceTree = "<group>"; };
 		EBF7991025225E36000B325C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EBF799122522BD45000B325C /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -651,6 +655,8 @@
 			isa = PBXGroup;
 			children = (
 				EBDBBFA4257D7AAD00F67AA4 /* Product.swift */,
+				EBF3339425A016CA00E92762 /* Condition.swift */,
+				EBF3339825A016FB00E92762 /* Category.swift */,
 				EBF33360259E5D9B00E92762 /* ConditionInformation.swift */,
 				EBF33367259E66DC00E92762 /* OfferInformation.swift */,
 			);
@@ -849,6 +855,7 @@
 				EBAC26C7259942E400200817 /* AuctionPictureViewModel.swift in Sources */,
 				EBDBBFA5257D7AAD00F67AA4 /* Product.swift in Sources */,
 				EB9F5765257B3CD6006447A9 /* MarketViewController.swift in Sources */,
+				EBF3339925A016FB00E92762 /* Category.swift in Sources */,
 				EB568FC9257D725100FE8B5E /* NetworkService.swift in Sources */,
 				EBAC26B92597D27B00200817 /* AuctionTableViewCell.swift in Sources */,
 				EB6E2B0D253395A3009EBBD7 /* PhotoInformationCell.swift in Sources */,
@@ -899,6 +906,7 @@
 				EBAE646925282F07000F654C /* BurgerMenuModalInteractor.swift in Sources */,
 				EB8EF454257B446A008BCBD8 /* SearchViewController.swift in Sources */,
 				EB639A762517F67800D4903B /* DriverInfoViewController.swift in Sources */,
+				EBF3339525A016CA00E92762 /* Condition.swift in Sources */,
 				EB3F8C02257ED90400FD381D /* MarketProductCell.swift in Sources */,
 				EB56A6C32557573B00A57448 /* AccountViewController.swift in Sources */,
 				EB22E0EA2569C71900453D85 /* ForgotPasswordViewModel.swift in Sources */,

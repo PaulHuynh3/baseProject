@@ -17,15 +17,17 @@ class ListProductBuilder {
     }
 
     func buildDiscardPostAlertData() -> AlertManager.Data {
-        let discardData = AlertManager.AlertActionData(title: "Discard",
-                                                           style: .destructive,
-                                                           isPreferred: false,
-                                                           handler: createDiscardPostCallback())
+        let discardData = AlertManager
+                            .AlertActionData(title: "Discard",
+                                             style: .destructive,
+                                             isPreferred: false,
+                                             handler: createDiscardPostCallback())
 
-        let cancelData = AlertManager.AlertActionData(title: "Cancel",
-                                                      style: .cancel,
-                                                      isPreferred: true,
-                                                      handler: nil)
+        let cancelData = AlertManager
+                            .AlertActionData(title: "Cancel",
+                                             style: .cancel,
+                                             isPreferred: true,
+                                             handler: nil)
 
         return AlertManager.Data(title: "Discard Listing?",
                                  message: "You're about to discard this listing",

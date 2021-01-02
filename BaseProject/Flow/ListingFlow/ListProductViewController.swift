@@ -16,13 +16,20 @@ class ListProductViewController: UIViewController {
     @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var conditionButton: UIButton!
     @IBOutlet weak var locationButton: UIButton!
-    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField! //this might have to be a textView
 
     let viewModel = ListProductViewModel()
+    var offerPriceString: String? {
+        return priceTextField.text?.replacingOccurrences(of: "$", with: "")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+
+    func configure() {
+        //enum .Auction, .Trade show auction shit depending
     }
 
     private func setup() {
@@ -31,39 +38,37 @@ class ListProductViewController: UIViewController {
         configureBorderColour()
         alignImageRightEdge()
         configureCornerRadius()
+        configureTextFields()
     }
 
     private func configureBorderColour() {
-        let borderColor = UIColor.lightGray.cgColor
-        addPhotoButton.layer.borderColor = borderColor
-        titleTextField.layer.borderColor = borderColor
-        priceTextField.layer.borderColor = borderColor
-        categoryButton.layer.borderColor = borderColor
-        conditionButton.layer.borderColor = borderColor
-        locationButton.layer.borderColor = borderColor
-        descriptionTextField.layer.borderColor = borderColor
+        addPhotoButton.layer.borderColor = viewModel.borderColour
+        titleTextField.layer.borderColor = viewModel.borderColour
+        priceTextField.layer.borderColor = viewModel.borderColour
+        categoryButton.layer.borderColor = viewModel.borderColour
+        conditionButton.layer.borderColor = viewModel.borderColour
+        locationButton.layer.borderColor = viewModel.borderColour
+        descriptionTextField.layer.borderColor = viewModel.borderColour
     }
 
     private func configureBorderWidth() {
-        let borderWidth = 1
-        addPhotoButton.layer.borderWidth = CGFloat(borderWidth)
-        titleTextField.layer.borderWidth = CGFloat(borderWidth)
-        priceTextField.layer.borderWidth = CGFloat(borderWidth)
-        categoryButton.layer.borderWidth = CGFloat(borderWidth)
-        conditionButton.layer.borderWidth = CGFloat(borderWidth)
-        locationButton.layer.borderWidth = CGFloat(borderWidth)
-        descriptionTextField.layer.borderWidth = CGFloat(borderWidth)
+        addPhotoButton.layer.borderWidth = viewModel.borderWidth
+        titleTextField.layer.borderWidth = viewModel.borderWidth
+        priceTextField.layer.borderWidth = viewModel.borderWidth
+        categoryButton.layer.borderWidth = viewModel.borderWidth
+        conditionButton.layer.borderWidth = viewModel.borderWidth
+        locationButton.layer.borderWidth = viewModel.borderWidth
+        descriptionTextField.layer.borderWidth = viewModel.borderWidth
     }
 
     private func configureCornerRadius() {
-        let cornerRadius = 5.0
-        addPhotoButton.layer.cornerRadius = CGFloat(cornerRadius)
-        titleTextField.layer.cornerRadius = CGFloat(cornerRadius)
-        priceTextField.layer.cornerRadius = CGFloat(cornerRadius)
-        categoryButton.layer.cornerRadius = CGFloat(cornerRadius)
-        conditionButton.layer.cornerRadius = CGFloat(cornerRadius)
-        locationButton.layer.cornerRadius = CGFloat(cornerRadius)
-        descriptionTextField.layer.cornerRadius = CGFloat(cornerRadius)
+        addPhotoButton.layer.cornerRadius = viewModel.cornerRadius
+        titleTextField.layer.cornerRadius = viewModel.cornerRadius
+        priceTextField.layer.cornerRadius = viewModel.cornerRadius
+        categoryButton.layer.cornerRadius = viewModel.cornerRadius
+        conditionButton.layer.cornerRadius = viewModel.cornerRadius
+        locationButton.layer.cornerRadius = viewModel.cornerRadius
+        descriptionTextField.layer.cornerRadius = viewModel.cornerRadius
     }
 
     private func alignImageRightEdge() {
@@ -72,17 +77,53 @@ class ListProductViewController: UIViewController {
         locationButton.alignImageRightEdge()
     }
 
-    @IBAction func addPhotosTapped(_ sender: Any) {
+    private func configureTextFields() {
+        titleTextField.delegate = self
+        priceTextField.delegate = self
+        priceTextField.keyboardType = .numberPad
+    }
 
+    @IBAction func addPhotosTapped(_ sender: Any) {
+        //ask for access to gallery and have photo inside to use
         //hide button when user selects an image, unhide button when user deselect image.
     }
 
     @IBAction func publishPostTapped(_ sender: Any) {
+        //check that all fields are filled
+        //highlight the fields that are not filled..
+        if priceTextField.text == "", titleTextField.text == "" {
 
+        }
     }
 
     @IBAction func discardPostTapped(_ sender: Any) {
         AlertManager.show(in: self, with: viewModel.discardAlertData)
+    }
+}
+
+extension ListProductViewController: UITextFieldDelegate {
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == priceTextField, textField.text?.count == 1 && string == "" {
+            return false
+        }
+        return true
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == priceTextField, textField.text?.count == 0 {
+            textField.text = "$"
+        }
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == priceTextField, textField.text?.count == 1 {
+            textField.text = nil
+        }
     }
 }
 

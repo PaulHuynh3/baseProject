@@ -6,12 +6,25 @@
 //  Copyright © 2021 BaseProject. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ListProductViewModel {
 
     var delegate: ListProductViewModelDelegate?
     private let builder = ListProductBuilder()
+
+    var borderColour: CGColor {
+        UIColor.lightGray.cgColor
+    }
+
+    var borderWidth: CGFloat {
+        1
+    }
+
+    var cornerRadius: CGFloat {
+        5
+    }
+
 
     func configure(delegate: ListProductViewModelDelegate) {
         self.delegate = delegate

@@ -44,28 +44,3 @@ enum ProductStock {
     case singleItem
     case multiple
 }
-
-enum ProductCondition {
-    case new
-    case usedLikeNew
-    case usedGood
-    case usedFair
-
-    var identifier: String {
-        switch self {
-        case .new:
-            return "Condition: New"
-        case .usedLikeNew:
-            return "Condition: Used - Like New"
-        case .usedGood:
-            return "Condition: Used - Good"
-        case .usedFair:
-            return "Condition: Used - Fair"
-        }
-    }
-}
-
-enum ProductCategory {
-    case healthBeauty
-    case clothingAccessory
-}
