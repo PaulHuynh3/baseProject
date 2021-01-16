@@ -24,6 +24,8 @@
 	<string>Bluetooth required to sync with vehicle.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Allow camera access</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow access to photo gallery</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
