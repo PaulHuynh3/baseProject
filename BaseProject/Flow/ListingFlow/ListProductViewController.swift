@@ -10,7 +10,7 @@ import UIKit
 
 class ListProductViewController: UIViewController {
 
-    @IBOutlet weak var addPhotoButton: UIButton!
+    @IBOutlet weak var photoContainerView: UIView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var categoryButton: UIButton!
@@ -23,10 +23,18 @@ class ListProductViewController: UIViewController {
     var offerPriceString: String? {
         return priceTextField.text?.replacingOccurrences(of: "$", with: "")
     }
+    var photoCollectionViewController: PhotoCollectionViewController?
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let photoCollectionViewController = segue.destination as? PhotoCollectionViewController {
+            self.photoCollectionViewController = photoCollectionViewController
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+//        photoCollectionViewController.configure()
     }
 
     func configure() {
@@ -50,7 +58,7 @@ class ListProductViewController: UIViewController {
     }
 
     private func configureBorderColour() {
-        addPhotoButton.layer.borderColor = viewModel.borderColour
+        photoContainerView.layer.borderColor = viewModel.borderColour
         titleTextField.layer.borderColor = viewModel.borderColour
         priceTextField.layer.borderColor = viewModel.borderColour
         categoryButton.layer.borderColor = viewModel.borderColour
@@ -60,8 +68,7 @@ class ListProductViewController: UIViewController {
     }
 
     private func configureBorderWidth() {
-        addPhotoButton.layer.borderWidth = viewModel.borderWidth
-        titleTextField.layer.borderWidth = viewModel.borderWidth
+        photoContainerView.layer.borderWidth = viewModel.borderWidth
         priceTextField.layer.borderWidth = viewModel.borderWidth
         categoryButton.layer.borderWidth = viewModel.borderWidth
         conditionButton.layer.borderWidth = viewModel.borderWidth
@@ -70,8 +77,7 @@ class ListProductViewController: UIViewController {
     }
 
     private func configureCornerRadius() {
-        addPhotoButton.layer.cornerRadius = viewModel.cornerRadius
-        titleTextField.layer.cornerRadius = viewModel.cornerRadius
+        photoContainerView.layer.cornerRadius = viewModel.cornerRadius
         priceTextField.layer.cornerRadius = viewModel.cornerRadius
         categoryButton.layer.cornerRadius = viewModel.cornerRadius
         conditionButton.layer.cornerRadius = viewModel.cornerRadius
@@ -108,11 +114,6 @@ class ListProductViewController: UIViewController {
     @objc func keyboardWillHide(notification:NSNotification) {
         let contentInset: UIEdgeInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
-    }
-
-    @IBAction func addPhotosTapped(_ sender: Any) {
-        //ask for access to gallery and have photo inside to use
-        //hide button when user selects an image, unhide button when user deselect image.
     }
 
     @IBAction func categoryButtonTapped(_ sender: Any) {
