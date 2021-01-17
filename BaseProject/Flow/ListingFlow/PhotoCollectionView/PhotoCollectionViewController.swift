@@ -32,6 +32,16 @@ class PhotoCollectionViewController: UIViewController {
     }
 }
 
+extension PhotoCollectionViewController: PhotoCollectionViewModelDelegate {
+    func getImageFrom(source: UIImagePickerController.SourceType) {
+        getImage(fromSourceType: source)
+    }
+
+    func showAlert() {
+        showActionSheet()
+    }
+}
+
 extension PhotoCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -41,14 +51,9 @@ extension PhotoCollectionViewController: UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch viewModel.uploadedPhotoType {
         case .placeholder:
-            if indexPath.row == 0 {
-                guard let uploadPhotoCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: UploadPlaceHolderViewCell.self), for: indexPath) as? UploadPlaceHolderViewCell else { fatalError() }
+            guard let uploadPhotoCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: UploadPlaceHolderViewCell.self), for: indexPath) as? UploadPlaceHolderViewCell else { fatalError() }
                 uploadPhotoCell.configure(data: viewModel.buildPlaceHolderData())
-                return uploadPhotoCell
-            }
-            guard let uploadedImageCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: UploadedImageViewCell.self), for: indexPath) as? UploadedImageViewCell else { fatalError() }
-            uploadedImageCell.configure(data: viewModel.buildPhotoData(indexPath: indexPath))
-            return uploadedImageCell
+            return uploadPhotoCell
         case .uploaded:
             //Access the last item in the collectionView
             if indexPath.row == viewModel.uploadedImages.count {
@@ -58,23 +63,32 @@ extension PhotoCollectionViewController: UICollectionViewDataSource, UICollectio
             }
             guard let uploadedImageCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: UploadedImageViewCell.self), for: indexPath) as? UploadedImageViewCell else { fatalError() }
             uploadedImageCell.configure(data: viewModel.buildPhotoData(indexPath: indexPath))
+            uploadedImageCell.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(deleteImage)))
             return uploadedImageCell
         }
     }
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard indexPath.row == 0 else { return }
-        print("hello")
-    }
-}
+    @objc func deleteImage(gesture: UILongPressGestureRecognizer) {
+        //prevents it getting called twice
+        if gesture.state != .ended {
+            return
+        }
+        let gestureLocation = gesture.location(in: self.collectionView)
 
-extension PhotoCollectionViewController: PhotoCollectionViewModelDelegate {
-    func getImageFrom(source: UIImagePickerController.SourceType) {
-        getImage(fromSourceType: source)
-    }
-
-    func showAlert() {
-        showActionSheet()
+        let alertController = UIAlertController(title: "Remove Image", message: "Delete selected image?", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let deleteImageAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+            if let indexPath = self.collectionView.indexPathForItem(at: gestureLocation) {
+                self.viewModel.uploadedImages.remove(at: indexPath.row)
+                if self.viewModel.uploadedImages.count == 0 {
+                    self.viewModel.uploadedPhotoType = .placeholder
+                }
+                self.collectionView.reloadData()
+            }
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(deleteImageAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
 
