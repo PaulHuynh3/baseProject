@@ -23,18 +23,10 @@ class ListProductViewController: UIViewController {
     var offerPriceString: String? {
         return priceTextField.text?.replacingOccurrences(of: "$", with: "")
     }
-    var photoCollectionViewController: PhotoCollectionViewController?
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let photoCollectionViewController = segue.destination as? PhotoCollectionViewController {
-            self.photoCollectionViewController = photoCollectionViewController
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-//        photoCollectionViewController.configure()
     }
 
     func configure() {

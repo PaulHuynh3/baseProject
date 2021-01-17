@@ -26,6 +26,18 @@ class PhotoCollectionViewModel {
         return UploadPlaceHolderViewCell.Data(photoTappedCallback: createPhotoTappedCallback())
     }
 
+    func buildGetImageActionSheet() -> UIAlertController {
+        let alert = UIAlertController(title: "Image Selection", message: "From where you want to pick this image?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(action: UIAlertAction) in
+            self.delegate?.getImageFrom(source: .camera)
+        }))
+        alert.addAction(UIAlertAction(title: "Photo Album", style: .default, handler: {(action: UIAlertAction) in
+            self.delegate?.getImageFrom(source: .photoLibrary)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        return alert
+    }
+
     private func createPhotoTappedCallback() -> (() -> Void)? {
         return { [weak self] in
             self?.delegate?.showAlert()
@@ -36,6 +48,7 @@ class PhotoCollectionViewModel {
 
 protocol PhotoCollectionViewModelDelegate {
     func showAlert()
+    func getImageFrom(source: UIImagePickerController.SourceType)
 }
 
 enum UploadPhotoType {

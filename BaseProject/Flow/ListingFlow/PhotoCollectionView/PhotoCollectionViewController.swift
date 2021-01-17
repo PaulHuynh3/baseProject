@@ -69,6 +69,10 @@ extension PhotoCollectionViewController: UICollectionViewDataSource, UICollectio
 }
 
 extension PhotoCollectionViewController: PhotoCollectionViewModelDelegate {
+    func getImageFrom(source: UIImagePickerController.SourceType) {
+        getImage(fromSourceType: source)
+    }
+
     func showAlert() {
         showActionSheet()
     }
@@ -97,15 +101,7 @@ extension PhotoCollectionViewController: UICollectionViewDelegateFlowLayout {
 
 extension PhotoCollectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func showActionSheet() {
-         let alert = UIAlertController(title: "Image Selection", message: "From where you want to pick this image?", preferredStyle: .actionSheet)
-         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(action: UIAlertAction) in
-             self.getImage(fromSourceType: .camera)
-         }))
-         alert.addAction(UIAlertAction(title: "Photo Album", style: .default, handler: {(action: UIAlertAction) in
-             self.getImage(fromSourceType: .photoLibrary)
-         }))
-         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-         self.present(alert, animated: true, completion: nil)
+        self.present(viewModel.buildGetImageActionSheet(), animated: true, completion: nil)
      }
 
     private func getImage(fromSourceType sourceType: UIImagePickerController.SourceType) {
@@ -123,6 +119,7 @@ extension PhotoCollectionViewController: UIImagePickerControllerDelegate, UINavi
             guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
             self.viewModel.uploadedImages.append(image)
             self.viewModel.uploadedPhotoType = .uploaded
+
             self.collectionView.reloadData()
             self.collectionView.performBatchUpdates(nil, completion: { _ in
                 //Finish reloading Data
