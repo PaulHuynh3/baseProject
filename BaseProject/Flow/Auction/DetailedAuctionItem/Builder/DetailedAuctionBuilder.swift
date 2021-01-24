@@ -41,7 +41,7 @@ class DetailedAuctionBuilder {
 
     func buildOfferData(product: Product?) -> DismissableData {
         return DismissableData(dismissableType: .offer,
-                               tableRowHeight: 200,
+                               tableRowHeight: 250,
                                offer: offerInformation(product: product)
         )
     }

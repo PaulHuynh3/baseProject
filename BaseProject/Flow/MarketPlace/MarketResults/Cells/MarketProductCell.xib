@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,7 +24,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vep-qu-Jh0">
                                 <rect key="frame" x="0.0" y="0.0" width="189" height="256"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="chk-G9-bqr">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="chk-G9-bqr">
                                         <rect key="frame" x="0.0" y="0.0" width="189" height="212.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red shirt" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VE1-RB-SDE">
@@ -38,7 +39,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="vep-qu-Jh0" secondAttribute="bottom" id="AHf-0q-NbQ"/>
                             <constraint firstAttribute="trailing" secondItem="vep-qu-Jh0" secondAttribute="trailing" id="DHZ-5T-TsW"/>
@@ -48,13 +49,13 @@
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="gkD-go-c4G"/>
             <constraints>
                 <constraint firstItem="gkD-go-c4G" firstAttribute="bottom" secondItem="bve-fU-Lex" secondAttribute="bottom" id="52u-r8-4MZ"/>
                 <constraint firstItem="bve-fU-Lex" firstAttribute="top" secondItem="gkD-go-c4G" secondAttribute="top" id="G8R-u6-9Eh"/>
                 <constraint firstItem="gkD-go-c4G" firstAttribute="leading" secondItem="bve-fU-Lex" secondAttribute="leading" id="LET-gx-rMc"/>
                 <constraint firstItem="bve-fU-Lex" firstAttribute="trailing" secondItem="gkD-go-c4G" secondAttribute="trailing" id="m1B-m8-lek"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="gkD-go-c4G"/>
             <size key="customSize" width="189" height="251"/>
             <connections>
                 <outlet property="productImage" destination="chk-G9-bqr" id="8wH-IS-sT3"/>
@@ -63,4 +64,9 @@
             <point key="canvasLocation" x="450.00000000000006" y="125.89285714285714"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

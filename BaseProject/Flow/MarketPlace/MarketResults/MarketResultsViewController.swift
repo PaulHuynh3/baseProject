@@ -47,7 +47,7 @@ class MarketResultsViewController: UIViewController {
         guard let listProductViewController = UIStoryboard(name: String(describing:ListProductViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: ListProductViewController.self)) as? ListProductViewController else {
             return
         }
-//        detailedAuctionItemViewController.configure(data: data)
+        listProductViewController.configure(delegate: self, type: .market)
         navigationController?.pushViewController(listProductViewController, animated: true)
     }
 
@@ -93,6 +93,13 @@ class MarketResultsViewController: UIViewController {
             return marketHeaderView
         }
         return headerView
+    }
+}
+
+extension MarketResultsViewController: ListProductViewControllerDelegate {
+    func publishedListProduct(_ product: Product) {
+        viewModel.marketProducts.append(product)
+        collectionView.reloadData()
     }
 }
 

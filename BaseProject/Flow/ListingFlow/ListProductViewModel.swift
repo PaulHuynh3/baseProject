@@ -12,6 +12,8 @@ class ListProductViewModel {
 
     var delegate: ListProductViewModelDelegate?
     private let builder = ListProductBuilder()
+    
+    var listType: ListingType = .market
 
     var dismissableController: DismissableViewController? {
         let dismissableController = UIStoryboard(name: String(describing: DismissableViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DismissableViewController.self)) as? DismissableViewController
@@ -28,6 +30,10 @@ class ListProductViewModel {
 
     var category: Category? {
         return builder.category
+    }
+
+    var location: String? {
+        return builder.location
     }
 
     var borderWidth: CGFloat {
@@ -52,6 +58,10 @@ class ListProductViewModel {
 
     var locationDismissableData: DismissableData {
         return builder.buildLocationDismissableData()
+    }
+
+    func missingFieldsAlertData() -> AlertManager.Data {
+        return AlertManager.Data(title: "Required", message: "Please fill out all the information", actions: nil)
     }
 
     func configure(delegate: ListProductViewModelDelegate) {

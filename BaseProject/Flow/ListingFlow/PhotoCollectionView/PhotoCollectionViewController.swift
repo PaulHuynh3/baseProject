@@ -19,10 +19,6 @@ class PhotoCollectionViewController: UIViewController {
         viewModel.configure(delegate: self)
     }
 
-    func configure() {
-        //get my data if i need it
-    }
-//need to scroll to last item self?.collectionView.scrollToItem(at: indexPath, at: .right, animated: true)
     private func registerNib() {
         let nib = UINib(nibName: String(describing: UploadPlaceHolderViewCell.self), bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: String(describing: UploadPlaceHolderViewCell.self))

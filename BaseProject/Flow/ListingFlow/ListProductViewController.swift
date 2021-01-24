@@ -19,9 +19,19 @@ class ListProductViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
 
-    let viewModel = ListProductViewModel()
+    private let viewModel = ListProductViewModel()
+    private var delegate: ListProductViewControllerDelegate?
+    
     var offerPriceString: String? {
         return priceTextField.text?.replacingOccurrences(of: "$", with: "")
+    }
+
+    private var photoCollectionViewController: PhotoCollectionViewController?
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let photoCollectionViewController = segue.destination as? PhotoCollectionViewController {
+            self.photoCollectionViewController = photoCollectionViewController
+        }
     }
 
     override func viewDidLoad() {
@@ -29,8 +39,9 @@ class ListProductViewController: UIViewController {
         setup()
     }
 
-    func configure() {
-        //enum .Auction, .Trade show auction shit depending
+    func configure(delegate: ListProductViewControllerDelegate?, type: ListingType) {
+        self.delegate = delegate
+        viewModel.listType = type
     }
 
     private func setup() {
@@ -127,11 +138,29 @@ class ListProductViewController: UIViewController {
     }
 
     @IBAction func publishPostTapped(_ sender: Any) {
-        //check that all fields are filled
-        //highlight the fields that are not filled..
-        if priceTextField.text == nil, titleTextField.text == nil, viewModel.condition == nil {
+        let photos = photoCollectionViewController?.viewModel.uploadedImages ?? []
+        let title = titleTextField.text ?? ""
+        let price = priceTextField.text ?? ""
+        let condition = viewModel.condition
+        let category = viewModel.category
+        let location = viewModel.location ?? ""
+        let description = descriptionTextView.text ?? ""
 
+        guard photos.count > 0,
+           title != "",
+           price != "",
+           condition != nil,
+           category != nil,
+           location != "",
+           description != "" else {
+            AlertManager.show(in: self, with: viewModel.missingFieldsAlertData())
+            return
         }
+        let priceNoDollarSign = price.replacingOccurrences(of: "$", with: "")
+
+        let product = Product(title: titleTextField.text ?? "", itemNumber: 0, description: description, images: photos, likes: 0, views: 0, location: location, price: Int(priceNoDollarSign) ?? 0)
+        delegate?.publishedListProduct(product)
+        popViewController()
     }
 
     @IBAction func discardPostTapped(_ sender: Any) {
@@ -208,4 +237,13 @@ extension ListProductViewController: ListProductViewModelDelegate {
     func popViewController() {
         navigationController?.popViewController(animated: true)
     }
+}
+
+enum ListingType {
+    case auction
+    case market
+}
+
+protocol ListProductViewControllerDelegate {
+    func publishedListProduct(_ product: Product)
 }

@@ -13,6 +13,7 @@ class ListProductBuilder {
     var delegate: ListProductBuilderDelgate?
     var condition: Condition?
     var category: Category?
+    var location: String?
 
     func configure(delegate: ListProductBuilderDelgate) {
         self.delegate = delegate
@@ -52,6 +53,7 @@ class ListProductBuilder {
 
     private func createLocationLocalityCallback() -> ((String) -> Void?) {
         return { [weak self] postalCode in
+            self?.location = postalCode
             self?.delegate?.dismissViewController()
             return self?.delegate?.update(location: postalCode)
         }

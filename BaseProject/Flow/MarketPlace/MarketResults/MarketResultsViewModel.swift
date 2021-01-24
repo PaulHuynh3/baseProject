@@ -20,12 +20,11 @@ class MarketResultsViewModel {
         marketProducts = createMarketProducts()
     }
 
-    let mockProducts = { () -> [Product] in
-        let redShoe = Product(title: "red shoe", itemNumber: 5, description: "This is just a normal red shoe", images:[ #imageLiteral(resourceName: "red-shoe")], likes: 5, views: 10, location: "undetermined")
-        let brownShoe = Product(title: "brown shoe", itemNumber: 5, description: "This is just a normal brown shoe", images:[ #imageLiteral(resourceName: "brown-shoes")], likes: 10, views: 10, location: "undetermined")
-        let jerseyShirt = Product(title: "jersey shirt", itemNumber: 5, description: "This is just a normal jersey shoe", images:[ #imageLiteral(resourceName: "jersey-shirt")], likes: 50, views: 10, location: "undetermined")
-        return [redShoe, brownShoe, jerseyShirt]
-    }
+    var mockProducts: [Product] = [
+        Product(title: "red shoe", itemNumber: 5, description: "This is just a normal red shoe", images:[ #imageLiteral(resourceName: "red-shoe")], likes: 5, views: 10, location: "undetermined"),
+        Product(title: "brown shoe", itemNumber: 5, description: "This is just a normal brown shoe", images:[ #imageLiteral(resourceName: "brown-shoes")], likes: 10, views: 10, location: "undetermined"),
+        Product(title: "jersey shirt", itemNumber: 5, description: "This is just a normal jersey shoe", images:[ #imageLiteral(resourceName: "jersey-shirt")], likes: 50, views: 10, location: "undetermined")
+    ]
 
     let allMockProducts = { () -> [Product] in
         let redShoe = Product(title: "red shoe", itemNumber: 5, description: "This is just a normal red shoe", images:[ #imageLiteral(resourceName: "red-shoe")], likes: 5, views: 10, location: "undetermined")
@@ -50,7 +49,7 @@ class MarketResultsViewModel {
     private func createMarketProducts() -> [Product] {
         switch mode {
         case .featured:
-            return mockProducts()
+            return mockProducts
         case .all:
             return allMockProducts()
         }
