@@ -16,19 +16,34 @@ class LocationTableViewCell: UITableViewCell, CLLocationManagerDelegate, MKMapVi
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(handleTap))
+            gestureRecognizer.delegate = self
+            mapView.addGestureRecognizer(gestureRecognizer)
     }
+
     private var userLocalityCallback: ((String) -> Void?)?
     private var locationManager: CLLocationManager?
-    private var currentLocation: CLLocation?
+    private var coordinate2D: CLLocationCoordinate2D?
 
     func configure(data: Data) {
         userLocalityCallback = data.userLocalityCallback
         setup()
     }
 
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Error - locationManager: \(error.localizedDescription)")
+    @IBAction func applyLocationTapped(_ sender: Any) {
+        guard let coordinate = coordinate2D else { return }
+        geocodeLocation(mLattitude: coordinate.latitude, mLongitude: coordinate.longitude)
+    }
+
+    @objc func handleTap(gestureRecognizer: UILongPressGestureRecognizer) {
+        let location = gestureRecognizer.location(in: mapView)
+        let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
+        mapView.removeAnnotations(mapView.annotations)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        mapView.addAnnotation(annotation)
+
+        coordinate2D = annotation.coordinate
     }
 
     private func setup() {
@@ -39,12 +54,7 @@ class LocationTableViewCell: UITableViewCell, CLLocationManagerDelegate, MKMapVi
         determineLocation()
     }
 
-    @IBAction func applyLocationTapped(_ sender: Any) {
-        guard let location = currentLocation else { return }
-        geocodeLocation(mLattitude: location.coordinate.latitude, mLongitude: location.coordinate.longitude)
-    }
-
-    fileprivate func determineLocation() {
+    private func determineLocation() {
         if CLLocationManager.locationServicesEnabled() {
             switch CLLocationManager.authorizationStatus() {
             case .notDetermined, .restricted, .denied:
@@ -70,12 +80,7 @@ class LocationTableViewCell: UITableViewCell, CLLocationManagerDelegate, MKMapVi
         let mRegion = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         mapView.setRegion(mRegion, animated: true)
 
-    let mkAnnotation: MKPointAnnotation = MKPointAnnotation()
-        mkAnnotation.coordinate = CLLocationCoordinate2DMake(mUserLocation.coordinate.latitude, mUserLocation.coordinate.longitude)
-        mkAnnotation.title = "Current location"
-        mapView.addAnnotation(mkAnnotation)
-
-        currentLocation = mUserLocation
+        coordinate2D = mUserLocation.coordinate
     }
 
     private func geocodeLocation(mLattitude: CLLocationDegrees, mLongitude: CLLocationDegrees) {
@@ -84,7 +89,6 @@ class LocationTableViewCell: UITableViewCell, CLLocationManagerDelegate, MKMapVi
 
         geoCoder.reverseGeocodeLocation(location) { placemarks, error -> Void in
             guard let mPlacemark = placemarks else { return }
-
             if let postalCode = mPlacemark[0].postalCode {
                 self.userLocalityCallback?(postalCode)
             } else if let locality = mPlacemark[0].locality {
