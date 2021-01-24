@@ -110,18 +110,20 @@ class ListProductViewController: UIViewController {
 
     @IBAction func categoryButtonTapped(_ sender: Any) {
         guard let dismissableController = viewModel.dismissableController else { return }
-        dismissableController.configure(delegate: self, data: viewModel.categorySelectionDismissableData)
+        dismissableController.configure(delegate: self, data: viewModel.categoryDismissableData)
         present(dismissableController, animated: true, completion: nil)
     }
 
     @IBAction func conditionButtonTapped(_ sender: Any) {
         guard let dismissableController = viewModel.dismissableController else { return }
-        dismissableController.configure(delegate: self, data: viewModel.conditionSelectionDismissableData)
+        dismissableController.configure(delegate: self, data: viewModel.conditionDismissableData)
         present(dismissableController, animated: true, completion: nil)
     }
 
     @IBAction func locationButtonTapped(_ sender: Any) {
-
+        guard let dismissableController = viewModel.dismissableController else { return }
+        dismissableController.configure(delegate: self, data: viewModel.locationDismissableData)
+        present(dismissableController, animated: true, completion: nil)
     }
 
     @IBAction func publishPostTapped(_ sender: Any) {
@@ -193,6 +195,10 @@ extension ListProductViewController: ListProductViewModelDelegate {
 
     func update(condition: Condition) {
         conditionButton.setTitle(condition.title, for: .normal)
+    }
+
+    func update(location: String) {
+        locationButton.setTitle(location, for: .normal)
     }
 
     func dismissViewController() {

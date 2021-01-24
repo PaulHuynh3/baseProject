@@ -12,11 +12,11 @@ class DismissableViewModel {
 
     var delegate: DismissableViewModelDelegate?
     var data: DismissableData?
-    var headerHeight: Int {
+    var headerHeight: CGFloat {
         return 50
     }
-    var rowHeight: Int {
-        data?.tableRowHeight ?? 0
+    var rowHeight: CGFloat {
+       CGFloat(data?.tableRowHeight ?? 0)
     }
     var dismissableType: DismissableType {
         guard let cellType = data?.dismissableType else { fatalError() }
@@ -42,8 +42,15 @@ class DismissableViewModel {
         }
     }
 
-    func setHeightForRow() -> CGFloat {
-        return CGFloat(rowHeight)
+    func setHeightForRow(_ tableView: UITableView) -> CGFloat {
+        switch dismissableType {
+        case .location:
+            //Apply button height 50
+            let height: CGFloat = tableView.frame.height - headerHeight - 53
+            return height
+        default:
+            return CGFloat(rowHeight)
+        }
     }
 
     func numberOfSection() -> Int {
@@ -85,8 +92,13 @@ class DismissableViewModel {
             return cell
         case .selectCategory:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CategoryTableViewCell.self)) as? CategoryTableViewCell else { fatalError("Dismissable Crashed") }
-            let title = data?.categorySelection?.categoryTypes[indexPath.section].category[indexPath.row].title
-            cell.configure(title: title ?? "")
+            let title = data?.categorySelection?.categoryTypes[indexPath.section].category[indexPath.row].title ?? ""
+            cell.configure(title: title)
+            return cell
+        case .location:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: LocationTableViewCell.self)) as? LocationTableViewCell else { fatalError("Dismissable Crashed") }
+            guard let data = data?.location else { fatalError() }
+            cell.configure(data: data)
             return cell
         }
     }

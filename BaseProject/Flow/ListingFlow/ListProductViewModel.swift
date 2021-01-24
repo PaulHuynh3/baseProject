@@ -42,12 +42,16 @@ class ListProductViewModel {
         return builder.buildDiscardPostAlertData()
     }
 
-    var conditionSelectionDismissableData: DismissableData {
-        return builder.buildDismissableSelectionData()
+    var conditionDismissableData: DismissableData {
+        return builder.buildConditionDismissableData()
     }
 
-    var categorySelectionDismissableData: DismissableData {
-        return builder.buildCategorySelectionData()
+    var categoryDismissableData: DismissableData {
+        return builder.buildCategoryDismissableData()
+    }
+
+    var locationDismissableData: DismissableData {
+        return builder.buildLocationDismissableData()
     }
 
     func configure(delegate: ListProductViewModelDelegate) {
@@ -72,11 +76,16 @@ extension ListProductViewModel: ListProductBuilderDelgate {
     func popViewController() {
         delegate?.popViewController()
     }
+
+    func update(location: String) {
+        delegate?.update(location: location)
+    }
 }
 
 protocol ListProductViewModelDelegate {
     func update(category: Category)
     func update(condition: Condition)
+    func update(location: String)
     func popViewController()
     func dismissViewController()
 }

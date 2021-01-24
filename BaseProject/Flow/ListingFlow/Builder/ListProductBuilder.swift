@@ -37,19 +37,28 @@ class ListProductBuilder {
         )
     }
 
-    func buildDismissableSelectionData() -> DismissableData {
+    func buildConditionDismissableData() -> DismissableData {
         return DismissableData(dismissableType: .conditionSelection, tableRowHeight: 200, conditionSelection: buildConditionSelectionData()
         )
     }
 
-    func buildCategorySelectionData() -> DismissableData {
+    func buildCategoryDismissableData() -> DismissableData {
         return DismissableData(dismissableType: .selectCategory, tableRowHeight: 50, categorySelection: categorySelectionData())
+    }
+
+    func buildLocationDismissableData() -> DismissableData {
+        return DismissableData(dismissableType: .location, tableRowHeight: 0, location: LocationTableViewCell.Data(userLocalityCallback: createLocationLocalityCallback()))
+    }
+
+    private func createLocationLocalityCallback() -> ((String) -> Void?) {
+        return { [weak self] postalCode in
+            self?.delegate?.dismissViewController()
+            return self?.delegate?.update(location: postalCode)
+        }
     }
 
     private func categorySelectionData() -> CategorySelection {
         let categoryType: [CategoryType] = [.clothingAccessories, .electronics, .entertainmentHobbies, .healthBeauty, .homeGarden, .miscellaneous]
-
-
         return CategorySelection(categoryTypes: categoryType, categorySelectedCallback: categorySelectedCallback())
     }
 
@@ -86,6 +95,7 @@ protocol ListProductBuilderDelgate {
     func dismissViewController()
     func update(condition: Condition)
     func update(category: Category)
+    func update(location: String)
 }
 
 struct CategorySelection {

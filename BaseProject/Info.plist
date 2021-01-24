@@ -26,6 +26,10 @@
 	<string>Allow camera access</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow access to photo gallery</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allow app to access your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow app to access your location</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

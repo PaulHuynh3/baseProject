@@ -13,6 +13,7 @@ enum DismissableType {
     case conditionInformation
     case conditionSelection
     case selectCategory
+    case location
 
     var title: String {
         switch self {
@@ -24,6 +25,8 @@ enum DismissableType {
             return "Condition"
         case .selectCategory:
             return "Select Category"
+        case .location:
+            return "Location"
         }
     }
 }

@@ -30,16 +30,19 @@ class DismissableViewController: UIViewController {
         switch viewModel.dismissableType {
         case .offer:
             registerNibForTableView(cellType: String(describing: OfferViewCell.self), tableView: tableView)
-            tableViewHeightConstraint.constant = CGFloat(viewModel.rowHeight + viewModel.headerHeight)
+            tableViewHeightConstraint.constant = viewModel.rowHeight + viewModel.headerHeight
         case .conditionInformation:
             registerNibForTableView(cellType: String(describing: ConditionViewCell.self), tableView: tableView)
-            tableViewHeightConstraint.constant = CGFloat(viewModel.rowHeight * (viewModel.data?.conditionInfo.count ?? 0) + viewModel.headerHeight)
+            tableViewHeightConstraint.constant = viewModel.rowHeight * CGFloat(viewModel.data?.conditionInfo.count ?? 0) + viewModel.headerHeight
         case .conditionSelection:
             registerNibForTableView(cellType: String(describing: ConditionTableViewCell.self), tableView: tableView)
-            tableViewHeightConstraint.constant = CGFloat(viewModel.rowHeight + viewModel.headerHeight)
+            tableViewHeightConstraint.constant = viewModel.rowHeight + viewModel.headerHeight
         case .selectCategory:
             registerNibForTableView(cellType: String(describing: CategoryTableViewCell.self), tableView: tableView)
             tableViewHeightConstraint.constant = CGFloat(view.frame.height/1.5)
+        case .location:
+            registerNibForTableView(cellType: String(describing: LocationTableViewCell.self), tableView: tableView)
+            tableViewHeightConstraint.constant = CGFloat(view.frame.height/1.25)
         }
     }
 
@@ -76,7 +79,7 @@ extension DismissableViewController: TableView {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        viewModel.setHeightForRow()
+        viewModel.setHeightForRow(tableView)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
