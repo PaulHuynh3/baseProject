@@ -63,7 +63,6 @@
                         <color key="selectedImageTintColor" systemColor="viewFlipsideBackgroundColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="grB-rG-ypz" kind="relationship" relationship="viewControllers" id="qJ9-UI-VEx"/>
                         <segue destination="1GE-sj-sPC" kind="relationship" relationship="viewControllers" id="0gk-WH-mUA"/>
                         <segue destination="aLX-vq-0Zg" kind="relationship" relationship="viewControllers" id="bOb-Jr-k86"/>
                         <segue destination="myu-gv-wfS" kind="relationship" relationship="viewControllers" id="dtP-09-2Vm"/>
