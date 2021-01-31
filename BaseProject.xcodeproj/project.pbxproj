@@ -51,6 +51,10 @@
 		EB72E57825C61B8800DA1BA0 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72E57725C61B8800DA1BA0 /* EditAccountViewController.swift */; };
 		EB72E57C25C631C700DA1BA0 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72E57B25C631C700DA1BA0 /* MessagesViewController.swift */; };
 		EB72E57F25C631D500DA1BA0 /* MessagesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB72E57E25C631D500DA1BA0 /* MessagesViewController.storyboard */; };
+		EB72E58C25C65A7F00DA1BA0 /* ChatLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72E58A25C65A7F00DA1BA0 /* ChatLogTableViewCell.swift */; };
+		EB72E58D25C65A7F00DA1BA0 /* ChatLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB72E58B25C65A7F00DA1BA0 /* ChatLogTableViewCell.xib */; };
+		EB72E59125C65B5300DA1BA0 /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72E59025C65B5300DA1BA0 /* MessagesViewModel.swift */; };
+		EB72E59425C65BB800DA1BA0 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72E59325C65BB800DA1BA0 /* UserViewModel.swift */; };
 		EB7B0881252987310050EE9F /* DriverInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7B0880252987310050EE9F /* DriverInfoViewModel.swift */; };
 		EB7B088725298B690050EE9F /* DriverInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7B088625298B690050EE9F /* DriverInfoBuilder.swift */; };
 		EB7B088A25298BDD0050EE9F /* DriverRequirementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7B088825298BDD0050EE9F /* DriverRequirementCell.swift */; };
@@ -180,6 +184,10 @@
 		EB72E57725C61B8800DA1BA0 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
 		EB72E57B25C631C700DA1BA0 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		EB72E57E25C631D500DA1BA0 /* MessagesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MessagesViewController.storyboard; sourceTree = "<group>"; };
+		EB72E58A25C65A7F00DA1BA0 /* ChatLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogTableViewCell.swift; sourceTree = "<group>"; };
+		EB72E58B25C65A7F00DA1BA0 /* ChatLogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatLogTableViewCell.xib; sourceTree = "<group>"; };
+		EB72E59025C65B5300DA1BA0 /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
+		EB72E59325C65BB800DA1BA0 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		EB7B0880252987310050EE9F /* DriverInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoViewModel.swift; sourceTree = "<group>"; };
 		EB7B088625298B690050EE9F /* DriverInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoBuilder.swift; sourceTree = "<group>"; };
 		EB7B088825298BDD0050EE9F /* DriverRequirementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRequirementCell.swift; sourceTree = "<group>"; };
@@ -442,8 +450,19 @@
 			children = (
 				EB72E57B25C631C700DA1BA0 /* MessagesViewController.swift */,
 				EB72E57E25C631D500DA1BA0 /* MessagesViewController.storyboard */,
+				EB72E59025C65B5300DA1BA0 /* MessagesViewModel.swift */,
+				EB72E58925C65A4D00DA1BA0 /* Cells */,
 			);
 			path = Messages;
+			sourceTree = "<group>";
+		};
+		EB72E58925C65A4D00DA1BA0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EB72E58A25C65A7F00DA1BA0 /* ChatLogTableViewCell.swift */,
+				EB72E58B25C65A7F00DA1BA0 /* ChatLogTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		EB7B0882252989BE0050EE9F /* PhotoVerification */ = {
@@ -725,6 +744,7 @@
 				EBF3339425A016CA00E92762 /* Condition.swift */,
 				EBF3339825A016FB00E92762 /* CategoryType.swift */,
 				EBF33360259E5D9B00E92762 /* ConditionInformation.swift */,
+				EB72E59325C65BB800DA1BA0 /* UserViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -882,6 +902,7 @@
 				EBAC26CC259948F400200817 /* AuctionPicturesCollectionCell.xib in Resources */,
 				EBA3942D251191990019B273 /* BottomStatusHelperView.xib in Resources */,
 				EB02435B2521416100EF93B9 /* HomeViewController.storyboard in Resources */,
+				EB72E58D25C65A7F00DA1BA0 /* ChatLogTableViewCell.xib in Resources */,
 				EB8EF451257B43DF008BCBD8 /* AuctionViewController.storyboard in Resources */,
 				EBBB67CA2515A6EE00031C30 /* BurgerMenuCell.xib in Resources */,
 				EB9F5767257B3CF5006447A9 /* MarketViewController.storyboard in Resources */,
@@ -931,6 +952,7 @@
 				EBF33373259E738900E92762 /* DismissableData.swift in Sources */,
 				EB6E552D250C8C5B00816820 /* PassiveLoadingViewController.swift in Sources */,
 				EB8B25AA255DBC4100453506 /* GeneralTextView.swift in Sources */,
+				EB72E58C25C65A7F00DA1BA0 /* ChatLogTableViewCell.swift in Sources */,
 				EB9A542925B39DC9000333DE /* UploadPlaceHolderViewCell.swift in Sources */,
 				EB30EBC1259D6B1600D36DE1 /* DismissableHeaderView.swift in Sources */,
 				EBC7FC872516973600102B57 /* BurgerMenuBuilder.swift in Sources */,
@@ -964,6 +986,7 @@
 				EB568FCC257D72AB00FE8B5E /* NetworkError.swift in Sources */,
 				EBE7DECF25314DCE0055309C /* PhotoInformationViewModel.swift in Sources */,
 				EB6E5528250C888700816820 /* RootViewController.swift in Sources */,
+				EB72E59125C65B5300DA1BA0 /* MessagesViewModel.swift in Sources */,
 				EBAE645F25281481000F654C /* HomeViewController.swift in Sources */,
 				EB7B088725298B690050EE9F /* DriverInfoBuilder.swift in Sources */,
 				EB30EBB3259D12F700D36DE1 /* DismissableViewController.swift in Sources */,
@@ -1009,6 +1032,7 @@
 				EB3F8C02257ED90400FD381D /* MarketProductCell.swift in Sources */,
 				EB56A6C32557573B00A57448 /* AccountViewController.swift in Sources */,
 				EB9A542025B391C4000333DE /* PhotoCollectionViewController.swift in Sources */,
+				EB72E59425C65BB800DA1BA0 /* UserViewModel.swift in Sources */,
 				EB22E0EA2569C71900453D85 /* ForgotPasswordViewModel.swift in Sources */,
 				EBAC26C52599326F00200817 /* AuctionPictureCollectionController.swift in Sources */,
 				EB31336D25252AAF008FF586 /* RegisterBuilder.swift in Sources */,

@@ -16,16 +16,58 @@
                     <view key="view" contentMode="scaleToFill" id="LbD-v4-sLn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K2Q-YR-8qC">
+                                <rect key="frame" x="-27" y="343" width="468" height="220.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyChat-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="5A5-R1-ibV">
+                                        <rect key="frame" x="114" y="0.0" width="240" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="5ee-q8-PbY"/>
+                                            <constraint firstAttribute="width" constant="240" id="UFt-tl-cgF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your chats appear here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SbC-ZN-sJ0">
+                                        <rect key="frame" x="145.5" y="200" width="176.5" height="20.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fax-3Q-uY5">
+                                <rect key="frame" x="0.0" y="91" width="414" height="771"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LxI-th-q2S" id="yyQ-o1-GUo"/>
+                                    <outlet property="delegate" destination="LxI-th-q2S" id="wLK-ra-XMT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zys-Aw-gmW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K2Q-YR-8qC" firstAttribute="centerX" secondItem="zys-Aw-gmW" secondAttribute="centerX" id="fmn-LU-ZI0"/>
+                            <constraint firstItem="zys-Aw-gmW" firstAttribute="bottom" secondItem="fax-3Q-uY5" secondAttribute="bottom" id="gRm-qJ-amn"/>
+                            <constraint firstItem="fax-3Q-uY5" firstAttribute="leading" secondItem="zys-Aw-gmW" secondAttribute="leading" id="idz-Zf-K9t"/>
+                            <constraint firstItem="fax-3Q-uY5" firstAttribute="top" secondItem="zys-Aw-gmW" secondAttribute="top" constant="47" id="ji2-tA-BnZ"/>
+                            <constraint firstItem="zys-Aw-gmW" firstAttribute="trailing" secondItem="fax-3Q-uY5" secondAttribute="trailing" id="lFH-WP-C2D"/>
+                            <constraint firstItem="K2Q-YR-8qC" firstAttribute="centerY" secondItem="zys-Aw-gmW" secondAttribute="centerY" id="wrL-Z7-c6M"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emptyChatStackView" destination="K2Q-YR-8qC" id="F2K-Ek-6aw"/>
+                        <outlet property="tableView" destination="fax-3Q-uY5" id="jti-vO-Z3u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RyR-Z9-vir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388" y="76"/>
+            <point key="canvasLocation" x="-388.40579710144931" y="75.669642857142847"/>
         </scene>
     </scenes>
     <resources>
+        <image name="emptyChat-Icon" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
