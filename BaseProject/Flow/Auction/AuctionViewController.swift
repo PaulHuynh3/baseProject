@@ -56,7 +56,7 @@ class AuctionViewController: UIViewController {
 extension AuctionViewController: TableView {
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 100
+        return 50
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

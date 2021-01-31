@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ake-FX-Qqj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ake-FX-Qqj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,7 +30,8 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="CiZ-c9-bh2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="O9B-28-dRR" firstAttribute="top" secondItem="3U3-uE-Zyb" secondAttribute="top" id="IbB-bV-HEQ"/>
                             <constraint firstItem="O9B-28-dRR" firstAttribute="leading" secondItem="CiZ-c9-bh2" secondAttribute="leading" id="PNV-jd-WI7"/>
@@ -40,7 +42,6 @@
                             <constraint firstItem="SMF-el-EJ4" firstAttribute="leading" secondItem="CiZ-c9-bh2" secondAttribute="leading" id="q5z-6T-0BS"/>
                             <constraint firstItem="SMF-el-EJ4" firstAttribute="bottom" secondItem="3U3-uE-Zyb" secondAttribute="bottom" id="yoq-ZT-Ul4"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="CiZ-c9-bh2"/>
                     </view>
                     <connections>
                         <outlet property="baseView" destination="O9B-28-dRR" id="mJe-1u-BFJ"/>
@@ -59,14 +60,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="selectedImageTintColor" systemColor="viewFlipsideBackgroundColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="grB-rG-ypz" kind="relationship" relationship="viewControllers" id="qJ9-UI-VEx"/>
-                        <segue destination="Zmk-wU-FcP" kind="relationship" relationship="viewControllers" id="twJ-g6-RQv"/>
                         <segue destination="1GE-sj-sPC" kind="relationship" relationship="viewControllers" id="0gk-WH-mUA"/>
                         <segue destination="aLX-vq-0Zg" kind="relationship" relationship="viewControllers" id="bOb-Jr-k86"/>
-                        <segue destination="5fd-eF-1lz" kind="relationship" relationship="viewControllers" id="tYs-No-N64"/>
+                        <segue destination="myu-gv-wfS" kind="relationship" relationship="viewControllers" id="dtP-09-2Vm"/>
+                        <segue destination="5fd-eF-1lz" kind="relationship" relationship="viewControllers" id="ZXh-L0-wSm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nla-1y-ebJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -109,24 +110,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hur-5P-Sht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="229" y="1233"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="YYP-21-hIH">
-            <objects>
-                <navigationController id="Zmk-wU-FcP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="search-icon" id="JVM-5h-g1g"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mhi-lC-tbS">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Gv5-jJ-nPG" kind="relationship" relationship="rootViewController" id="xhq-z7-ESg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qeg-Mk-jMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="916" y="1233"/>
+            <point key="canvasLocation" x="814" y="1221"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="Yj3-Xw-yXQ">
@@ -160,20 +144,20 @@
                                 <rect key="frame" x="182" y="428" width="50" height="50"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your passive income solution" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUL-7r-5Hm">
-                                <rect key="frame" x="96.5" y="499.5" width="221" height="21"/>
+                                <rect key="frame" x="97.5" y="499.5" width="219.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dwv-yr-emq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TUL-7r-5Hm" firstAttribute="top" secondItem="NhT-51-yWD" secondAttribute="bottom" constant="21.5" id="3xA-ZL-2Ak"/>
                             <constraint firstItem="TUL-7r-5Hm" firstAttribute="centerX" secondItem="dwv-yr-emq" secondAttribute="centerX" id="ZCm-m3-cBk"/>
                             <constraint firstItem="NhT-51-yWD" firstAttribute="centerY" secondItem="dwv-yr-emq" secondAttribute="centerY" id="cZq-Jo-QrA"/>
                             <constraint firstItem="NhT-51-yWD" firstAttribute="centerX" secondItem="dwv-yr-emq" secondAttribute="centerX" id="h4H-zX-YrT"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dwv-yr-emq"/>
                     </view>
                     <connections>
                         <outlet property="carImageView" destination="NhT-51-yWD" id="Cwm-ha-b9Z"/>
@@ -187,7 +171,6 @@
         <!--Navigation Controller-->
         <scene sceneID="1zG-Bl-dUz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uSA-vb-WRr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aLX-vq-0Zg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="shop-icon" id="33J-nT-byQ"/>
                     <toolbarItems/>
@@ -200,6 +183,7 @@
                         <segue destination="G0P-dg-kkg" kind="relationship" relationship="rootViewController" id="DK7-Qg-T8V"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSA-vb-WRr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2394" y="1233"/>
         </scene>
@@ -239,7 +223,17 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exo-Zu-UtA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3254" y="1233"/>
+            <point key="canvasLocation" x="3730" y="1221"/>
+        </scene>
+        <!--MessagesViewController-->
+        <scene sceneID="JRS-xy-Kdw">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MessagesViewController" storyboardName="MessagesViewController" id="Ux5-On-nt1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="G3K-Mq-4bx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dv-xH-eZ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3054" y="1642"/>
         </scene>
         <!--AccountViewController-->
         <scene sceneID="S9t-rd-YC6">
@@ -249,15 +243,38 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ax4-Nn-BBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3254" y="1666"/>
+            <point key="canvasLocation" x="3755" y="1665"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xzQ-XS-nYq">
+            <objects>
+                <navigationController id="myu-gv-wfS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="chat-icon" id="l32-Ee-xJ6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XAD-yY-S31">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ux5-On-nt1" kind="relationship" relationship="rootViewController" id="exh-7b-NT7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9RK-kf-kMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3052" y="1233"/>
         </scene>
     </scenes>
     <resources>
         <image name="StepForward" width="50" height="50"/>
         <image name="account-icon" width="30" height="30"/>
         <image name="auction-icon" width="30" height="30"/>
+        <image name="chat-icon" width="30" height="30"/>
         <image name="home-icon" width="30" height="30"/>
-        <image name="search-icon" width="30" height="30"/>
         <image name="shop-icon" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686274509804" green="0.12941176470588239" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

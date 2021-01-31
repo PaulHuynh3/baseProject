@@ -49,6 +49,8 @@
 		EB6E552D250C8C5B00816820 /* PassiveLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E552B250C8C5B00816820 /* PassiveLoadingViewController.swift */; };
 		EB6E5535250C90E800816820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6E5534250C90E800816820 /* LaunchScreen.storyboard */; };
 		EB72E57825C61B8800DA1BA0 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72E57725C61B8800DA1BA0 /* EditAccountViewController.swift */; };
+		EB72E57C25C631C700DA1BA0 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72E57B25C631C700DA1BA0 /* MessagesViewController.swift */; };
+		EB72E57F25C631D500DA1BA0 /* MessagesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB72E57E25C631D500DA1BA0 /* MessagesViewController.storyboard */; };
 		EB7B0881252987310050EE9F /* DriverInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7B0880252987310050EE9F /* DriverInfoViewModel.swift */; };
 		EB7B088725298B690050EE9F /* DriverInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7B088625298B690050EE9F /* DriverInfoBuilder.swift */; };
 		EB7B088A25298BDD0050EE9F /* DriverRequirementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7B088825298BDD0050EE9F /* DriverRequirementCell.swift */; };
@@ -176,6 +178,8 @@
 		EB6E552B250C8C5B00816820 /* PassiveLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassiveLoadingViewController.swift; sourceTree = "<group>"; };
 		EB6E5534250C90E800816820 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB72E57725C61B8800DA1BA0 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
+		EB72E57B25C631C700DA1BA0 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		EB72E57E25C631D500DA1BA0 /* MessagesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MessagesViewController.storyboard; sourceTree = "<group>"; };
 		EB7B0880252987310050EE9F /* DriverInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoViewModel.swift; sourceTree = "<group>"; };
 		EB7B088625298B690050EE9F /* DriverInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoBuilder.swift; sourceTree = "<group>"; };
 		EB7B088825298BDD0050EE9F /* DriverRequirementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRequirementCell.swift; sourceTree = "<group>"; };
@@ -399,6 +403,7 @@
 			children = (
 				EB9890BA250DC11500E35BEF /* Account */,
 				EBBB67BF2515A46F00031C30 /* Burger Menu */,
+				EB72E57A25C631A200DA1BA0 /* Messages */,
 				EB9890C0250DC4F500E35BEF /* Login */,
 				EB918DFB25297BB900EC0254 /* Driver Onboarding */,
 				EB6E2B08253394A4009EBBD7 /* CameraSession */,
@@ -407,7 +412,6 @@
 				EB8EF44D257B439B008BCBD8 /* Auction */,
 				EBF33381259FA28800E92762 /* ListingFlow */,
 				EBF3336C259E72EB00E92762 /* DismissableView */,
-				EB8EF452257B4429008BCBD8 /* Search */,
 				EB6E5533250C90C000816820 /* Launch */,
 				EB6E552A250C8B9000816820 /* Tabbar */,
 			);
@@ -431,6 +435,15 @@
 				EB6E5534250C90E800816820 /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		EB72E57A25C631A200DA1BA0 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				EB72E57B25C631C700DA1BA0 /* MessagesViewController.swift */,
+				EB72E57E25C631D500DA1BA0 /* MessagesViewController.storyboard */,
+			);
+			path = Messages;
 			sourceTree = "<group>";
 		};
 		EB7B0882252989BE0050EE9F /* PhotoVerification */ = {
@@ -651,6 +664,7 @@
 			children = (
 				EBAE645E25281481000F654C /* HomeViewController.swift */,
 				EB02435A2521416100EF93B9 /* HomeViewController.storyboard */,
+				EB8EF452257B4429008BCBD8 /* Search */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -893,6 +907,7 @@
 				EBAC26C32598307700200817 /* DetailedAuctionItemViewController.storyboard in Resources */,
 				EBAC26BA2597D27B00200817 /* AuctionTableViewCell.xib in Resources */,
 				EB6E5535250C90E800816820 /* LaunchScreen.storyboard in Resources */,
+				EB72E57F25C631D500DA1BA0 /* MessagesViewController.storyboard in Resources */,
 				EB9890B7250C9A8B00E35BEF /* RootViewController.storyboard in Resources */,
 				EB7B088B25298BDD0050EE9F /* DriverRequirementCell.xib in Resources */,
 				EB30EBB6259D133000D36DE1 /* DismissableViewController.storyboard in Resources */,
@@ -938,6 +953,7 @@
 				EBAC26B92597D27B00200817 /* AuctionTableViewCell.swift in Sources */,
 				EB6E2B0D253395A3009EBBD7 /* PhotoInformationCell.swift in Sources */,
 				EBF33378259E923C00E92762 /* FloatingButton.swift in Sources */,
+				EB72E57C25C631C700DA1BA0 /* MessagesViewController.swift in Sources */,
 				EB8EF44F257B43CB008BCBD8 /* AuctionViewController.swift in Sources */,
 				EBAE646225281C24000F654C /* StoryboardNavigation.swift in Sources */,
 				EB9890C8250DC82F00E35BEF /* Bindable.swift in Sources */,
