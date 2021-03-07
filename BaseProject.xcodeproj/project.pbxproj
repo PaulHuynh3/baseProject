@@ -37,7 +37,6 @@
 		EB3F8C03257ED90400FD381D /* MarketProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB3F8C01257ED90400FD381D /* MarketProductCell.xib */; };
 		EB568FC9257D725100FE8B5E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB568FC8257D725100FE8B5E /* NetworkService.swift */; };
 		EB568FCC257D72AB00FE8B5E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB568FCB257D72AB00FE8B5E /* NetworkError.swift */; };
-		EB56A6C12556422F00A57448 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A6C02556422F00A57448 /* Promise.swift */; };
 		EB56A6C32557573B00A57448 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A6C22557573B00A57448 /* AccountViewController.swift */; };
 		EB639A742517F3DB00D4903B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB639A732517F3DB00D4903B /* Extensions.swift */; };
 		EB639A762517F67800D4903B /* DriverInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB639A752517F67800D4903B /* DriverInfoViewController.swift */; };
@@ -170,7 +169,6 @@
 		EB3F8C01257ED90400FD381D /* MarketProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketProductCell.xib; sourceTree = "<group>"; };
 		EB568FC8257D725100FE8B5E /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		EB568FCB257D72AB00FE8B5E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		EB56A6C02556422F00A57448 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		EB56A6C22557573B00A57448 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		EB639A732517F3DB00D4903B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EB639A752517F67800D4903B /* DriverInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoViewController.swift; sourceTree = "<group>"; };
@@ -593,7 +591,6 @@
 				EB9890C7250DC82F00E35BEF /* Bindable.swift */,
 				EB639A732517F3DB00D4903B /* Extensions.swift */,
 				EB313367252510AD008FF586 /* AlertManager.swift */,
-				EB56A6C02556422F00A57448 /* Promise.swift */,
 				EB22E0EE2569D14600453D85 /* Enums.swift */,
 			);
 			path = Helpers;
@@ -960,7 +957,6 @@
 				EB22E0EF2569D14600453D85 /* Enums.swift in Sources */,
 				EBB677ED2534E4CE00074550 /* PhotoInformationBuilder.swift in Sources */,
 				EBF333A925A043A200E92762 /* CategoryTableViewCell.swift in Sources */,
-				EB56A6C12556422F00A57448 /* Promise.swift in Sources */,
 				EBAC26CB259948F400200817 /* AuctionPicturesCollectionCell.swift in Sources */,
 				EBC7FC85251691E200102B57 /* BurgerMenuViewModel.swift in Sources */,
 				EB30EBC7259E29EE00D36DE1 /* DismissableViewModel.swift in Sources */,
