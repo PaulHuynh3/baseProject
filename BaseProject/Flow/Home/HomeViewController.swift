@@ -22,7 +22,6 @@ class HomeViewController: UIViewController {
         return burgerMenuViewController
     }()
 
-
     private func showPassiveLoadingViewController() {
         guard let passiveLoadingViewController = UIStoryboard(name: StoryboardNavigation.Root.rawValue, bundle: nil).instantiateViewController(withIdentifier:  String(describing: PassiveLoadingViewController.self)) as? PassiveLoadingViewController else { return }
         present(passiveLoadingViewController, animated: true, completion: nil)
@@ -41,6 +40,4 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: BurgerMenuDelegate {
-
-}
+extension HomeViewController: BurgerMenuDelegate {}

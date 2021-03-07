@@ -13,13 +13,11 @@ class MarketResultsViewController: UIViewController {
 
     private var mode: MarketResultsMode = .featured
     var viewModel = MarketResultsViewModel()
-    var delegate: MarketResultsViewControllerDelegate?
     @IBOutlet weak var collectionView: UICollectionView!
 
     // MARK: - Setup
 
-    func configure(delegate: MarketResultsViewControllerDelegate?, mode: MarketResultsMode) {
-        self.delegate = delegate
+    func configure(mode: MarketResultsMode) {
         self.mode = mode
     }
 
@@ -157,11 +155,7 @@ extension MarketResultsViewController: MarketReuseableViewDelegate {
         guard let marketViewController = UIStoryboard(name: String(describing:StoryboardNavigation.MarketResultsViewController.rawValue), bundle: nil).instantiateViewController(withIdentifier: String(describing: MarketResultsViewController.self)) as? MarketResultsViewController else {
             return
         }
-        marketViewController.configure(delegate: nil, mode: .all)
+        marketViewController.configure(mode: .all)
         navigationController?.pushViewController(marketViewController, animated: true)
     }
-}
-
-protocol MarketResultsViewControllerDelegate {
-    func navigateToSelectedItem()
 }
